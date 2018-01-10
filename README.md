@@ -1,6 +1,6 @@
 <img src="https://worldwind.arc.nasa.gov/img/nasa-logo.svg" height="100"/>
 
-# NASAWorldWind.github.io
+# worldwind.arc.nasa.gov
 
 This repository is home to the NASA WorldWind website which is hosted at [https://worldwind.arc.nasa.gov/](https://worldwind.arc.nasa.gov). The site should provide helpful information for users interested in WorldWind's different projects.
 
