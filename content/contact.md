@@ -8,26 +8,43 @@ draft: false
 
 ---
 
-#### Administrative Contact
+<html>
+<body>
+<form action="/php/contact-form-email.php" method="post">
+<div class="controls">
 
-Patrick Hogan - [patrick.hogan@nasa.gov](mailto:patrick.hogan@nasa.gov)
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Name *</h4>
+          <input type="text" name="name" class="form-control" required>
+      </div>
+    </div>
+  </div>
 
-The WorldWind project is managed from [NASA Ames Research Center](https://www.nasa.gov/ames) at Moffett Field, CA.
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Email *</h4>
+          <input type="text" name="email" class="form-control" required>
+      </div>
+    </div>
+  </div>
 
----
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <h4>Message *</h4>
+          <input type="text" name="message" class="form-control" required>
+      </div>
+    </div>
+  </div>
 
-#### Issue Reports and Source Code
+  <input type="submit" value="Submit">
 
-WorldWind uses [GitHub](https://github.com/NASAWorldWind/) for source and issue management.
-
----
-
-#### Development Community
-
-The [WorldWind Forum](https://forum.worldwindcentral.com/) is a great resource to learn more about the WorldWind
-projects. Many users are quick to help and share code snippets. Members of the NASA and ESA WorldWind development teams
-regularly visit the forum to answer questions and help with issues.
+</div>
+</form>
 
 
-<br></br>
-<br></br>
+</body>
+</html>
