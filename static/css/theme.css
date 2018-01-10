@@ -1,0 +1,30 @@
+.banner {
+    background-image: url("../img/banner-night.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+   padding-bottom: 0px;
+}
+
+/* 
+ Styles below from: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-centered-columns
+ */
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-max {
+    /* custom max width */
+    max-width:125px;
+}
