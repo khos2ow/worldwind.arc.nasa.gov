@@ -4,24 +4,24 @@ date: 2017-07-07T00:38:02-04:00
 draft: false
 header: Shapes Dash and Fill
 listdescription: "Demonstrates how to specify dashed outlines and repeating fill patterns for shapes."
-listimage: "/img/ww-android-shape-fills.png"
+listimage: "/img/ww-android-shape-fills.jpg"
 ---
 
 ## Shapes Dash and Fill
 
-<img src="/img/ww-android-shape-fills.png" class="img-responsive center-block">
+<img src="/img/ww-android-shape-fills.jpg" class="img-responsive center-block">
 
 This example renders five different dashed shapes on the globe.
 
 - The westernmost Path specifies a dash pattern and factor.
 - The middle Path modifies the dash factor from the western example.
 - The easternmost Path follows terrain and uses a different pattern.
-- The northern Polygon specifies a repeating fill using an image.
+- The Ellipse specifies a repeating fill using an image.
 - The southern Polygon uses the same repeating fill, but follows terrain and specifies a dash pattern for the outline.
 
 ### ShapesDashAndFillFragment.java
 
-The ShapesDashAndFillFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create and add a RenderableLayer to the globe, and then define and add four Paths to the layer.
+The ShapesDashAndFillFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create and add a RenderableLayer to the globe, and then define and add paths, an ellipse, and polygon.
 
 ```java
 package gov.nasa.worldwindx;
@@ -88,18 +88,13 @@ public class ShapesDashAndFillFragment extends BasicGlobeFragment {
         path.setFollowTerrain(true);
         layer.addRenderable(path);
 
-        // Create a polygon using an image as a repeating fill pattern.
-        positions = Arrays.asList(
-            Position.fromDegrees(50.0, -70.0, 1e5),
-            Position.fromDegrees(35.0, -85.0, 1e5),
-            Position.fromDegrees(35.0, -55.0, 1e5)
-        );
-        Polygon polygon = new Polygon(positions);
+        // Create an Ellipse using an image as a repeating fill pattern
+        Position ellipseCenter = new Position(40, -70.0, 1e5);
+        Ellipse ellipse = new Ellipse(ellipseCenter, 1.5e6, 800e3);
         sa = new ShapeAttributes(thickenLine);
         sa.setInteriorImageSource(ImageSource.fromResource(R.drawable.pattern_sample_houndstooth));
-        sa.setInteriorColor(new gov.nasa.worldwind.render.Color(1f, 1f, 1f, 1f));
-        polygon.setAttributes(sa);
-        layer.addRenderable(polygon);
+        ellipse.setAttributes(sa);
+        layer.addRenderable(ellipse);
 
         // Create a surface polygon using an image as a repeating fill pattern and a dash pattern for the outline
         // of the polygon.
@@ -109,7 +104,7 @@ public class ShapesDashAndFillFragment extends BasicGlobeFragment {
             Position.fromDegrees(10.0, -60.0, 0.0),
             Position.fromDegrees(25.0, -55.0, 0.0)
         );
-        polygon = new Polygon(positions);
+        Polygon polygon = new Polygon(positions);
         sa = new ShapeAttributes(thickenLine);
         sa.setInteriorImageSource(ImageSource.fromResource(R.drawable.pattern_sample_houndstooth));
         sa.setOutlineImageSource(ImageSource.fromLineStipple(8, (short) 0xDFF6));

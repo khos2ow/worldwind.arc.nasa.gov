@@ -10,7 +10,9 @@ The full code for the examples below is available in the worldwind-examples modu
 
 ---
 
-{{% panel-narrow title="General Purpose Globe" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/BasicGlobeActivity.java" imgUrl="/img/wwa-ex-general-purpose-globe.png" %}}
+{{% panel-narrow title="General Purpose Globe" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/GeneralGlobeActivity.java" imgUrl="/img/wwa-ex-general-purpose-globe.png" %}}
+
+{{% panel-narrow title="Multi-Globe Demonstration" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/MultiGlobeActivity.java" imgUrl="/img/wwa-ex-multi-globe.jpg" %}}
 
 {{% panel-narrow title="Placemarks Demonstration" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PlacemarksDemoActivity.java" imgUrl="/img/wwa-ex-placemarks-demonstration.png" %}}
 
@@ -23,6 +25,8 @@ The full code for the examples below is available in the worldwind-examples modu
 {{% panel-narrow title="Line Of Sight" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/OmnidirectionalSightlineActivity.java" imgUrl="/img/ww-android-movable-line-of-sight.png" %}}
 
 {{% panel-narrow title="Paths" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PathsExampleActivity.java" imgUrl="/img/wwa-ex-paths-example.png" %}}
+
+{{% panel-narrow title="Paths, Polygons & Labels" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PathsPolygonsLabelsActivity.java" imgUrl="/img/wwa-ex-paths-polygons-labels.jpg" %}}
 
 {{% panel-narrow title="Day Night Cycle" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/DayNightCycleActivity.java" imgUrl="/img/wwa-ex-day-night-cycle.png" %}}
 

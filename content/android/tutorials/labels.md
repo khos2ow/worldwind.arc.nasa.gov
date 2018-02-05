@@ -11,7 +11,15 @@ listimage: "/img/ww-android-labels.png"
 
 <img src="/img/ww-android-labels.png" class="img-responsive center-block">
 
-This tutorial uses Labels shapes to identify landmarks around Washington, D.C. Label shapes have a variety of configurable properties, including text color, text size (in screen pixels), typeface, text outline, and rotation.
+This tutorial uses Labels shapes to identify landmarks around Washington, D.C. Label shapes have a variety of configurable properties, including:
+
+- Text Color
+- Text Size (in screen pixels)
+- Typeface
+- Text Outline
+- Rotation
+- Outline Color
+- Outline Size
 
 ### LabelsFragment.java
 
@@ -41,10 +49,12 @@ public class LabelsFragment extends BasicGlobeFragment {
         Label label = new Label(new Position(38.8977, -77.0365, 0), "The White House");
         layer.addRenderable(label);
 
-        // Create a label with a green text color, the default text size, the system default typeface, and the default
-        // alignment.
+        // Create a label with a black text color, the default text size, the system default typeface, the default
+        // alignment, and a thick white text outline.
         TextAttributes attrs = new TextAttributes();
-        attrs.setTextColor(new Color(0, 1, 0, 1)); // green via r,g,b,a
+        attrs.setTextColor(new Color(0, 0, 0, 1)); // black text via r,g,b,a
+        attrs.setOutlineColor(new Color(1, 1, 1, 1)); // white outline via r,g,b,a
+        attrs.setOutlineWidth(5); // thicken the white outline
         label = new Label(new Position(38.881389, -77.036944, 0), "Thomas Jefferson Memorial", attrs);
         layer.addRenderable(label);
 
