@@ -2,9 +2,6 @@
 title: "Ellipse"
 date: 2018-02-02T16:17:14-06:00
 draft: false
-header: Ellipse
-listdescription: "Demonstrates how to configure and add an Ellipse shape to the globe."
-listimage: "/img/ww-android-ellipse.jpg"
 ---
 
 

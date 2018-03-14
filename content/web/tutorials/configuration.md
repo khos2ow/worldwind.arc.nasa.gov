@@ -2,8 +2,6 @@
 title: "Configuration-Web WorldWind/NASA WorldWind"
 date: 2017-11-15T13:56:48-08:00
 draft: false
-header: Configuration
-listdescription: Illustrates the WorldWind configuration options and how to set them.
 ---
 
 ## Configuration

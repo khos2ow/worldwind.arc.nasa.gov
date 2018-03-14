@@ -1,6 +1,36 @@
 {{ define "main" }}
-    {{partial "java-header.html" . }}
-    <div class="container">
-        {{ .Content }}
+{{ partial "java-header.html" . }}
+<div class="container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
     </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            <!--Sidebar content-->
+            <div class="sidenav">
+                <!--Sidebar content-->
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/java">Overview</a></li>
+                    <li><a href="/java/get-started">Get Started</a></li>
+                    <li><a href="/java/features">Features</a></li>
+                    <li><a href="/java/demos">Demos</a></li>
+                    <li><a href="/java/examples">Examples</a></li>
+                    <li><a href="/java/tutorials">Tutorials</a></li>
+                    <li><a href="/java/releases">Releases</a></li>
+                    <li><a href="/java/docs">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Body content-->
+    <section class="col-sm-9">
+        {{ .Content }}
+    </section>
+</div>
 {{ end }}

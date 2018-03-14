@@ -26,3 +26,5 @@ Want to learn more? Let's [get started](/serverkit/get-started/)!
 
 <img src="/img/install4j_medium.png" alt="Electric blue logo for install4j" hspace="10"/>
 WWSK uses a <a href="https://www.ej-technologies.com/products/install4j/overview.html">multi-platform installer builder</a> to maximize productivity.
+
+<br/>

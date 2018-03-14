@@ -26,7 +26,7 @@ htmlSource="Atmosphere.html" htmlLink="https://github.com/NASAWorldWind/WebWorld
 jsSource="BasicExample.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BasicExample.js" 
 htmlSource="BasicExample.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BasicExample.html" %}}
 
-{{% panel-web-example title="Blue Marble Time Series" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/BlueMarbleTimeSeries.html" imgUrl="/img/web/ww-web-timeSeries.jpg" 
+{{% panel-web-example title="Time Series" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/BlueMarbleTimeSeries.html" imgUrl="/img/web/ww-web-timeSeries.jpg"
 jsSource="BlueMarbleTimeSeries.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BlueMarbleTimeSeries.js" 
 htmlSource="BlueMarbleTimeSeries.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BlueMarbleTimeSeries.html" %}}
 
@@ -82,7 +82,7 @@ htmlSource="KmlExample.html" htmlLink="https://github.com/NASAWorldWind/WebWorld
 jsSource="Measurements.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Measurements.js" 
 htmlSource="Measurements.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Measurements.html" %}}
 
-{{% panel-web-example title="Moving SurfaceShapes Test" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/TestMovingSurfaceShapes.html" imgUrl="/img/web/ww-web-movingSurfaceShapesTest.jpg" 
+{{% panel-web-example title="Moving SurfaceShapes Test" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/TestMovingSurfaceShapes.html" imgUrl="/img/web/ww-web-movingSurfaceShapesTest.jpg"
 jsSource="TestMovingSurfaceShapes.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/TestMovingSurfaceShapes.js" 
 htmlSource="TestMovingSurfaceShapes.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/TestMovingSurfaceShapes.html" %}}
 

@@ -25,3 +25,5 @@ draft: false
 ---
 
 <img src="/img/intellij-idea-logo.svg" alt="Multi-colored JetBrains' IntelliJ IDEA logo" height="60" width="60" hspace="20"> For maximum productivity, WorldWind Java is developed in [JetBrains' IntelliJ IDEA IDE](https://www.jetbrains.com/idea/).
+
+<br></br>

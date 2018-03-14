@@ -61,3 +61,5 @@ JAR files used by a Java Web Start application must be signed by a recognized au
 
 4. Deploy Your Application
 Determine a URL to host your app at, such as http://myworldwinddemo.org/. Set your JNLP file's codebase attribute to this URL, then host your JNLP file and any JAR files referenced by your JNLP at this URL. See Oracle's documentation on Rich Internet Application Deployment for more information.
+
+<br/>

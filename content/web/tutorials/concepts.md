@@ -2,8 +2,6 @@
 title: "Concepts-WebWorldWind/NASA WorldWind"
 date: 2017-07-26T14:39:48-05:00
 draft: false
-header: Concepts
-listdescription: "Describes the architecture of Web WorldWind."
 ---
 
 ## Concepts

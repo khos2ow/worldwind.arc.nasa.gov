@@ -1,0 +1,13 @@
+{{ $title := .Get "title" }}
+{{ $link := .Get "link" }}
+{{ $content := .Get "content" }}
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="{{ $link }}"><h3 class="panel-title">{{ $title }}</h3></a>
+        </div>
+        <div class="panel-body">
+            <p>{{ $content }}</p>
+    </div>
+</div>
+</div>

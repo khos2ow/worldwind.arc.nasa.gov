@@ -33,7 +33,9 @@ in your npm-based project's web root.
 
 Load the latest release library directly from WorldWind's servers.
 
-    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/worldwind.min.js" type="text/javascript"></script>
+    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/worldwind.min.js"
+            type="text/javascript">
+    </script>
 
 ---
 
@@ -44,3 +46,5 @@ Load the latest release library directly from WorldWind's servers.
 - [Simplest Usage](/web/tutorials/simplest-example) tutorial
 
 - [Hosting Locally](/web/tutorials/standalone-example) tutorial
+
+<br/>

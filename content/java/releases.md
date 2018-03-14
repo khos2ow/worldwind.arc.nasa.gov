@@ -59,3 +59,5 @@ This is WorldWind’s first public formal release. It’s undergone significant 
 This release of WorldWind operates on all platforms WorldWind has historically supported: OS X, Windows 32 & 64, Linux 32 & 64. It is expected to work on Solaris but has not been tested on that platform.
 
 There are very few platform-specific dependencies. The most significant one is the absence of BrowserBalloon availability on Linux. This will be corrected at some point. All other platform dependencies are related to specific problems, such as the existence of a bug on one platform but not another. The bug database describes all such known problems.
+
+<br/>

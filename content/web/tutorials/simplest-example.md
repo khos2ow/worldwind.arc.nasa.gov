@@ -2,8 +2,6 @@
 title: "Simplest Example-Web WorldWind/NASA WorldWind"
 date: 2017-11-15T13:48:00-08:00
 draft: false
-header: Simplest Example
-listdescription: Shows the simplest way to get started with Web WorldWind.
 ---
 
 ## Simplest Example
@@ -21,7 +19,9 @@ your two fingers upward to tilt the globe.
 
 First, in the head tag of your HTML, add a script element to include the Web WorldWind library.
 
-    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/worldwind.min.js" type="text/javascript"></script>
+    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/worldwind.min.js"
+            type="text/javascript">
+    </script>
 
 Next, create an HTML5 canvas, defining its width and height. You will also want to include a message for browsers that
 do not support HTML5 Canvas.
@@ -60,7 +60,9 @@ Here is what it looks like in a working example:
     <meta charset="UTF-8">
     <title>WorldWind Example</title>
     <!-- Include the Web WorldWind library. -->
-    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web"%}}/worldwind.min.js" type="text/javascript"></script>
+    <script src="{{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web"%}}/worldwind.min.js"
+            type="text/javascript">
+    </script>
     </head>
     <body>
     <div style="position: absolute; top: 50px; left: 50px;">

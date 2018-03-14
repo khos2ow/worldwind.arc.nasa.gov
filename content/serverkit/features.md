@@ -31,3 +31,5 @@ which lets you see your data in the context of Earth.
 - Exported raster GeoPackages contain a collection of prerendered tiles
 - User-controlled content (i.e. extents, styles, layers)
 - Can be shared and used offline in GIS tools
+
+<br/>

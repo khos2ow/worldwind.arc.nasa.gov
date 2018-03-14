@@ -32,3 +32,5 @@ Web WorldWind provides a rich set of features for displaying and interacting wit
 - Imagery: JPEG, PNG
 - Graticules
 - Shapefiles
+
+<br/>

@@ -2,9 +2,6 @@
 title: "Surface Image-WorldWind Android/NASA WorldWind"
 date: 2017-07-06T23:56:43-04:00
 draft: false
-header: Surface Image
-listdescription: "Demonstrates how to add SurfaceImages to a RenderableLayer."
-listimage: "/img/ww-android-surface-image.png"
 ---
 
 ## Surface Image

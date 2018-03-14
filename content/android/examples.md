@@ -12,7 +12,9 @@ The full code for the examples below is available in the worldwind-examples modu
 
 {{% panel-narrow title="General Purpose Globe" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/GeneralGlobeActivity.java" imgUrl="/img/wwa-ex-general-purpose-globe.png" %}}
 
-{{% panel-narrow title="Multi-Globe Demonstration" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/MultiGlobeActivity.java" imgUrl="/img/wwa-ex-multi-globe.jpg" %}}
+{{% panel-narrow title="Multi-Globe Demonstration" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/MultiGlobeActivity.java" imgUrl="/img/wwa-ex-multi-globe.png" %}}
+
+{{% panel-narrow title="Day Night Cycle" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/DayNightCycleActivity.java" imgUrl="/img/wwa-ex-day-night-cycle.png" %}}
 
 {{% panel-narrow title="Placemarks Demonstration" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PlacemarksDemoActivity.java" imgUrl="/img/wwa-ex-placemarks-demonstration.png" %}}
 
@@ -28,14 +30,13 @@ The full code for the examples below is available in the worldwind-examples modu
 
 {{% panel-narrow title="Paths, Polygons & Labels" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PathsPolygonsLabelsActivity.java" imgUrl="/img/wwa-ex-paths-polygons-labels.jpg" %}}
 
-{{% panel-narrow title="Day Night Cycle" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/DayNightCycleActivity.java" imgUrl="/img/wwa-ex-day-night-cycle.png" %}}
-
 {{% panel-narrow title="Basic Performance Benchmark" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/BasicPerformanceBenchmarkActivity.java" imgUrl="/img/wwa-ex-basic-performance-benchmark.png" %}}
 
 {{% panel-narrow title="Placemarks Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PlacemarksStressTestActivity.java" imgUrl="/img/wwa-ex-placemarks-stress-test.png" %}}
 
-{{% panel-narrow title="MIL-STD-2525 Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PlacemarksMilStd2525StressActivity.java" imgUrl="/img/wwa-ex-milstd2525-stress-test.png" %}}
+{{% panel-narrow title="Basic Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/BasicStressTestActivity.java" imgUrl="/img/wwa-ex-basic-stress-test.png" %}}
 
 {{% panel-narrow title="Texture Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/TextureStressTestActivity.java" imgUrl="/img/wwa-ex-texture-stress-test.png" %}}
 
-{{% panel-narrow title="Basic Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/BasicStressTestActivity.java" imgUrl="/img/wwa-ex-basic-stress-test.png" %}}
+{{% panel-narrow title="MIL-STD-2525 Stress Test" link="https://github.com/NASAWorldWind/WorldWindAndroid/blob/master/worldwind-examples/src/main/java/gov/nasa/worldwindx/PlacemarksMilStd2525StressActivity.java" imgUrl="/img/wwa-ex-milstd2525-stress-test.png" %}}
+

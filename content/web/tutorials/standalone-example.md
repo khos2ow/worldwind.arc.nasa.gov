@@ -2,8 +2,6 @@
 title: "Standalone Example-Web WorldWind/NASA WorldWind"
 date: 2017-11-15T14:33:47-08:00
 draft: false
-header: Standalone Example
-listdescription: Describes the how to host Web WorldWind on your own HTTP server.
 ---
 
 ## Hosting Locally
