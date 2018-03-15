@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     padding-top: 190px;
     padding-bottom: 140px;
-    background: url("../img/web-background.png") no-repeat center center;
+    background: url("../img/web-background.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     padding-top: 190px;
     padding-bottom: 140px;
-    background: url("../img/java/java-background.png")  no-repeat center center;
+    background: url("../img/java-background.jpg")  no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     padding-top: 190px;
     padding-bottom: 140px;
-    background: url("../img/android-background.png") no-repeat center center;
+    background: url("../img/android-background.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     padding-top: 190px;
     padding-bottom: 140px;
-    background: url("../img/serverkit-background.png") no-repeat center center;
+    background: url("../img/serverkit-background.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
