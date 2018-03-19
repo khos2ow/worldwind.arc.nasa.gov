@@ -105,7 +105,7 @@ Illustrates how applications can display video on the globe's surface.
 
 ---
 
-{{% panel title="Web Browser Balloons" link="https://worldwind.arc.nasa.gov/java/latest/webstart/VideoOnTerrain.jnlp" imgUrl="/img/java/webbrowserballoons_01_250.jpg" %}}
+{{% panel title="Web Browser Balloons" link="https://worldwind.arc.nasa.gov/java/latest/webstart/WebBrowserBalloons.jnlp" imgUrl="/img/java/webbrowserballoons_01_250.jpg" %}}
 Demonstrates use of WorldWind browser balloons to display HTML, JavaScript, and Flash content to the user in the form of a screen-aligned balloon. There are two browser balloon types: *ScreenBrowserBalloon* which displays a balloon at a point on the screen, and *GlobeBrowserBalloon* which displays a balloon attached to a position on the Globe.
 {{% /panel %}}
 
