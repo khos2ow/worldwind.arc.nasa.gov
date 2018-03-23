@@ -207,6 +207,11 @@ ul {
     padding-bottom: 10px;
 }
 
+/*Heading paddingfor tutorials and examples categories*/
+.title-padding {
+    padding-left: 15px;
+}
+
 .footer, .push {
     height: 260px;
 }
