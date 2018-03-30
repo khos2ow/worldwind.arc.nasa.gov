@@ -1,10 +1,10 @@
 {{ define "main" }}
     {{ partial "web-header.html" . }}
-
-<div class="container" id="main">
+<div id="anchor"></div>
+<div class="container content-container" id="main">
     <div class="row-fluid" style="margin-bottom: 10px;">
         <p class="span12">
-            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+            <a class="side-menu-link btn btn-mini" title="Click for sub-menu">
                 <i class="icon-th"></i>
             </a>
         </p>
@@ -15,13 +15,14 @@
             <!--Sidebar content-->
             <div class="sidenav">
                         <!--Sidebar content-->
+                        <a href="#menu"></a>
                         <ul class="nav nav-pills nav-stacked">
                             <li><a href="/web">Overview</a></li>
-                            <li><a href="/web/get-started">Get Started</a></li>
-                            <li><a href="/web/features">Features</a></li>
-                            <li><a href="/web/examples">Examples</a></li>
-                            <li><a href="/web/tutorials">Tutorials</a></li>
-                            <li><a href="/web/docs">Docs</a></li>
+                            <li><a href="/web/get-started#anchor">Get Started</a></li>
+                            <li><a href="/web/features#anchor">Features</a></li>
+                            <li><a href="/web/examples#anchor">Examples</a></li>
+                            <li><a href="/web/tutorials#anchor">Tutorials</a></li>
+                            <li><a href="/web/docs#anchor">Docs</a></li>
                         </ul>
                     </div>
                 </div>
