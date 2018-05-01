@@ -9,7 +9,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -240,19 +240,15 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.30);
 }
 
+
+p, li {
+    font-size: 18px;
+}
+
 .content-container {
     margin-top: 80px; !important;
 }
-
-li {
-    font-size: 14px;
-}
-
-p {
-    font-size: 14px;
-}
-
-
+  
 ul {
     list-style-type: none;
 }
