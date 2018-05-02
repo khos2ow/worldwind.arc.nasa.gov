@@ -47,7 +47,8 @@ Here's a look at the WorldWind team's progress since 0.9.0, and the progress tow
 
 <br>
 
-For detailed progress on these and other upcoming features, checkout our  [GitHub issues](https://github.com/NASAWorldWind/WebWorldWind/issues).
+For detailed progress on these and other upcoming features, checkout our  [GitHub issues](https://github.com/NASAWorldWind/WebWorldWind/issues). You can also
+see our current feature set in the [Web WorldWind](https://worldwind.arc.nasa.gov/web/features/#anchor) section of this site.
 
 Please send questions to the NASA WorldWind Product Manager, Endia Irizarry, at [endia.j.irizarry@nasa.gov](mailto:endia.j.irizarry@nasa.gov).
 
