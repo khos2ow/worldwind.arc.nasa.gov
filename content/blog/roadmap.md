@@ -23,7 +23,7 @@ Here's a look at the WorldWind team's progress since 0.9.0, and the progress tow
 - Web Coverage Service (WCS) initial public API and preparation
 - Web Coverage Service (WCS) capabilities negotiation
 - GeoTiff elevations support
-- Infrastructure for multiple elevation sources
+- Multiple elevation sources
 - Layer attribution enhancement
 - Improved WebGL texture management with a high resolution canvas
 - RenderableLayer opacity support (shapes inherit layer opacity)
@@ -34,7 +34,6 @@ Here's a look at the WorldWind team's progress since 0.9.0, and the progress tow
 
 - Surface shape editors
 - Web Coverage Service (WCS) elevation sources
-- Complete support for multiple elevation sources
 - Navigation interface enhancements
 
 <br>
