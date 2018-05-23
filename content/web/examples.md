@@ -10,9 +10,9 @@ The full code for the examples below is available in the [examples](https://gith
 
 ---
 
-{{% panel-web-example title="Annotations" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/Annotations.html" imgUrl="/img/web/ww-web-annotations.jpg" 
-jsSource="Annotations.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Annotations.js" 
-htmlSource="Annotations.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Annotations.html" %}}
+{{% panel-web-example title="Sun Simulation" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/SunSimulation.html" imgUrl="/img/web/ww-web-sunsimulation.jpg"
+jsSource="SunSimulation.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/SunSimulation.js"
+htmlSource="SunSimulation.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/SunSimulation.html" %}}
 
 {{% panel-web-example title="Argument Parsing" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/ParseUrlArguments.html" imgUrl="/img/web/ww-web-parseURLArguments.jpg" 
 jsSource="ParseUrlArguments.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/ParseUrlArguments.js" 
