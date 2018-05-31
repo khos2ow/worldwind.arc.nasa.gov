@@ -240,6 +240,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.30);
 }
 
+#anchor {
+    padding-top:70px;
+    margin-top:-70px;
+}
 
 p, li {
     font-size: 18px;
