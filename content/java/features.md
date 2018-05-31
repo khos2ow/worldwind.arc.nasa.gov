@@ -52,7 +52,7 @@ WorldWind Java provides a rich set of features for displaying and interacting wi
 
 ## Analysis Capabilities
 - Measurement,  geometric and terrain following
-- Line of site with high-resolution terrain and shapes
+- Line-of-sight with high-resolution terrain and shapes
 - Terrain intersection
 - Shape interactions
 
