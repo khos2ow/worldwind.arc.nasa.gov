@@ -1,4 +1,4 @@
-![NASA Meatball](https://worldwind.arc.nasa.gov/img/nasa-logo.svg)
+<img src="https://worldwind.arc.nasa.gov/img/nasa-logo.svg" height="100"/>
 
 # NASA WorldWind Team
 
@@ -22,16 +22,11 @@ Work with the WorldWind project manager to get connected with the WorldWind team
 - [NPM](https://www.npmjs.com/signup) account
 - [Skype](https://login.skype.com/account/signup-form) account
 - [JetBrains](https://account.jetbrains.com/login) account
+- [Slack](https://slack.com/) account
 - [Forum](http://forum.worldwindcentral.com/register.php) account (NASA interns skip this step)
   - Set Avatar to NASA logo
   - Set User Title to 'WW Team Member'
   - Set Biography to 'NASA WorldWind Team Member'
-
-Set your calendar for WorldWind's Skype meetings
-
-- WorldWind all hands, Tuesdays at 1300 Pacific Time
-- WorldWind developers, Tuesdays and Thursdays at 1100 Pacific Time
-- ESA developers, Tuesdays at 1800 Central European Time
 
 Download WorldWind development tools
 
