@@ -1,4 +1,4 @@
-![NASA Meatball](https://nasaworldwind.github.io/img/nasa-logo.svg)
+![NASA Meatball](https://worldwind.arc.nasa.gov/img/nasa-logo.svg)
 
 # NASA WorldWind Team
 
