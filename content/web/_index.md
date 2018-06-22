@@ -31,9 +31,6 @@ In 2015, our team began a technical collaboration with the European Space Agency
 
 <br/>
 
-<p>NASA<br/><a href="http://explorer.worldwind.earth/">WorldWind Explorer</p>
-
-<br/>
 </div>
 
 </br>
