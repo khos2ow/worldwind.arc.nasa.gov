@@ -21,9 +21,10 @@ platform for giving any application the means to express, manipulate and analyze
 can be incorporated into a wide range of applications, including, Windows, Mac, Linux, web, and mobile devices.
 
 Curated by NASA, work on WorldWind began in 2002 and was released under the NASA Open Source Agreement (NOSA).  The
-project was ported to Java in 2006, and in November 2009 was awarded NASA Software of the Year.  Since then, it has
-developed a global community of users, from government, education, the non-profit sector, as well as private industry.
-HTML5 and Android versions have been added as well as the server kit for hosting data.
+project was ported to Java in 2006, and in November 2009 was awarded NASA Software of the Year.  In 2018 Web WorldWind 
+0.9.0 was released under Apache 2.0 License. It has developed a global community of users, from government, education, 
+the non-profit sector, as well as private industry. HTML5 and Android versions have been added as well as the server kit 
+for hosting data.
 
 WorldWind is different from a 3D globe like Google Earth because it is not an application.  Instead, it is an SDK
 (software development kit) that software engineers can use to build their own applications.  WorldWind provides a
