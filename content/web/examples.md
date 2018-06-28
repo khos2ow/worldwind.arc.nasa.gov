@@ -18,10 +18,6 @@ htmlSource="SunSimulation.html" htmlLink="https://github.com/NASAWorldWind/WebWo
 jsSource="ParseUrlArguments.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/ParseUrlArguments.js" 
 htmlSource="ParseUrlArguments.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/ParseUrlArguments.html" %}}
 
-{{% panel-web-example title="Atmosphere" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/Atmosphere.html" imgUrl="/img/web/ww-web-atmosphere.jpg" 
-jsSource="Atmosphere.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Atmosphere.js" 
-htmlSource="Atmosphere.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Atmosphere.html" %}}
-
 {{% panel-web-example title="Basic Example" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/BasicExample.html" imgUrl="/img/web/ww-web-basicExample.jpg"
 jsSource="BasicExample.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BasicExample.js" 
 htmlSource="BasicExample.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/BasicExample.html" %}}
@@ -85,10 +81,6 @@ htmlSource="KmlExample.html" htmlLink="https://github.com/NASAWorldWind/WebWorld
 {{% panel-web-example title="Measurements" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/Measurements.html" imgUrl="/img/web/ww-web-measurements.jpg" 
 jsSource="Measurements.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Measurements.js" 
 htmlSource="Measurements.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/Measurements.html" %}}
-
-{{% panel-web-example title="Moving SurfaceShapes Test" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/TestMovingSurfaceShapes.html" imgUrl="/img/web/ww-web-movingSurfaceShapesTest.jpg"
-jsSource="TestMovingSurfaceShapes.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/TestMovingSurfaceShapes.js" 
-htmlSource="TestMovingSurfaceShapes.html" htmlLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/TestMovingSurfaceShapes.html" %}}
 
 {{% panel-web-example title="Multi-Window" link="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/MultiWindow.html" imgUrl="/img/web/ww-web-multiWindow.jpg" 
 jsSource="MultiWindow.js" jsLink="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/MultiWindow.js" 
