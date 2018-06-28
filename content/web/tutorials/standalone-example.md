@@ -53,7 +53,5 @@ Load the data in WorldWind:
 
 ---
 
-You can see this tutorial in action through the [Standalone Example](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/Standalone.html).
-
 <br></br>
 <br></br>
