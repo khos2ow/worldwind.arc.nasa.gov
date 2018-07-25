@@ -6,14 +6,12 @@ draft: false
 
 <br>
 
-## WorldWind Roadmap 2018: Q2
+## WorldWind Roadmap 2018
 
 ---
 
-Last December, we released [Web WorldWind 0.9.0](https://github.com/NASAWorldWind/WebWorldWind/releases/tag/v0.9.0),
-giving the community a solid foundation for their applications. Since then, we've been working on bug fixes and new
-features for the upcoming [Web WorldWind 0.10.0](https://github.com/NASAWorldWind/WebWorldWind/milestone/2) release. 
-Here's a look at the WorldWind team's progress since 0.9.0, and the progress toward our goals for 2018 Q2:
+Earlier this year, we created NASA WorldWind's first roadmap, a place where users and developers alike can see what's in
+store for the Web platform. Checkout what we've been working on!
 
 *Please note this is a preliminary plan, so not all features may be included in our next release.*
 
@@ -32,6 +30,7 @@ Here's a look at the WorldWind team's progress since 0.9.0, and the progress tow
 
 ![In Progress](https://img.shields.io/badge/status-in%20progress-yellow.svg) 
 
+- Surface shape rendering performance
 - Surface shape editors
 - Web Coverage Service (WCS) elevation sources
 - Navigation interface enhancements
@@ -40,7 +39,6 @@ Here's a look at the WorldWind team's progress since 0.9.0, and the progress tow
 
 ![Upcoming](https://img.shields.io/badge/status-upcoming-lightgrey.svg)
 
-- Surface shape rendering performance
 - OGC Web Service interface improvement
 - Better navigation near the terrain
 
