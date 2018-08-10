@@ -25,10 +25,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
 
-.web-navbar {
-    height: 80px;
-}
-
 .fh5co-widget a:hover {
     color: #fff;
 }
@@ -73,10 +69,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-#esa-logo {
-    height: 25px;
-    width: auto;
-}
 
 /* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand {

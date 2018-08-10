@@ -6,7 +6,11 @@ draft: false
 
 ### Power your browser
 
-Web WorldWind is a powerful tool for displaying geographic information in your browser. Use it to embed a globe in your web page or create your own application. The possibilities are endless.
+Web WorldWind is a free, open-source virtual globe for web pages. Written in JavaScript, Web WorldWind enables web page
+and application builders to quickly create interactive visualizations of geographic information on an interactive 3D
+globe or 2D map. Web WorldWind provides an API that enables JavaScript programs to control every detail of visualization
+and interaction. Use it to embed a globe in your web page or create your own application. Web WorldWind runs on all
+major operating systems, desktop and mobile devices, and web browsers.
 
 <br>
 
