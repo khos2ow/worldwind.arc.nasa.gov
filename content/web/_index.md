@@ -22,8 +22,7 @@ As a developer, you decide how to display and interact with your data. We provid
 
 ### Technical contributors
 
-The Web WorldWind platform has had many technical contributors including the European Space Agency.
-It has provided valuable contributions on this platform. They have built apps such as Copernicus Sentinel that are powered by the WorldWind platform.
+The Web WorldWind platform has many technical contributors. In particular, the European Space Agency has provided valuable add-ons and improvements.These features have enabled to build various apps powered by the WorldWind platform, such as the Copernicus Sentinel mobile app.
 
 <br>
 
