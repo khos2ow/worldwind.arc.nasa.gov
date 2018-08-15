@@ -1,6 +1,6 @@
 ![Hugo](https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png)
 
-A Fast and Flexible Static Site Generator built with love by [spf13](http://spf13.com/) and [friends](https://github.com/gohugoio/hugo/graphs/contributors) in [Go][].
+A Fast and Flexible Static Site Generator built with love by [bep](https://github.com/bep), [spf13](http://spf13.com/) and [friends](https://github.com/gohugoio/hugo/graphs/contributors) in [Go][].
 
 [Website](https://gohugo.io) |
 [Forum](https://discourse.gohugo.io) |
@@ -19,23 +19,22 @@ A Fast and Flexible Static Site Generator built with love by [spf13](http://spf1
 ## Overview
 
 Hugo is a static HTML and CSS website generator written in [Go][].
-It is optimized for speed, easy use and configurability.
+It is optimized for speed, ease of use, and configurability.
 Hugo takes a directory with content and templates and renders them into a full HTML website.
 
-Hugo relies on Markdown files with front matter for meta data.
-And you can run Hugo from any directory.
+Hugo relies on Markdown files with front matter for metadata, and you can run Hugo from any directory.
 This works well for shared hosts and other systems where you don’t have a privileged account.
 
 Hugo renders a typical website of moderate size in a fraction of a second.
 A good rule of thumb is that each piece of content renders in around 1 millisecond.
 
-Hugo is designed to work well for any kind of website including blogs, tumbles and docs.
+Hugo is designed to work well for any kind of website including blogs, tumbles, and docs.
 
 #### Supported Architectures
 
-Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD and macOS (Darwin) and [Android](https://gist.github.com/bep/a0d8a26cf6b4f8bc992729b8e50b480b) for x64, i386 and ARM architectures.
+Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD, macOS (Darwin), and [Android](https://gist.github.com/bep/a0d8a26cf6b4f8bc992729b8e50b480b) for x64, i386 and ARM architectures.
 
-Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan&nbsp;9 and Solaris.
+Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan 9, and Solaris.
 
 **Complete documentation is available at [Hugo Documentation][].**
 
@@ -55,16 +54,36 @@ Use the [installation instructions in the Hugo documentation](https://gohugo.io/
 
 ### Build and Install the Binaries from Source (Advanced Install)
 
-Add Hugo and its package dependencies to your go `src` directory.
+#### Prerequisite Tools
 
-    go get -v github.com/gohugoio/hugo
+* [Git](http://git-scm.com/)
+* [Go (latest or previous version)](https://golang.org/dl/)
 
-Once the `get` completes, you should find your new `hugo` (or `hugo.exe`) executable sitting inside `$GOPATH/bin/`.
+#### Vendored Dependencies
 
-To update Hugo’s dependencies, use `go get` with the `-u` option.
+Hugo uses [dep](https://github.com/golang/dep) to vendor dependencies, but we don't commit the vendored packages themselves to the Hugo git repository. Therefore, a simple `go get` is _not_ supported because the command is not vendor aware.
 
-    go get -u -v github.com/gohugoio/hugo
+The simplest way is to use [mage](https://github.com/magefile/mage) (a Make alternative for Go projects.)
 
+#### Fetch from GitHub
+
+```bash
+go get github.com/magefile/mage
+go get -d github.com/gohugoio/hugo
+cd ${GOPATH:-$HOME/go}/src/github.com/gohugoio/hugo
+mage vendor
+mage install
+```
+
+**If you are a Windows user, substitute the `$HOME` environment variable above with `%USERPROFILE%`.**
+	
+## The Hugo Documentation
+
+The Hugo documentation now lives in its own repository, see https://github.com/gohugoio/hugoDocs. But we do keep a version of that documentation as a `git subtree` in this repository. To build the sub folder `/docs` as a Hugo site, you need to clone this repo:
+
+```bash
+git clone git@github.com:gohugoio/hugo.git
+```
 ## Contributing to Hugo
 
 For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
@@ -93,6 +112,7 @@ When reporting the issue, please provide the version of Hugo in use (`hugo versi
 The Hugo project welcomes all contributors and contributions regardless of skill or experience level.
 If you are interested in helping with the project, we will help you with your contribution.
 Hugo is a very active project with many contributions happening daily.
+
 Because we want to create the best possible product for our users and the best contribution experience for our developers,
 we have a set of guidelines which ensure that all contributions are acceptable.
 The guidelines are not intended as a filter or barrier to participation.
