@@ -16,27 +16,25 @@ major operating systems, desktop and mobile devices, and web browsers.
 
 ### Interactive features
 
-As a developer, you decide how to display and interact with your data. We provide interactive features such as shapes and paths, as well as standard protocols developed by the OGC. Use only what you need.
+As a developer, you decide how to display and interact with your data. We provide interactive features such as shapes
+and paths, as well as standard protocols developed by the OGC. Use only what you need.
 
 <br>
 
-### ESA-NASA Collaboration
+### Technical Collaboration
 
-In 2015, our team began a technical collaboration with the European Space Agency to provide the optimal Web solution for spatial. Now, three years later, we continue our collaboration. All source code is open source for developers throughout the world.
+The Web WorldWind platform has had many technical contributors, including the European Space Agency. It has provided
+valuable contributions on this platform. They have built apps such as Copernicus Sentinel that are powered by the
+WorldWind platform.
 
-<hr>
+<br>
 
-<div class="text-center">
-<h4>Check out our apps!</h4>
+### Download
 
-<br/>
+All source code is open source for developers throughout the world. [Fork the repository](https://github.com/NASAWorldWind/WebWorldWind)
+on Github!
 
-<p>Copernicus Sentinel App<br/><a href="https://itunes.apple.com/us/app/copernicus-sentinel/id1036738151?mt=8">iOS</a> | <a href="https://play.google.com/store/apps/details?id=esa.sentinel&hl=en">Android</a></p>
-
-<br/>
-
-</div>
-
+<br>
 </br>
 
 
