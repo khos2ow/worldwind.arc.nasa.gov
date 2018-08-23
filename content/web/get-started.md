@@ -351,7 +351,7 @@ Every feature here and more is described thoroughly via code examples in our rep
 
 This is the final result in code:
 
-**index.html:**
+'index.html'
 {{< highlight html >}}
 <!DOCTYPE html>
 <html lang="en">
@@ -372,7 +372,7 @@ This is the final result in code:
 </html>
 {{< /highlight >}}
 
-**helloWorldWind.js:**
+'helloWorldWind.js'
 {{< highlight javascript >}}
 // Create a WorldWindow for the canvas.
 var wwd = new WorldWind.WorldWindow("canvasOne");
