@@ -16,7 +16,7 @@ major operating systems, desktop and mobile devices, and web browsers.
 
 ### Interactive features
 
-As a developer, you decide how to display and interact with your data. We provide interactive features such as shapes and paths, as well as standard protocols developed by the OGC. Use only what you need.
+As a developer, you decide how to display and interact with your data. We provide interactive features such as shapes and paths, as well as Open Geospatial Consortium (OGC) standard protocols. Use only what you need.
 
 <br>
 
@@ -31,7 +31,3 @@ The Web WorldWind platform has many technical contributors. In particular, the E
 All source code is open source for developers throughout the world. [Fork the repository](https://github.com/NASAWorldWind/WebWorldWind) on GitHub!
 
 </br>
-
-
-
-
