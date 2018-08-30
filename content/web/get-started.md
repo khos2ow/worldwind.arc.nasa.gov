@@ -339,7 +339,7 @@ We finally have everything to do our request and display the imagery to Web Worl
 $.get(serviceAddress).done(createLayer).fail(logError);
 {{< /highlight >}}
 
-We should now visualize the average temperature imagery over land in the globe:
+We should now visualize imagery over the globe of the average temperature over land:
 
 {{% latestWorldWindScript url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}
 {{% getStarted_WMS %}}
