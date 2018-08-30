@@ -82,7 +82,7 @@ We have written a basic Web WorldWind app, but unlike the Java and Android versi
 If you do not already have a web server, you can use a minimal development web server built in [Node.js](https://en.wikipedia.org/wiki/Node.js):
 
 - • Download and install [Node](https://www.nodejs.org).
-- • Open a command line console in the root folder of your web app (where the 'index.html' file and your '/images' folder is located).
+- • Open a command line console in the root folder of your web app (where the 'index.html' file and your './images' folder is located).
 - • In the command line console, run `npm install http-server`.
 - • Execute the command `http-server` to start the server.
 - • In your web browsear, head to the address http://localhost/:8080.
@@ -90,7 +90,7 @@ If you do not already have a web server, you can use a minimal development web s
 Another option is to use [Python's http.server](https://docs.python.org/2/library/simplehttpserver.html):
 
 - • Download and install [Python](https://www.python.org/) version 3.X.
-- • Open a command line console in the root folder of your web app (where the 'index.html' file and your '/images' folder is located).
+- • Open a command line console in the root folder of your web app (where the 'index.html' file and your './images' folder is located).
 - • In the command line console, run `python -m http.server`.
 - • In your web browser, head to the address http://localhost/:8000.
 
@@ -102,7 +102,7 @@ In either case, you should see in your web browser a globe like this:
 ---
 ### Our WorldWind globe so far
 
-So now you have a WorldWind globe up an running in a local instance of a minimal web server. These are the contents of our web application up to this point:
+Now you have a WorldWind globe up an running in a local instance of a minimal web server. These are the contents of our web application up to this point:
 
 index.html:
 {{< highlight html >}}
@@ -174,7 +174,7 @@ Secondly, we'll define if we desire the placemark size to scale according to the
 
 The last argument binds the previously created `PlacemarkAttributes` to our placemark.
 
-Hence, the next steps on our placemark creation look like:
+The creation of a placemark at 55° latitude and 106° longitude at 100 meters altitude looks like this:
 
 {{< highlight javascript >}}
 var position = new WorldWind.Position(55.0, -106.0, 100.0);
@@ -266,7 +266,7 @@ var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_model
 var colladaLoader = new WorldWind.ColladaLoader(position, config);
 {{< /highlight >}}
 
-Note that this assumes a '/collada_models' folder as a sibling of the Web WorldWind library.
+Note that this assumes a './collada_models' folder as a sibling of the Web WorldWind library.
 
 We can now use the `load` function of `ColladaLoader` to retrieve the model file that we desire. The first parameter is a string with the model's filename, and the second is a [_callback function_](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function). Note that in this callback we're setting a scale for the model to have (we could also change its orientation), and we're asynchronously adding the 3D COLLADA model to the `modelLayer` only after ensuring that the `load` function executed successfully:
 
