@@ -23,7 +23,9 @@ To do it, we'll go over the following steps:
 
 ### Loading and displaying a WorldWind globe
 
-There are multiple ways to load the Web WorldWind library. The simplest is to include a script tag in an HTML page to link it directly from WorldWind's servers. Let's create a file named 'index.html' and add the following to it:
+There are multiple ways to load the Web WorldWind library. The simplest is to include a script tag in an HTML page to link it directly from WorldWind's servers.
+
+We can begin by creating a folder for our web application (say, 'HelloWorldWind'). Within that folder, Let's create a file named 'index.html' and add the following to it:
 
 {{< highlight html >}}
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ There are multiple ways to load the Web WorldWind library. The simplest is to in
 
 As shown above, within your body section and above the `script` tags, a canvas is needed where you want your globe to be, defining its `id`, `width` and `height`. You also want to include a message for browsers that do not support HTML5 Canvas.
 
-Now we'll create our WorldWind globe through JavaScript. In this example, we'll create a 'helloWorldWind.js' file. In our JavaScript file, first we need to create a WorldWindow. The [WorldWindow object](https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html) binds all Web WorldWind functionality to an HTML canvas via its `id`, which as defined in our previous HTML is `"canvasOne"`:
+Now we'll create our WorldWind globe through JavaScript. Within our project folder, we'll create a 'helloWorldWind.js' file. In our JavaScript file, first we need to create a WorldWindow. The [WorldWindow object](https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html) binds all Web WorldWind functionality to an HTML canvas via its `id`, which as defined in our previous HTML is `"canvasOne"`:
 
 {{< highlight javascript >}}
 var wwd = new WorldWind.WorldWindow("canvasOne");
@@ -69,7 +71,7 @@ wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
 wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
 {{< /highlight >}}
 
-Note that in order for both the corresponding icons of these controls to be displayed, as well as the low resolution Blue Marble imagery, we need their image files to be sourced locally. These need to be inside an '/images' directory which needs to be a sibling of the library, _i.e._ exist in the same directory. The image files can be downloaded in [here]({{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/images.zip).
+Note that in order for both the corresponding icons of these controls to be displayed, as well as the low resolution Blue Marble imagery, we need their image files to be sourced locally. These need to be inside an './images' directory which needs to be a sibling of the library, _i.e._ exist in the same directory (if following our convention, the folder should be './HelloWorldWind/images'). The image files can be downloaded in [here]({{% latestArtifactoryPath url="https://files.worldwind.arc.nasa.gov/artifactory" repo="web" %}}/images.zip).
 
 We have written a basic Web WorldWind app, but unlike the Java and Android versions of WorldWind, Web WorldWind is meant to be part of a web application, therefore we need a web server to visualize our work. If you're not familiar with local testing servers, [the Mozilla Development Network is a good place to start](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
 
