@@ -168,13 +168,13 @@ placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/push
 
 We can now create the placemark proper and add it to our `placemarkLayer`. For this, we create a placemark object using `new WorldWind.Placemark(position, false, placemarkAttributes);`. Let's review each argument.
 
-We will use a [WorldWind.Position](https://nasaworldwind.github.io/WebWorldWind/Position.html) object to define the placemark location over the globe in terms of [geographic coordinates](https://en.wikipedia.org/wiki/Geographic_coordinate_system): latitude, longitude, and elevation. Most placements in WorldWind are defined in terms of geographic coordinates.
+We will use a [WorldWind.Position](https://nasaworldwind.github.io/WebWorldWind/Position.html) object to define the placemark location over the globe in terms of [geographic coordinates](https://en.wikipedia.org/wiki/Geographic_coordinate_system): latitude, longitude, and altitude. Most placements in WorldWind are defined in terms of geographic coordinates.
 
 Secondly, we'll define if we desire the placemark size to scale according to the camera zoom. In this case we want the placemark size to remain constant, so it's set to `false`.
 
 The last argument binds the previously created `PlacemarkAttributes` to our placemark.
 
-The creation of a placemark at 55° N latitude, 106° W longitude and 100 meters elevation looks like this:
+The creation of a placemark at 55° N latitude, 106° W longitude and 100 meters altitude looks like this:
 
 {{< highlight javascript >}}
 var position = new WorldWind.Position(55.0, -106.0, 100.0);
