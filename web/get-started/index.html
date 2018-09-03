@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <title>
+        Get Started-Web WorldWind/NASA WorldWind
+        </title>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+<div>
+<nav class="navbar web-navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <p class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+            <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+        <div id="myNavBar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about">About</a></li>
+                <li><a href="/web">Web</a></li>
+                <li><a href="/android">Android</a></li>
+                <li><a href="/java">Java</a></li>
+                <li><a href="/serverkit">Server Kit</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+</nav>
+</div>
+
+
+    <div class="container-fluid">
+    <div class="row ww-carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                        <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WebWorldWind"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+
+                    <li><a href="/web#anchor">Overview</a></li>
+                    <li><a href="/web/get-started#anchor">Get Started</a></li>
+                    <li><a href="/web/features#anchor">Features</a></li>
+                    <li><a href="/web/examples#anchor">Examples</a></li>
+                    <li><a href="/web/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/web/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="get-started">Get Started</h2>
+
+<hr />
+
+<p>This is a quick guide to get started on Web WorldWind basics. This is what we&rsquo;re going to build:</p>
+
+<p>
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="FinalWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+    
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    
+    function eventWindowLoaded() {
+        
+        var wwd = new WorldWind.WorldWindow("FinalWorldWindow");
+
+        
+        wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+        
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+        
+        var placemarkLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(placemarkLayer);
+        
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        
+        placemarkAttributes.imageOffset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.3,
+            WorldWind.OFFSET_FRACTION, 0.0);
+
+        placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.5,
+            WorldWind.OFFSET_FRACTION, 1.0);
+
+        placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+        
+        var position = new WorldWind.Position(55.0, -106.0, 100.0);
+        var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+        placemark.label = "Placemark\n" +
+            "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+            "Lon " + placemark.position.longitude.toPrecision(5).toString();
+        placemark.alwaysOnTop = true;
+
+        placemarkLayer.addRenderable(placemark);
+
+        
+        var polygonLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(polygonLayer);
+
+        var polygonAttributes = new WorldWind.ShapeAttributes(null);
+        polygonAttributes.interiorColor = new WorldWind.Color(0, 1, 1, 0.75);
+        polygonAttributes.drawOutline = true;
+        polygonAttributes.applyLighting = true;
+        polygonAttributes.outlineColor = WorldWind.Color.BLUE;
+
+        var boundaries = [];
+        boundaries.push(new WorldWind.Position(20.0, -75.0, 700000.0));
+        boundaries.push(new WorldWind.Position(25.0, -85.0, 700000.0));
+        boundaries.push(new WorldWind.Position(20.0, -95.0, 700000.0));
+
+        var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
+        polygon.extrude = true;
+        polygonLayer.addRenderable(polygon);
+
+        
+        var modelLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(modelLayer);
+
+        var position = new WorldWind.Position(10.0, -125.0, 800000.0);
+        var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
+
+        var colladaLoader = new WorldWind.ColladaLoader(position, config);
+        colladaLoader.load("duck.dae", function (colladaModel) {
+            colladaModel.scale = 9000;
+            modelLayer.addRenderable(colladaModel);
+        });
+
+        
+        var serviceAddress = "https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0";
+        var layerName = "MOD_LSTD_CLIM_M";
+
+        var createLayer = function (xmlDom) {
+            var wms = new WorldWind.WmsCapabilities(xmlDom);
+            var wmsLayerCapabilities = wms.getNamedLayer(layerName);
+            var wmsConfig = WorldWind.WmsLayer.formLayerConfiguration(wmsLayerCapabilities);
+            var wmsLayer = new WorldWind.WmsLayer(wmsConfig);
+            wwd.addLayer(wmsLayer);
+        };
+
+        var logError = function (jqXhr, text, exception) {
+            console.log("There was a failure retrieving the capabilities document: " +
+                text +
+            " exception: " + exception);
+        };
+
+        $.get(serviceAddress).done(createLayer).fail(logError);
+    }
+</script></p>
+
+<p>To do it, we&rsquo;ll go over the following steps:</p>
+
+<ul>
+<li>• Loading and displaying a WorldWind globe</li>
+<li>• Setting up a development web server</li>
+<li>• Displaying some objects over the globe (placemarks and 3D shapes)</li>
+<li>• Displaying imagery from a 3rd party map service</li>
+</ul>
+
+<hr />
+
+<h3 id="loading-and-displaying-a-worldwind-globe">Loading and displaying a WorldWind globe</h3>
+
+<p>There are multiple ways to load the Web WorldWind library. The simplest is to include a script tag in an HTML page to link it directly from WorldWind&rsquo;s servers.</p>
+
+<p>We can begin by creating a folder for our web application (say, &lsquo;HelloWorldWind&rsquo;). Within that folder, Let&rsquo;s create a file named &lsquo;index.html&rsquo; and add the following to it:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;canvasOne&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1024&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;768&#34;</span>&gt;
+            Your browser does not support HTML5 Canvas.
+        &lt;/<span style="color:#f92672">canvas</span>&gt;
+        &lt;<span style="color:#f92672">script</span> 
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js&#34;</span>
+        <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;helloWorldWind.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+
+<p>As shown above, within your body section and above the <code>script</code> tags, a canvas is needed where you want your globe to be, defining its <code>id</code>, <code>width</code> and <code>height</code>. You also want to include a message for browsers that do not support HTML5 Canvas.</p>
+
+<p>Now we&rsquo;ll create our WorldWind globe through JavaScript. Within our project folder, we&rsquo;ll create a &lsquo;helloWorldWind.js&rsquo; file. In our JavaScript file, first we need to create a WorldWindow. The <a href="https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html">WorldWindow object</a> binds all Web WorldWind functionality to an HTML canvas via its <code>id</code>, which as defined in our previous HTML is <code>&quot;canvasOne&quot;</code>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wwd</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WorldWindow</span>(<span style="color:#e6db74">&#34;canvasOne&#34;</span>);
+</code></pre></div>
+
+<p>Now we can start manipulating our WorldWind instance through the WorldWindow. Let&rsquo;s add some imagery layers:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGOneImageLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGLandsatLayer</span>());
+</code></pre></div>
+
+<p>The first layer is a locally sourced, very low resolution version of <a href="https://visibleearth.nasa.gov/view_cat.php?categoryID=1484">NASA&rsquo;s Blue Marble</a>, which it may be used as a &lsquo;fallback&rsquo; if Web WorldWind is not able to request online imagery layers, such as the second one (<a href="https://landsat.gsfc.nasa.gov/">Landsat imagery</a> with higher resolution).</p>
+
+<p>We will also add a compass, a coordinates display, and some view controls to the <a href="https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html">WorldWindow</a>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CompassLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CoordinatesDisplayLayer</span>(<span style="color:#a6e22e">wwd</span>));
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ViewControlsLayer</span>(<span style="color:#a6e22e">wwd</span>));
+</code></pre></div>
+
+<p>Note that in order for both the corresponding icons of these controls to be displayed, as well as the low resolution Blue Marble imagery, we need their image files to be sourced locally. These need to be inside an &lsquo;./images&rsquo; directory which needs to be a sibling of the library, <em>i.e.</em> exist in the same directory (if following our convention, the folder should be &lsquo;./HelloWorldWind/images&rsquo;). The image files can be downloaded in <a href="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/images.zip">here</a>.</p>
+
+<p>We have written a basic Web WorldWind app, but unlike the Java and Android versions of WorldWind, Web WorldWind is meant to be part of a web application, therefore we need a web server to visualize our work. If you&rsquo;re not familiar with local testing servers, <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">the Mozilla Development Network is a good place to start</a>.</p>
+
+<hr />
+
+<h3 id="serving-your-application">Serving your application</h3>
+
+<p>If you do not already have a web server, you can use a minimal development web server built in <a href="https://en.wikipedia.org/wiki/Node.js">Node.js</a>:</p>
+
+<ul>
+<li>• Download and install <a href="https://www.nodejs.org">Node</a>.</li>
+<li>• Open a command line console in the root folder of your web app (where the &lsquo;index.html&rsquo; file and your &lsquo;./images&rsquo; folder is located).</li>
+<li>• In the command line console, run <code>npm install http-server</code>.</li>
+<li>• Execute the command <code>http-server</code> to start the server.</li>
+<li>• In your web browsear, head to the address <a href="http://localhost/:8080">http://localhost/:8080</a>.</li>
+</ul>
+
+<p>Another option is to use <a href="https://docs.python.org/2/library/simplehttpserver.html">Python&rsquo;s http.server</a>:</p>
+
+<ul>
+<li>• Download and install <a href="https://www.python.org/">Python</a> version 3.X.</li>
+<li>• Open a command line console in the root folder of your web app (where the &lsquo;index.html&rsquo; file and your &lsquo;./images&rsquo; folder is located).</li>
+<li>• In the command line console, run <code>python -m http.server</code>.</li>
+<li>• In your web browser, head to the address <a href="http://localhost/:8000">http://localhost/:8000</a>.</li>
+</ul>
+
+<p>In either case, you should see in your web browser a globe like this:</p>
+
+<p>
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="ServingTheGlobeWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+    
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    
+    function eventWindowLoaded() {
+        
+        var wwd = new WorldWind.WorldWindow("ServingTheGlobeWorldWindow");
+
+        
+        wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+        
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+    }
+</script></p>
+
+<hr />
+
+<h3 id="our-worldwind-globe-so-far">Our WorldWind globe so far</h3>
+
+<p>Now you have a WorldWind globe up an running in a local instance of a minimal web server. These are the contents of our web application up to this point:</p>
+
+<p>index.html:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;canvasOne&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1024&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;768&#34;</span>&gt;
+        Your browser does not support HTML5 Canvas.
+    &lt;/<span style="color:#f92672">canvas</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;helloWorldWind.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div></p>
+
+<p>helloWorldWind.js:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wwd</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WorldWindow</span>(<span style="color:#e6db74">&#34;canvasOne&#34;</span>);
+
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGOneImageLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGLandsatLayer</span>());
+
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CompassLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CoordinatesDisplayLayer</span>(<span style="color:#a6e22e">wwd</span>));
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ViewControlsLayer</span>(<span style="color:#a6e22e">wwd</span>));
+</code></pre></div></p>
+
+<p>You can easily add to the globe things like placemarks, tridimensional polygon volumes, and other surface shapes. As you may have inferred from our code so far, WorldWind&rsquo;s basic mechanism for displaying information on the globe is the <a href="https://nasaworldwind.github.io/WebWorldWind/Layer.html">Layer</a>. As we are about to see, Layers are not exclusively related to map imagery. It&rsquo;s in a Layer where we should store the different kinds of shapes that we desire.</p>
+
+<hr />
+
+<h3 id="drawing-placemarks">Drawing placemarks</h3>
+
+<p>Let&rsquo;s begin with adding a <a href="https://nasaworldwind.github.io/WebWorldWind/Placemark.html">placemark</a>. As with all shapes, let&rsquo;s create a layer to store it, and then add it to the <a href="https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html">WorldWindow</a>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemarkLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>(<span style="color:#e6db74">&#34;Placemark&#34;</span>);
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">placemarkLayer</span>);
+</code></pre></div>
+
+<p>Then we can create a <a href="https://nasaworldwind.github.io/WebWorldWind/PlacemarkAttributes.html">PlacemarkAttributes</a> object to define the attributes for the placemark to have. We will use an image file to draw the placemark, and we want to draw a text label beneath the placemark image. We can customize the positioning of both the image and the text label via <a href="https://nasaworldwind.github.io/WebWorldWind/Offset.html">Offsets</a>, and we can define which color we desire for the text with a <a href="https://nasaworldwind.github.io/WebWorldWind/Color.html">WorldWind.Color</a> object:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemarkAttributes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">PlacemarkAttributes</span>(<span style="color:#66d9ef">null</span>);
+
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">imageOffset</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Offset</span>(
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.3</span>,
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.0</span>);
+
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">labelAttributes</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Color</span>.<span style="color:#a6e22e">YELLOW</span>;
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">labelAttributes</span>.<span style="color:#a6e22e">offset</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Offset</span>(
+            <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.5</span>,
+            <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">1.0</span>);
+</code></pre></div>
+
+<p>Finally, we&rsquo;ll define which image to use for the placemark. We&rsquo;ll use a pushpin image included in the images bundle mentioned at the beginning. <code>WorldWind.configuration.baseUrl</code> provides us with a relative path to the root folder where Web WorldWind is being served:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">imageSource</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">configuration</span>.<span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;images/pushpins/plain-red.png&#34;</span>;
+</code></pre></div>
+
+<p>We can now create the placemark proper and add it to our <code>placemarkLayer</code>. For this, we create a placemark object using <code>new WorldWind.Placemark(position, false, placemarkAttributes);</code>. Let&rsquo;s review each argument.</p>
+
+<p>We will use a <a href="https://nasaworldwind.github.io/WebWorldWind/Position.html">WorldWind.Position</a> object to define the placemark location over the globe in terms of <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinates</a>: latitude, longitude, and altitude. Most placements in WorldWind are defined in terms of geographic coordinates.</p>
+
+<p>Secondly, we&rsquo;ll define if we desire the placemark size to scale according to the camera zoom. In this case we want the placemark size to remain constant, so it&rsquo;s set to <code>false</code>.</p>
+
+<p>The last argument binds the previously created <code>PlacemarkAttributes</code> to our placemark.</p>
+
+<p>The creation of a placemark at 55° N latitude, 106° W longitude and 100 meters altitude looks like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">55.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">106.0</span>, <span style="color:#ae81ff">100.0</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemark</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Placemark</span>(<span style="color:#a6e22e">position</span>, <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">placemarkAttributes</span>);
+</code></pre></div>
+
+<p>Using the <code>Placemark.label</code> property, we can define the text contents of it with a String. In this case, we&rsquo;ll display the placemark&rsquo;s latitude and longitude. We&rsquo;ll also want the placemark to always be drawn on top of other shapes placed over the globe.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">label</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Placemark\n&#34;</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34;Lat &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">latitude</span>.<span style="color:#a6e22e">toPrecision</span>(<span style="color:#ae81ff">4</span>).<span style="color:#a6e22e">toString</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34;Lon &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">longitude</span>.<span style="color:#a6e22e">toPrecision</span>(<span style="color:#ae81ff">5</span>).<span style="color:#a6e22e">toString</span>();
+<span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">alwaysOnTop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</code></pre></div>
+
+<p>Experiment with the placemark positioning and customization. Try putting a placemark at your house, for instance.</p>
+
+<p>We have customized our placemark how we want. We can finally add it to the previously created <code>placemarkLayer</code>, which will display the contents of the Layer. We could keep adding more placemarks to <code>placemarkLayer</code> if we desire.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">placemarkLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">placemark</span>);
+</code></pre></div>
+
+<p>The work so far should look like this:
+
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="PlacemarkWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+    
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    
+    function eventWindowLoaded() {
+        
+        WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING);
+
+        
+        var wwd = new WorldWind.WorldWindow("PlacemarkWorldWindow");
+
+        
+        wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+        
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+        
+        var placemarkLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(placemarkLayer);
+        
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        
+        placemarkAttributes.imageOffset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.3,
+            WorldWind.OFFSET_FRACTION, 0.0);
+
+        placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.5,
+            WorldWind.OFFSET_FRACTION, 1.0);
+
+        placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+        
+        var position = new WorldWind.Position(55.0, -106.0, 100.0);
+        var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+        placemark.label = "Placemark\n" +
+            "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+            "Lon " + placemark.position.longitude.toPrecision(5).toString();
+        placemark.alwaysOnTop = true;
+
+        placemarkLayer.addRenderable(placemark);
+    }
+</script></p>
+
+<hr />
+
+<h3 id="displaying-3d-shapes">Displaying 3D shapes</h3>
+
+<p>In WorldWind there are different types of tridimensional shapes, among them, the <a href="https://nasaworldwind.github.io/WebWorldWind/Polygon.html">Polygon</a>. We&rsquo;ll add one to our current example.</p>
+
+<p>First we need a layer to store our Polygon shape. Let&rsquo;s create it and add it to the <a href="https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html">WorldWindow</a>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygonLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>();
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">polygonLayer</span>);
+</code></pre></div>
+
+<p>As with the placemark, we&rsquo;ll define first the attributes for the polygon to have. We create a <a href="https://nasaworldwind.github.io/WebWorldWind/ShapeAttributes.html">WorldWind.ShapeAttributes</a> object to then define colors for the shape interior and outline. Note that we&rsquo;re using a new notation for the interior with a flexible RGBA notation (in this case, three quarters-transparent turquiose blue). The outline is solid blue as defined with a <a href="https://nasaworldwind.github.io/WebWorldWind/Color.html">WorldWind.Color</a> object, similar to what we did with the placemark. The outline is set to appear and a lightsource is applied to the tridimensional shape, so shading will be applied to it depending on the camera&rsquo;s view angle:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygonAttributes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ShapeAttributes</span>(<span style="color:#66d9ef">null</span>);
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">interiorColor</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Color</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.75</span>);
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">outlineColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Color</span>.<span style="color:#a6e22e">BLUE</span>;
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">drawOutline</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">applyLighting</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</code></pre></div>
+
+<p>Now, in terms of latitude, longitude and altitude, we define the boundaries of the polygon using an array of <a href="https://nasaworldwind.github.io/WebWorldWind/Position.html">WorldWind.Position</a> objects. We can create many different shapes, including polygons with interior boundaries. In this case we&rsquo;ll create a triangle 70 km high from the Earth&rsquo;s surface:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boundaries</span> <span style="color:#f92672">=</span> [];
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">20.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">75.0</span>, <span style="color:#ae81ff">700000.0</span>));
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">25.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">85.0</span>, <span style="color:#ae81ff">700000.0</span>));
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">20.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">95.0</span>, <span style="color:#ae81ff">700000.0</span>));
+</code></pre></div>
+
+<p>We can now construct our polygon shape with these boundaries and attributes. We want to display our shape as an extrusion from the surface of the Earth, and we use the <code>polygon.extrude</code> attribute set to <code>true</code> for this. If set to <code>false</code>, we would see a hovering triangle without thickness instead. Then we finally add the polygon to the <code>polygonLayer</code>. As with the <code>placemarkLayer</code>, we could keep adding more shapes to it if we desire.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygon</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Polygon</span>(<span style="color:#a6e22e">boundaries</span>, <span style="color:#a6e22e">polygonAttributes</span>);
+<span style="color:#a6e22e">polygon</span>.<span style="color:#a6e22e">extrude</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#a6e22e">polygonLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">polygon</span>);
+</code></pre></div>
+
+<p>This is how the polygon looks as configured. To distinguish its 3D shape, you can tilt the camera with right click dragging (or three finger sweep if in a mobile device).</p>
+
+<p>
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="PolygonWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+    
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    
+    function eventWindowLoaded() {
+        
+        var wwd = new WorldWind.WorldWindow("PolygonWorldWindow");
+ 
+        
+        wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+        
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+        
+        var placemarkLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(placemarkLayer);
+        
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        
+        placemarkAttributes.imageOffset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.3,
+            WorldWind.OFFSET_FRACTION, 0.0);
+
+        placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.5,
+            WorldWind.OFFSET_FRACTION, 1.0);
+
+        placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+        
+        var position = new WorldWind.Position(55.0, -106.0, 100.0);
+        var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+        placemark.label = "Placemark\n" +
+            "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+            "Lon " + placemark.position.longitude.toPrecision(5).toString();
+        placemark.alwaysOnTop = true;
+
+        placemarkLayer.addRenderable(placemark);
+
+        
+        var polygonLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(polygonLayer);
+
+        var polygonAttributes = new WorldWind.ShapeAttributes(null);
+        polygonAttributes.interiorColor = new WorldWind.Color(0, 1, 1, 0.75);
+        polygonAttributes.drawOutline = true;
+        polygonAttributes.applyLighting = true;
+        polygonAttributes.outlineColor = WorldWind.Color.BLUE;
+
+        var boundaries = [];
+        boundaries.push(new WorldWind.Position(20.0, -75.0, 700000.0));
+        boundaries.push(new WorldWind.Position(25.0, -85.0, 700000.0));
+        boundaries.push(new WorldWind.Position(20.0, -95.0, 700000.0));
+
+        var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
+        polygon.extrude = true;
+        polygonLayer.addRenderable(polygon);
+    }
+</script></p>
+
+<hr />
+
+<p>We can also display more complex 3D shapes from external sources, like <a href="https://www.khronos.org/collada/wiki/COLLADA">COLLADA</a> 3D model files. COLLADA is basically an open standard for 3D content that provides encoding of visual scenes including geometry, shaders and effects, physics, animation, kinematics, and even multiple version representations of the same asset. Let&rsquo;s add a COLLADA model to our current scene.</p>
+
+<p>As usual, let&rsquo;s create a Layer and add it to the <a href="https://nasaworldwind.github.io/WebWorldWind/WorldWindow.html">WorldWindow</a> to have a place where to store the 3D model:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">modelLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>();
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">modelLayer</span>);
+</code></pre></div>
+
+<p>To load a COLLADA .dae file, we need a <a href="https://nasaworldwind.github.io/WebWorldWind/ColladaLoader.html">WorldWind.ColladaLoader</a> object, which will asynchronously retrieve the file. We can create it defining a position for the 3D model to have (again, a <a href="https://nasaworldwind.github.io/WebWorldWind/Position.html">WorldWind.Position</a> object in terms of latitude, longitude, and altitude) and a configuration object containing a <code>dirPath</code> attribute that points towards a folder where many .dae files may be located. Web WorldWind&rsquo;s repository contains a COLLADA .dae file (and its .png texture) which otherwise you can download <a href="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/examples/collada_models/">here</a>.</p>
+
+<p>We feed both parameters to the <code>ColladaLoader</code> constructor as follows:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">10.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">125.0</span>, <span style="color:#ae81ff">800000.0</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">dirPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">configuration</span>.<span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;examples/collada_models/duck/&#39;</span>};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">colladaLoader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ColladaLoader</span>(<span style="color:#a6e22e">position</span>, <span style="color:#a6e22e">config</span>);
+</code></pre></div>
+
+<p>Note that this assumes a &lsquo;./collada_models&rsquo; folder as a sibling of the Web WorldWind library.</p>
+
+<p>We can now use the <code>load</code> function of <code>ColladaLoader</code> to retrieve the model file that we desire. The first parameter is a string with the model&rsquo;s filename, and the second is a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"><em>callback function</em></a>. Note that in this callback we&rsquo;re setting a scale for the model to have (we could also change its orientation), and we&rsquo;re asynchronously adding the 3D COLLADA model to the <code>modelLayer</code> only after ensuring that the <code>load</code> function executed successfully:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colladaLoader</span>.<span style="color:#a6e22e">load</span>(<span style="color:#e6db74">&#34;duck.dae&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">colladaModel</span>) {
+    <span style="color:#a6e22e">colladaModel</span>.<span style="color:#a6e22e">scale</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9000</span>;
+    <span style="color:#a6e22e">modelLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">colladaModel</span>);
+});
+</code></pre></div>
+
+<p>This should be the end result:</p>
+
+<p>
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="ColladaWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+    
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    
+    function eventWindowLoaded() {
+        
+        var wwd = new WorldWind.WorldWindow("ColladaWorldWindow");
+ 
+        
+        wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+        
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+        
+        var placemarkLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(placemarkLayer);
+        
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        
+        placemarkAttributes.imageOffset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.3,
+            WorldWind.OFFSET_FRACTION, 0.0);
+
+        placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.5,
+            WorldWind.OFFSET_FRACTION, 1.0);
+
+        placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+        
+        var position = new WorldWind.Position(55.0, -106.0, 100.0);
+        var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+        placemark.label = "Placemark\n" +
+            "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+            "Lon " + placemark.position.longitude.toPrecision(5).toString();
+        placemark.alwaysOnTop = true;
+
+        placemarkLayer.addRenderable(placemark);
+
+        
+        var polygonLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(polygonLayer);
+
+        var polygonAttributes = new WorldWind.ShapeAttributes(null);
+        polygonAttributes.interiorColor = new WorldWind.Color(0, 1, 1, 0.75);
+        polygonAttributes.drawOutline = true;
+        polygonAttributes.applyLighting = true;
+        polygonAttributes.outlineColor = WorldWind.Color.BLUE;
+
+        var boundaries = [];
+        boundaries.push(new WorldWind.Position(20.0, -75.0, 700000.0));
+        boundaries.push(new WorldWind.Position(25.0, -85.0, 700000.0));
+        boundaries.push(new WorldWind.Position(20.0, -95.0, 700000.0));
+
+        var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
+        polygon.extrude = true;
+        polygonLayer.addRenderable(polygon);
+
+        
+        var modelLayer = new WorldWind.RenderableLayer();
+        wwd.addLayer(modelLayer);
+
+        var position = new WorldWind.Position(10.0, -125.0, 800000.0);
+        var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
+
+        var colladaLoader = new WorldWind.ColladaLoader(position, config);
+        colladaLoader.load("duck.dae", function (colladaModel) {
+            colladaModel.scale = 9000;
+            modelLayer.addRenderable(colladaModel);
+        });
+    }
+</script></p>
+
+<hr />
+
+<h3 id="accessing-a-map-imagery-service">Accessing a map imagery service</h3>
+
+<p>WorldWind supports different open standards for retrieving georeferenced map imagery from a server, among them <a href="http://www.opengeospatial.org/standards/wms">WMS (Web Map Service)</a>. Let&rsquo;s see how we can access such a service.</p>
+
+<p>For this feature we will use the commonly used <a href="https://jquery.com/">jQuery library</a>. It&rsquo;s not strictly necessary, but it makes life easier. Let&rsquo;s make it the first library we load (before WorldWind itself and our helloWorldWind.js file) via a <code>&lt;script&gt;</code> tag in our HTML file:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+
+<p>Now, back in our JavaScript file, we&rsquo;ll retrieve an imagery layer from <a href="https://neo.sci.gsfc.nasa.gov/about/wms.php">NASA Earth Observations WMS</a> (Thank you, GSFC folks!) We&rsquo;ll need the WMS address alongside its WMS&rsquo;s <code>GetCapabilities</code> request:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">serviceAddress</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&amp;REQUEST=GetCapabilities&amp;VERSION=1.3.0&#34;</span>;
+</code></pre></div>
+
+<p>Within that document, we can identify the different imagery layers that the service provides. We&rsquo;ll choose one that displays the average temperature data.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">layerName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MOD_LSTD_CLIM_M&#34;</span>;
+</code></pre></div></p>
+
+<p>Now let&rsquo;s define a function to create our layer from the XML document from the WMS.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">createLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">xmlDom</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wms</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsCapabilities</span>(<span style="color:#a6e22e">xmlDom</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsLayerCapabilities</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">wms</span>.<span style="color:#a6e22e">getNamedLayer</span>(<span style="color:#a6e22e">layerName</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsConfig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsLayer</span>.<span style="color:#a6e22e">formLayerConfiguration</span>(<span style="color:#a6e22e">wmsLayerCapabilities</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsLayer</span>(<span style="color:#a6e22e">wmsConfig</span>);
+    <span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">wmsLayer</span>);
+};
+</code></pre></div>
+
+<p>Let&rsquo;s briefly go through what every instruction line does within the <code>createLayer</code> function, in order:</p>
+
+<ul>
+<li>• Creates a <a href="https://nasaworldwind.github.io/WebWorldWind/WMSCapabilities.html">WmsCapabilities</a> object from the XML document.</li>
+<li>• Retrieves a <a href="https://nasaworldwind.github.io/WebWorldWind/WmsLayerCapabilities.html">WmsLayerCapabilities</a> object by the desired layer name.</li>
+<li>• Constructs a configuration object from the <code>WmsLayerCapabilities</code> object</li>
+<li>• Creates the WMS Layer from the configuration object</li>
+<li>• Adds the layer to the WorldWindow</li>
+</ul>
+
+<p>Now let&rsquo;s handle possible errors that may occur is something fails during the WMS request:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">logError</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">jqXhr</span>, <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">exception</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;There was a failure retrieving the capabilities document: &#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#a6e22e">text</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34; exception: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">exception</span>);
+};
+</code></pre></div></p>
+
+<p>We finally have everything to do our request and display the imagery to Web WorldWind. This is where jQuery comes handy. <a href="https://api.jquery.com/jquery.get/">In a single instruction</a> we&rsquo;re doing the <a href="https://www.w3schools.com/xml/xml_http.asp">(otherwise very long)</a> xhttp request, pointing out what to do if it succeeds, and what to do if it fails:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">serviceAddress</span>).<span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">createLayer</span>).<span style="color:#a6e22e">fail</span>(<span style="color:#a6e22e">logError</span>);
+</code></pre></div>
+
+<p>We should now visualize imagery over the globe of the average temperature over land:</p>
+
+<p>
+
+
+
+
+    
+    <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <canvas id="WMSWorldWindow" style="width: 500px; height: 500px; background-color: white;">
+        Your browser does not support HTML5 Canvas.
+    </canvas>
+</div>
+
+<script type="text/javascript">
+
+window.addEventListener("load", eventWindowLoaded, false);
+
+
+function eventWindowLoaded() {
+    
+    var wwd = new WorldWind.WorldWindow("WMSWorldWindow");
+
+    
+    wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+    wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+
+    
+    wwd.addLayer(new WorldWind.CompassLayer());
+    wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+    wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+    
+    var placemarkLayer = new WorldWind.RenderableLayer();
+    wwd.addLayer(placemarkLayer);
+    
+    var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+    
+    placemarkAttributes.imageOffset = new WorldWind.Offset(
+        WorldWind.OFFSET_FRACTION, 0.3,
+        WorldWind.OFFSET_FRACTION, 0.0);
+
+    placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+        WorldWind.OFFSET_FRACTION, 0.5,
+        WorldWind.OFFSET_FRACTION, 1.0);
+
+    placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+    
+    var position = new WorldWind.Position(55.0, -106.0, 100.0);
+    var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+    placemark.label = "Placemark\n" +
+        "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+        "Lon " + placemark.position.longitude.toPrecision(5).toString();
+    placemark.alwaysOnTop = true;
+
+    placemarkLayer.addRenderable(placemark);
+
+    
+    var polygonLayer = new WorldWind.RenderableLayer();
+    wwd.addLayer(polygonLayer);
+
+    var polygonAttributes = new WorldWind.ShapeAttributes(null);
+    polygonAttributes.interiorColor = new WorldWind.Color(0, 1, 1, 0.75);
+    polygonAttributes.drawOutline = true;
+    polygonAttributes.applyLighting = true;
+    polygonAttributes.outlineColor = WorldWind.Color.BLUE;
+
+    var boundaries = [];
+    boundaries.push(new WorldWind.Position(20.0, -75.0, 700000.0));
+    boundaries.push(new WorldWind.Position(25.0, -85.0, 700000.0));
+    boundaries.push(new WorldWind.Position(20.0, -95.0, 700000.0));
+
+    var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
+    polygon.extrude = true;
+    polygonLayer.addRenderable(polygon);
+
+    
+    var modelLayer = new WorldWind.RenderableLayer();
+    wwd.addLayer(modelLayer);
+
+    var position = new WorldWind.Position(10.0, -125.0, 800000.0);
+    var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
+
+    var colladaLoader = new WorldWind.ColladaLoader(position, config);
+    colladaLoader.load("duck.dae", function (colladaModel) {
+        colladaModel.scale = 9000;
+        modelLayer.addRenderable(colladaModel);
+    });
+
+    
+    var serviceAddress = "https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0";
+    var layerName = "MOD_LSTD_CLIM_M";
+
+    var createLayer = function (xmlDom) {
+        var wms = new WorldWind.WmsCapabilities(xmlDom);
+        var wmsLayerCapabilities = wms.getNamedLayer(layerName);
+        var wmsConfig = WorldWind.WmsLayer.formLayerConfiguration(wmsLayerCapabilities);
+        var wmsLayer = new WorldWind.WmsLayer(wmsConfig);
+        wwd.addLayer(wmsLayer);
+    };
+
+    var logError = function (jqXhr, text, exception) {
+        console.log("There was a failure retrieving the capabilities document: " +
+            text +
+        " exception: " + exception);
+    };
+
+    $.get(serviceAddress).done(createLayer).fail(logError);
+}
+
+</script>
+</p>
+
+<hr />
+
+<h2 id="in-summary">In summary</h2>
+
+<p>Congratulations! You now have a good grasp of how to use core Web WorldWind concepts and features.</p>
+
+<p>Every feature here and more is described thoroughly via code examples in our repository in the <a href="https://github.com/NASAWorldWind/WebWorldWind/tree/develop/examples">&lsquo;examples&rsquo;</a> and <a href="https://github.com/NASAWorldWind/WebWorldWind/tree/develop/apps">&lsquo;apps&rsquo;</a> folders. Be sure to also check out our <a href="https://worldwind.arc.nasa.gov/web/docs/">API documentation</a> for detailed information on the objects and functions described here.</p>
+
+<p>This is the final result in code:</p>
+
+<p>&lsquo;index.html&rsquo;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;canvasOne&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1024&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;768&#34;</span>&gt;
+            Your browser does not support HTML5 Canvas.
+        &lt;/<span style="color:#f92672">canvas</span>&gt;
+        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+        &lt;<span style="color:#f92672">script</span> 
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js&#34;</span>
+        <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">script</span>&gt;
+        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;helloWorldWind.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div></p>
+
+<p>&lsquo;helloWorldWind.js&rsquo;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Create a WorldWindow for the canvas.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wwd</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WorldWindow</span>(<span style="color:#e6db74">&#34;canvasOne&#34;</span>);
+
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGOneImageLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">BMNGLandsatLayer</span>());
+
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CompassLayer</span>());
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">CoordinatesDisplayLayer</span>(<span style="color:#a6e22e">wwd</span>));
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ViewControlsLayer</span>(<span style="color:#a6e22e">wwd</span>));
+
+<span style="color:#75715e">// Add a placemark
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemarkLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>();
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">placemarkLayer</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemarkAttributes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">PlacemarkAttributes</span>(<span style="color:#66d9ef">null</span>);
+
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">imageOffset</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Offset</span>(
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.3</span>,
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.0</span>);
+
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">labelAttributes</span>.<span style="color:#a6e22e">offset</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Offset</span>(
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">0.5</span>,
+    <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">OFFSET_FRACTION</span>, <span style="color:#ae81ff">1.0</span>);
+
+<span style="color:#a6e22e">placemarkAttributes</span>.<span style="color:#a6e22e">imageSource</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">configuration</span>.<span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;images/pushpins/plain-red.png&#34;</span>;
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">55.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">106.0</span>, <span style="color:#ae81ff">100.0</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">placemark</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Placemark</span>(<span style="color:#a6e22e">position</span>, <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">placemarkAttributes</span>);
+
+<span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">label</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Placemark\n&#34;</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34;Lat &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">latitude</span>.<span style="color:#a6e22e">toPrecision</span>(<span style="color:#ae81ff">4</span>).<span style="color:#a6e22e">toString</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34;Lon &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">longitude</span>.<span style="color:#a6e22e">toPrecision</span>(<span style="color:#ae81ff">5</span>).<span style="color:#a6e22e">toString</span>();
+<span style="color:#a6e22e">placemark</span>.<span style="color:#a6e22e">alwaysOnTop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#a6e22e">placemarkLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">placemark</span>);
+
+<span style="color:#75715e">// Add a polygon
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygonLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>();
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">polygonLayer</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygonAttributes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ShapeAttributes</span>(<span style="color:#66d9ef">null</span>);
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">interiorColor</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Color</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.75</span>);
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">outlineColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Color</span>.<span style="color:#a6e22e">BLUE</span>;
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">drawOutline</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#a6e22e">polygonAttributes</span>.<span style="color:#a6e22e">applyLighting</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boundaries</span> <span style="color:#f92672">=</span> [];
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">20.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">75.0</span>, <span style="color:#ae81ff">700000.0</span>));
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">25.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">85.0</span>, <span style="color:#ae81ff">700000.0</span>));
+<span style="color:#a6e22e">boundaries</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">20.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">95.0</span>, <span style="color:#ae81ff">700000.0</span>));
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">polygon</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Polygon</span>(<span style="color:#a6e22e">boundaries</span>, <span style="color:#a6e22e">polygonAttributes</span>);
+<span style="color:#a6e22e">polygon</span>.<span style="color:#a6e22e">extrude</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#a6e22e">polygonLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">polygon</span>);
+
+<span style="color:#75715e">// Add a COLLADA model
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">modelLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">RenderableLayer</span>();
+<span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">modelLayer</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">Position</span>(<span style="color:#ae81ff">10.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">125.0</span>, <span style="color:#ae81ff">800000.0</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">dirPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">configuration</span>.<span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;examples/collada_models/duck/&#39;</span>};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">colladaLoader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">ColladaLoader</span>(<span style="color:#a6e22e">position</span>, <span style="color:#a6e22e">config</span>);
+<span style="color:#a6e22e">colladaLoader</span>.<span style="color:#a6e22e">load</span>(<span style="color:#e6db74">&#34;duck.dae&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">colladaModel</span>) {
+    <span style="color:#a6e22e">colladaModel</span>.<span style="color:#a6e22e">scale</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9000</span>;
+    <span style="color:#a6e22e">modelLayer</span>.<span style="color:#a6e22e">addRenderable</span>(<span style="color:#a6e22e">colladaModel</span>);
+});
+
+<span style="color:#75715e">// Add WMS imagery
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">serviceAddress</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&amp;REQUEST=GetCapabilities&amp;VERSION=1.3.0&#34;</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">layerName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MOD_LSTD_CLIM_M&#34;</span>;
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">createLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">xmlDom</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wms</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsCapabilities</span>(<span style="color:#a6e22e">xmlDom</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsLayerCapabilities</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">wms</span>.<span style="color:#a6e22e">getNamedLayer</span>(<span style="color:#a6e22e">layerName</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsConfig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsLayer</span>.<span style="color:#a6e22e">formLayerConfiguration</span>(<span style="color:#a6e22e">wmsLayerCapabilities</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wmsLayer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WorldWind</span>.<span style="color:#a6e22e">WmsLayer</span>(<span style="color:#a6e22e">wmsConfig</span>);
+    <span style="color:#a6e22e">wwd</span>.<span style="color:#a6e22e">addLayer</span>(<span style="color:#a6e22e">wmsLayer</span>);
+};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">logError</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">jqXhr</span>, <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">exception</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;There was a failure retrieving the capabilities document: &#34;</span> <span style="color:#f92672">+</span>
+        <span style="color:#a6e22e">text</span> <span style="color:#f92672">+</span>
+    <span style="color:#e6db74">&#34; exception: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">exception</span>);
+};
+
+<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">serviceAddress</span>).<span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">createLayer</span>).<span style="color:#a6e22e">fail</span>(<span style="color:#a6e22e">logError</span>);
+</code></pre></div></p>
+
+<p><br></p>
+
+    </section>
+</div>
+
+
+
+
+<div class="push"></div>
+<script type="text/javascript" src="/js/event-tracking.js"></script>
+
+</div>
+</body>
+<div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+</div>
+</html>

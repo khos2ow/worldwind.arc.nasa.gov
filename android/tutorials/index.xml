@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials-WorldWind Android/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/android/tutorials/</link>
+    <description>Recent content in Tutorials-WorldWind Android/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2017 14:51:58 -0400</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/android/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ellipse</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/ellipse/</link>
+      <pubDate>Fri, 02 Feb 2018 16:17:14 -0600</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/ellipse/</guid>
+      <description>Ellipse This tutorial demonstrates how to configure an Ellipse shape and add it to the globe.
+Ellipse uses the provided major radius, minor radius, heading, and center position to draw an Ellipse on the globe. The outline of the ellipse is computed in geographic space using great circle distance. The number of points used to build the outline is dynamic and based on the camera distance to the shape.</description>
+    </item>
+    
+    <item>
+      <title>Line Of Sight-WorldWind Android-NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/line-of-sight/</link>
+      <pubDate>Tue, 22 Aug 2017 17:25:39 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/line-of-sight/</guid>
+      <description>Line Of Sight   Video above from the Line Of Sight Example This tutorial demonstrates the OmnidirectionalSightline class and how it can be used to display the line of sight visible portions of terrain given an origin.
+OmnidirectionalSightline uses the GPU to determine the visible areas of terrain from a position. A Position and range is all that is needed for the OmnidirectionalSightline object to display the visible areas.</description>
+    </item>
+    
+    <item>
+      <title>Show Tessellation-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/show-tessellation/</link>
+      <pubDate>Fri, 07 Jul 2017 00:47:30 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/show-tessellation/</guid>
+      <description>Show Tessellation This example adds a layer to the basic globe that shows the tessellation.
+ShowTessellationFragement.java The ShowTessellationFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we simply add an additional ShowTessellationLayer to the globe.
+public class ShowTessellationFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with a additional tessellation layer. */ @Override public WorldWindow createWorldWindow() { // Let the super class (BasicGlobeFragment) do the creation WorldWindow wwd = super.</description>
+    </item>
+    
+    <item>
+      <title>Camera Controls-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/camera-controls/</link>
+      <pubDate>Fri, 07 Jul 2017 00:43:36 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/camera-controls/</guid>
+      <description>Camera Controls This advanced example uses the Navigator&amp;rsquo;s setAsCamera interface in response to touch event gestures. It overrides the default pan, zoom and rotate behavior.
+ one-finger pan moves the geographic location of the camera, two-finger pinch-zoom adjusts the camera altitude, two-finger rotate rotates the camera about its own axis, three-finger tilt tilts the camera about its own axis.  CameraControlFragment.java The CameraControlFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method.</description>
+    </item>
+    
+    <item>
+      <title>Shapes Dash and Fill-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/shapes-dash-and-fill/</link>
+      <pubDate>Fri, 07 Jul 2017 00:38:02 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/shapes-dash-and-fill/</guid>
+      <description>Shapes Dash and Fill This example renders five different dashed shapes on the globe.
+ The westernmost Path specifies a dash pattern and factor. The middle Path modifies the dash factor from the western example. The easternmost Path follows terrain and uses a different pattern. The Ellipse specifies a repeating fill using an image. The southern Polygon uses the same repeating fill, but follows terrain and specifies a dash pattern for the outline.</description>
+    </item>
+    
+    <item>
+      <title>Labels-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/labels/</link>
+      <pubDate>Fri, 07 Jul 2017 00:33:17 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/labels/</guid>
+      <description>Labels This tutorial uses Labels shapes to identify landmarks around Washington, D.C. Label shapes have a variety of configurable properties, including:
+ Text Color Text Size (in screen pixels) Typeface Text Outline Rotation Outline Color Outline Size  LabelsFragment.java The LabelsFragment class extends BasicGlobeFragment and overrides the createWorldWindow method. Here we configure six Label shapes to identify landmarks around Washington, D.C.
+package gov.nasa.worldwindx; ... public class LabelsFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a set of label shapes * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>Polygons-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/polygons/</link>
+      <pubDate>Fri, 07 Jul 2017 00:30:16 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/polygons/</guid>
+      <description>Polygons This example renders six different five-sided polygons on the globe.
+ The top-left polygon is above ground, using the default ABSOLUTE altitude mode and default attributes. The top-right polygon is on the terrain surface, using a CLAMP_TO_GROUND altitude mode and setFollowTerrain(true). The middle-left polygon is above ground, like the top-left, but with setExtrude(true). The middle-right polygon is like the middle-left, but with custom attributes. The bottom-left polygon contains an inner ring specified with addBoundary(List).</description>
+    </item>
+    
+    <item>
+      <title>Paths-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/paths/</link>
+      <pubDate>Fri, 07 Jul 2017 00:26:01 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/paths/</guid>
+      <description>Paths This example renders four different wing-shaped or chevron-shaped paths on the globe.
+ The northern most path is above ground, using the default ABSOLUTE altitude mode and default attributes. The next path is on the terrain surface, using a CLAMP_TO_GROUND altitude mode and setFollowTerrain(true). The third path is above ground, like the first, but with setExtrude(true). The southern most path is like the third, but with custom attributes.  PathsFragment.</description>
+    </item>
+    
+    <item>
+      <title>Placemark Picking-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/placemark-picking/</link>
+      <pubDate>Fri, 07 Jul 2017 00:22:32 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/placemark-picking/</guid>
+      <description>Placemark Picking Tapping a placemark will toggle its highlighted state.
+PlacemarksPickingFragment.java The PlacemarksPickingFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a add a RenderableLayer with four Placemarks to the globe. We also override with default WorldWindowController with a PickNavigateController inner class to respond to touch events on the Placemarks.
+public class PlacemarksPickingFragment extends BasicGlobeFragment { private static final double NORMAL_IMAGE_SCALE = 3.0; private static final double HIGHLIGHTED_IMAGE_SCALE = 4.</description>
+    </item>
+    
+    <item>
+      <title>Placemarks-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/placemarks/</link>
+      <pubDate>Fri, 07 Jul 2017 00:19:26 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/placemarks/</guid>
+      <description>Placemarks This example renders four different placemarks with one above ground.
+PlacemarksFragment.java The PlacemarksFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a add a RenderableLayer with four Placemarks to the globe.
+public class PlacemarksFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with a RenderableLayer populated with four Placemarks. */ @Override public WorldWindow createWorldWindow() { // Let the super class (BasicGlobeFragment) do the creation WorldWindow wwd = super.</description>
+    </item>
+    
+    <item>
+      <title>Navigator Events-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/navigator-events/</link>
+      <pubDate>Fri, 07 Jul 2017 00:15:50 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/navigator-events/</guid>
+      <description>Navigator Events The crosshairs and overlays react to the user input.
+NavigatorEventFragment.java The NavigatorEventFragment class extends the BasicGlobeFragment and overrides the onCreateView method. Here we create some screen overlays and implement a NavigatorListener to respond to NavigatorEvents.
+public class NavigatorEventFragment extends BasicGlobeFragment { // UI elements protected TextView latView; protected TextView lonView; protected TextView altView; protected ImageView crosshairs; protected ViewGroup overlay; // Use pre-allocated navigator state objects to avoid per-event memory allocations private LookAt lookAt = new LookAt(); private Camera camera = new Camera(); // Track the navigation event time so the overlay refresh rate can be throttled private long lastEventTime; // Animation object used to fade the overlays private AnimatorSet animatorSet; private boolean crosshairsActive; @Nullable @Override public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) { // Let the super class (BasicGlobeFragment) create the view and the WorldWindow View rootView = super.</description>
+    </item>
+    
+    <item>
+      <title>Look At View-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/look-at-view/</link>
+      <pubDate>Fri, 07 Jul 2017 00:11:40 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/look-at-view/</guid>
+      <description>Look At View This example simulates a view from an aircraft above Santa Monica, CA looking at the LAX airport.
+CameraViewFragment.java The LookAtViewFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we position the Navigator&amp;rsquo;s camera at an aircraft&amp;rsquo;s location and point the camera at a nearby airport.
+public class LookAtViewFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with its camera configured to look at a given location from a given position.</description>
+    </item>
+    
+    <item>
+      <title>Camera View-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/camera-view/</link>
+      <pubDate>Fri, 07 Jul 2017 00:03:35 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/camera-view/</guid>
+      <description>Camera View This example simulates a view from an aircraft above Oxnard, CA looking at the Point Mugu Naval Air Station.
+CameraViewFragment.java The CameraViewFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we position the Navigator&amp;rsquo;s camera at an aircraft&amp;rsquo;s location and point the camera at a nearby airport.
+public class CameraViewFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with its camera positioned at a given location and configured to point in a given * direction.</description>
+    </item>
+    
+    <item>
+      <title>Surface Image-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/surface-image/</link>
+      <pubDate>Thu, 06 Jul 2017 23:56:43 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/surface-image/</guid>
+      <description>Surface Image This example adds two surface images to the basic globe:
+ A remote image showing Mount Etna erupting on July 13th, 2001. The NASA &amp;lsquo;Meatball&amp;rsquo; logo.  SurfaceImageFragment.java The SurfaceImageFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create two SurfaceImage objects and add them to a RenderableLayer, and then we add the layer to the globe.
+public class SurfaceImageFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with an additional RenderableLayer containing two SurfaceImages.</description>
+    </item>
+    
+    <item>
+      <title>GeoPackage-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/geopackage/</link>
+      <pubDate>Thu, 06 Jul 2017 23:51:35 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/geopackage/</guid>
+      <description>GeoPackage The GeoPackageFragment class extends BasicGlobeFragment and overrides the createWorldWindow method. Here we use WorldWind&amp;rsquo;s LayerFactory to display the contents of a local OGC GeoPackage database. LayerFactory asynchronously reads the GeoPackage contents to configure a WorldWind layer, then notifies the application when it&amp;rsquo;s done.
+package gov.nasa.worldwindx; ... public class GeoPackageFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a GeoPackage Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>WCS Elevation Coverage-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wcs-elevation-coverage/</link>
+      <pubDate>Thu, 06 Jul 2017 23:45:17 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wcs-elevation-coverage/</guid>
+      <description>WCS Elevation Coverage This tutorial demonstrates how to add USGS NED elevation data from a WCS.
+WcsElevationFragment.java The WcsElevationFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we use the Wcs100ElevationCoverage class to load USGS NED elevation data. Once the coverage is added to the elevation model, the Wcs100ElevationCoverage class will request elevation data via the WCS version 1.0.0 specification and WorldWind will generate terrain. A similar connection to a WCS supporting version 2.</description>
+    </item>
+    
+    <item>
+      <title>WMTS Layer-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wmts-layer/</link>
+      <pubDate>Thu, 06 Jul 2017 23:26:43 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wmts-layer/</guid>
+      <description>WMTS Layer This tutorial adds a hillshade WMTS layer to the basic globe example.
+WmtsLayerFragment.java The WmtsLayerFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we use WorldWind&amp;rsquo;s LayerFactory to display the contents of a remote OGC Web Map Tile Service (WMTS). LayerFactory asynchronously negotiates with the WMTS endpoint to configure a WorldWind layer, then notifies the application when it&amp;rsquo;s done.
+package gov.nasa.worldwindx; ... public class WmtsLayerFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a WMTS Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>WMS Layer-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wms-layer/</link>
+      <pubDate>Thu, 06 Jul 2017 23:21:29 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wms-layer/</guid>
+      <description>WMS Layer This example adds a Sea Surface Temperature WMS layer to the basic globe example.
+WmsLayerFragment.java The WmsLayerFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a WmsLayerConfig object to define a WMS layer configuration, and then we create a WmsLayer object with the config object. And, finally, we add the new layer to the WorldWindow object.
+WmsLayerFragment.java public class WmsLayerFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a WMS Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>Basic Globe-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/basic-globe/</link>
+      <pubDate>Thu, 06 Jul 2017 23:01:58 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/basic-globe/</guid>
+      <description>Basic Globe Tutorial The globe uses the default navigation gestures:
+ one-finger pan moves the camera, two-finger pinch-zoom adjusts the range to the look at position, two-finger rotate arcs the camera horizontally around the look at position, three-finger tilt arcs the camera vertically around the look at position.  Get Started It’s very easy to get started using WorldWind Android. You simply create and configure a WorldWindow View object and add it to a layout.</description>
+    </item>
+    
+    <item>
+      <title>Basic WorldWind App-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/basic-ww-app/</link>
+      <pubDate>Thu, 06 Jul 2017 14:01:30 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/basic-ww-app/</guid>
+      <description>How to build a basic WorldWind Android &amp;lsquo;app&amp;rsquo; This tutorial sets up a project from scratch and inserts a WorldWind globe in a FrameLayout.
+1. Create a new Android Studio Project  Select File &amp;gt; New &amp;gt; New Project&amp;hellip; to run the ne project wizard Configure your new project:  You can use the default values  Select the form factors your app will run on:  Choose Phone/Tablet Choose Minimum SDK: API 19: Android 4.</description>
+    </item>
+    
+    <item>
+      <title>Development Environment Setup-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/dev-environment-setup/</link>
+      <pubDate>Thu, 06 Jul 2017 12:51:19 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/dev-environment-setup/</guid>
+      <description>Development Environment Setup Android Studio is the IDE used by the WorldWind development team. It includes all the tools you need to build apps for Android. If you haven&amp;rsquo;t done so already, download and install Android Studio.
+Installation Notes When you perform the installation you can choose the Standard Setup, which will download the required Android SDK components.
+Prerequisites Android Studio requires a compatible Java SE Development Kit (JDK) be installed on your computer.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/</link>
+    <description>Recent content on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jul 2017 06:27:48 -0400</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://worldwind.arc.nasa.gov/blog/roadmap/</link>
+      <pubDate>Mon, 30 Apr 2018 11:57:49 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/blog/roadmap/</guid>
+      <description>WorldWind Roadmap 2018 Earlier this year, we created NASA WorldWind&amp;rsquo;s first roadmap, a place where users and developers alike can see what&amp;rsquo;s in store for the Web platform. Checkout what we&amp;rsquo;ve been working on!
+Please note this is a preliminary plan, so not all features may be included in our next release.
+ Surface shape dragging interface for shape editors Web Coverage Service (WCS) initial public API and preparation Web Coverage Service (WCS) capabilities negotiation GeoTiff elevations support Multiple elevation sources Layer attribution enhancement Improved WebGL texture management with a high resolution canvas RenderableLayer opacity support (shapes inherit layer opacity)</description>
+    </item>
+    
+    <item>
+      <title>Ellipse</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/ellipse/</link>
+      <pubDate>Fri, 02 Feb 2018 16:17:14 -0600</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/ellipse/</guid>
+      <description>Ellipse This tutorial demonstrates how to configure an Ellipse shape and add it to the globe.
+Ellipse uses the provided major radius, minor radius, heading, and center position to draw an Ellipse on the globe. The outline of the ellipse is computed in geographic space using great circle distance. The number of points used to build the outline is dynamic and based on the camera distance to the shape.</description>
+    </item>
+    
+    <item>
+      <title>Standalone Example-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/standalone-example/</link>
+      <pubDate>Wed, 15 Nov 2017 14:33:47 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/standalone-example/</guid>
+      <description>Hosting Locally The Data Get the latest release on GitHub.
+Host the WorldWind library and the images folder on your HTTP server:
+https://YOUR_SERVER/worldwind.min.js https://YOUR_SERVER/image/  Get some data and unpack to:
+https://YOUR_SEVER/standalone/  You can also use this example data from NASA.
+The standalone folder is specific to the example data from NASA. With custom data, the folder could be named anything. The Script Add the WorldWind library:
+&amp;lt;script src=&amp;quot;https://YOUR_SERVER/worldwind.</description>
+    </item>
+    
+    <item>
+      <title>Configuration-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/configuration/</link>
+      <pubDate>Wed, 15 Nov 2017 13:56:48 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/configuration/</guid>
+      <description>Configuration If you are just getting started with Web WorldWind, you might be interested in its configuration options. The script below shows you how to set some of these configurations. Please note that these options must be set before you create the WorldWindow or any other WorldWind object.
+Setting the Logging Level // Get detailed logging WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING); // Turn off logging WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_NONE);  Changing the GPU Cache Size // Custom GPU Cache Size WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Simplest Example-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/simplest-example/</link>
+      <pubDate>Wed, 15 Nov 2017 13:48:00 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/simplest-example/</guid>
+      <description>Simplest Example This tutorial illustrates how to build a simple WorldWind globe in an HTML file. Zoom in with your mouse wheel (pinch gesture for mobile devices). Drag the mouse or your finger to pan around the globe. Drag the right mouse button or your two fingers upward to tilt the globe.
+  Your browser does not support HTML5 Canvas.   window.addEventListener(&#34;load&#34;, eventWindowLoaded, false); function eventWindowLoaded() { var wwd = new WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/get-started/</link>
+      <pubDate>Tue, 14 Nov 2017 11:17:24 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/get-started/</guid>
+      <description>Get Started This is a quick guide to get started on Web WorldWind basics. This is what we&amp;rsquo;re going to build:
+  Your browser does not support HTML5 Canvas.   window.addEventListener(&#34;load&#34;, eventWindowLoaded, false); function eventWindowLoaded() { var wwd = new WorldWind.WorldWindow(&#34;FinalWorldWindow&#34;); wwd.addLayer(new WorldWind.BMNGOneImageLayer()); wwd.addLayer(new WorldWind.BMNGLandsatLayer()); wwd.addLayer(new WorldWind.CompassLayer()); wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd)); wwd.addLayer(new WorldWind.ViewControlsLayer(wwd)); var placemarkLayer = new WorldWind.RenderableLayer(); wwd.addLayer(placemarkLayer); var placemarkAttributes = new WorldWind.PlacemarkAttributes(null); placemarkAttributes.imageOffset = new WorldWind.Offset( WorldWind.OFFSET_FRACTION, 0.</description>
+    </item>
+    
+    <item>
+      <title>Web Examples</title>
+      <link>https://worldwind.arc.nasa.gov/web/examples/</link>
+      <pubDate>Tue, 07 Nov 2017 15:08:10 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/examples/</guid>
+      <description>Examples The full code for the examples below is available in the examples module of the Web WorldWind project.
+Sun Simulation   Source: SunSimulation.js SunSimulation.html    Argument Parsing   Source: ParseUrlArguments.js ParseUrlArguments.html    Basic Example   Source: BasicExample.js BasicExample.html    Time Series   Source: BlueMarbleTimeSeries.js BlueMarbleTimeSeries.html    Collada   Source: Collada.js Collada.html    Configuration   Source: Configuration.</description>
+    </item>
+    
+    <item>
+      <title>Sitemap/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/sitemap/</link>
+      <pubDate>Fri, 06 Oct 2017 14:46:25 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/sitemap/</guid>
+      <description> Site Map Web  Overview Get Started Features Examples Tutorials Docs  Android  Overview Get Started Tutorials Examples Docs  Java  Overview Get Started Features Demos Examples Tutorials Releases Docs  Server Kit  Overview Get Started Features Docs  </description>
+    </item>
+    
+    <item>
+      <title>Features-WWSK/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/serverkit/features/</link>
+      <pubDate>Wed, 13 Sep 2017 12:21:37 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/serverkit/features/</guid>
+      <description>Features WWSK&amp;rsquo;s features are built for data viewing. In addition to GeoServer&amp;rsquo;s general features, WWSK can export data as a GeoPackage, allowing the user to control its contents. Our most recently developed feature is the WorldWind Viewer, which lets you see your data in the context of Earth.
+General Features  Understands multiple data formats such as Shapefiles, GeoTIFFS, GeoPackages, and GDAL formats Serves and shares data with clients Accesses data from remote services, acting as a proxy Uses an integrated GeoWebCache for improved client performance  WorldWind Explorer  Allows you to see your data in the context of a globe Visualizes all the layers and layer groups that you&amp;rsquo;ve defined on one terrain Understands and leverages your GeoServer&amp;rsquo;s capabilities and strengths&amp;ndash;no configuration required  GeoPackage Capabilities  Export your data as a GeoPackage Exported raster GeoPackages contain a collection of prerendered tiles User-controlled content (i.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-WWSK/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/serverkit/get-started/</link>
+      <pubDate>Wed, 13 Sep 2017 12:21:14 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/serverkit/get-started/</guid>
+      <description>Get Started Build WWSK uses Apache Maven for a build system. To build WWSK and its dependencies, run maven from the root of the WWSK repository:
+$ mvn clean install  Run Depending on your personal preference, there are several ways to run WWSK.
+ Deploy a standalone WWSK distribution Deploy a WAR file Run in NetBeans Run in Jetty from Maven Deploy a binary distribution  Detailed instructions for each of these options are available on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Line Of Sight-WorldWind Android-NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/line-of-sight/</link>
+      <pubDate>Tue, 22 Aug 2017 17:25:39 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/line-of-sight/</guid>
+      <description>Line Of Sight   Video above from the Line Of Sight Example This tutorial demonstrates the OmnidirectionalSightline class and how it can be used to display the line of sight visible portions of terrain given an origin.
+OmnidirectionalSightline uses the GPU to determine the visible areas of terrain from a position. A Position and range is all that is needed for the OmnidirectionalSightline object to display the visible areas.</description>
+    </item>
+    
+    <item>
+      <title>Docs-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/docs/</link>
+      <pubDate>Fri, 28 Jul 2017 14:05:05 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WebWorldWind/</description>
+    </item>
+    
+    <item>
+      <title>Docs-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/docs/</link>
+      <pubDate>Fri, 28 Jul 2017 14:04:18 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WorldWindJava/</description>
+    </item>
+    
+    <item>
+      <title>Docs-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/docs/</link>
+      <pubDate>Thu, 27 Jul 2017 23:01:41 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WorldWindAndroid/</description>
+    </item>
+    
+    <item>
+      <title>Releases-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/releases/</link>
+      <pubDate>Thu, 27 Jul 2017 13:47:01 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/releases/</guid>
+      <description>Releases GitHub Releases has the WorldWind Java release artifacts and detailed release change logs. Information about the WorldWind releases is listed here.
+WorldWind Java v2.1.0, December 13, 2016 WorldWind Java v2.1.0 contains major improvements for security, functionality, and automation, including: HTTPS map services, Travis CI integration, first-class 2D map support, improved shape dragging, general shape editor, new USGS high resolution imagery layer, new USGS topographic layers, Shapefile rendering performance improvements, Shapefile XML layer configuration files, OGC Web Coverage Service (WCS) elevations, plus many more improvements and bug fixes.</description>
+    </item>
+    
+    <item>
+      <title>Features-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/features/</link>
+      <pubDate>Thu, 27 Jul 2017 11:22:07 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/features/</guid>
+      <description>Features Web WorldWind provides a rich set of features for displaying and interacting with geographic information.
+General Features  Open-source, high-performance, 3D virtual globe (WGS84) for web pages and web applications 2D Map mode with selectable and extensible map projections JavaScript API for automating all aspects of interaction and visualization Large collection of built-in high-resolution imagery and terrain Display high-resolution imagery, terrain and geographic data from any public or private source Supports REST, WMS and Bing Large collection of geometric and geographic shapes for representing information Navigation and Viewing, Picking Display multiple globes and maps on the same page Simple to use, extend and modify  Graphics Capabilities  Placemark, Path and Curtain, Polygon and Extruded Polygon, Text Terrain conforming shapes: Path, Polygon, Ellipse, Circle, Quadrilateral, Square Imagery: JPEG, PNG Graticules Shapefiles</description>
+    </item>
+    
+    <item>
+      <title>Examples-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/examples/</link>
+      <pubDate>Thu, 27 Jul 2017 09:58:18 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/examples/</guid>
+      <description>Examples The WorldWind API contains over 100 code examples that show how to perform all manner of tasks, from creating the most basic WorldWind application to using complex, advanced functionality.
+Below are brief descriptions of selected example programs. All examples can be found in the GitHub repository.
+ Basics Layers View Data Terrain Shapes Annotations Images User Interface Network Configuration Tools Multiwindow  Basics SimplestPossibleExample - Demonstrates the simplest possible way to create a WorldWind application.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/get-started/</link>
+      <pubDate>Thu, 27 Jul 2017 09:50:17 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/get-started/</guid>
+      <description>Get Started WorldWind is an SDK (software development kit) that software engineers can use to build their own applications. To run a WorldWind demo application, visit the Demos page. Follow these instructions to download, run, and deploy an application using WorldWind.
+Run an Application Using WorldWind  Download the latest release from the WorldWind GitHub Releases.
+ Extract the WorldWind SDK to a folder anywhere on your hard drive. The following steps refer to the extracted folder as WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Features-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/features/</link>
+      <pubDate>Thu, 27 Jul 2017 09:48:19 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/features/</guid>
+      <description>Features WorldWind Java provides a rich set of features for displaying and interacting with geographic data and representing a wide range of geometric objects.
+General Features  Open-source, high-performance 3D Virtual globe API and SDK Adds 3D geographic visualization to any application Runs on Windows, Mac OS X, Linux Free run-time and development license Unencumbered use on any number of devices Huge collection of high-resolution imagery and terrain from NASA servers Displays high-resolution imagery, terrain and geographic information from any open-standard public or private source Open-standard interfaces to GIS services and databases Large collection of geometric and geographic shapes Simple to extend and modify, designed to be extensible Uses Java and OpenGL  Graphics Capabilities  Point, Path, Polygon, Curtain Volumes: Extruded Polygon, Ellipsoid, Sphere, Cylinder, Cone, Pyramid, Box, Airspaces (see below) Terrain conforming shapes: Path, Polygons, Ellipse, Circle, Quadrilateral, Rectangle, Square, Text, Image, Icon Airspaces: Box, Cake, Capped Cylinder (full and partial), Curtain, Orbit, PolyArc, Polygon, Route, Sphere, Track Annotation: Text, Text Balloon, HTML5 web-browser Balloon, Image, Icons, all with geo-located and screen versions Placenames, Political boundaries Transparency Picking, Selection Navigation and Viewing: Orbit View, First Person, Stereo, application-defined Multiple WorldWind windows Interactive shape editors 2525C Tactical Symbols and Tactical Graphics  Data Formats  Imagery: JPG, PNG, GeoTIFF, JPEG2000 and many others Government formats: NITF, MrSID, RPF (CADRG, CIB, etc.</description>
+    </item>
+    
+    <item>
+      <title>Deployment-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/deployment/</link>
+      <pubDate>Thu, 27 Jul 2017 09:14:35 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/deployment/</guid>
+      <description>Deployment Deploying Web WorldWind is easy. In fact, unless you want to run it from your own server there is no deployment required. You simply include a script tag linking to it:
+&amp;lt;script src=&amp;quot;https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  To deploy Web WorldWind on your own server, copy the library worldwind.min.js and the images directory from the Web WorldWind release and place them on your web server. The images directory must be a sibling of the library, i.</description>
+    </item>
+    
+    <item>
+      <title>Shapes-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/shapes/</link>
+      <pubDate>Thu, 27 Jul 2017 09:10:24 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/shapes/</guid>
+      <description>Shapes Shapes represent the information other than surface imagery that you display on the globe. Web WorldWind has a rich and growing set of shapes to choose from:
+ Placemark (class Placemark) — Displays an image with an optional label at any geographic position and altitude. You can use one of Web WorldWind’s placemark images or specify your own. See the PlacemarksAndPicking example. Path (class Path) — Draws a connected set of lines either in space or on the ground.</description>
+    </item>
+    
+    <item>
+      <title>Layers-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/layers/</link>
+      <pubDate>Wed, 26 Jul 2017 15:21:03 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/layers/</guid>
+      <description>Layers LayerListLayers hold all the information displayed by the WorldWindow. Each WorldWindow holds one layer list that contains all the layers to display in that WorldWindow. Each layer contains either imagery, shapes or decorations such as a compass. During rendering, layers are displayed in the order they’re defined in the layer list. (3D shapes within layers, however, are displayed in far-to-near order, as described in the Shapes section.) The adjacent illustration depicts six layers.</description>
+    </item>
+    
+    <item>
+      <title>Picking-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/picking/</link>
+      <pubDate>Wed, 26 Jul 2017 15:19:00 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/picking/</guid>
+      <description>Picking Picking is performed by the WorldWindow. There are four flavors of picking:
+ Normal picking returns the visible object or terrain at a specified pick point. See PlacemarksAndPicking.js for an example. Deep picking returns all objects at a specified pick point. See DeepPicking.js for an example. Region picking returns all visible objects within a specified pick region. See PickAllShapesInRegion.js for an example. Terrain picking returns the geographic coordinates of the terrain at a specified pick point.</description>
+    </item>
+    
+    <item>
+      <title>Navigation and Viewing-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/navigation-and-viewing/</link>
+      <pubDate>Wed, 26 Jul 2017 15:14:35 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/navigation-and-viewing/</guid>
+      <description>Navigation and Viewing As the user interacts with the globe, panning, zooming and tilting, it’s the WorldWindow’s Navigator that translates the user’s movements into operations on the globe. Each WorldWindow has one navigator. That navigator is responsible for the view onto the globe. A navigator is created automatically when you create a WorldWindow.
+Topics on this page:
+ Controlling the View from the WorldWindow Controlling the Navigator GoTo Animator Geocoders  Controlling the View from the WorldWindow If all you want to do is move the view to a geographic location or position (a location with altitude), you can use the goTo function of WorldWindow to do that.</description>
+    </item>
+    
+    <item>
+      <title>Event and Gesture Handling-WebWorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/event-and-gesture-handling/</link>
+      <pubDate>Wed, 26 Jul 2017 15:10:22 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/event-and-gesture-handling/</guid>
+      <description>Event and Gesture Handling Applications can generally monitor and respond to JavaScript events as they normally would. But because the WorldWindow’s navigator is monitoring mouse and touch events to enable the user to manipulate the globe, some coordination between the application’s event handling and the navigator’s event handling is necessary. Web WorldWind does not monitor keyboard events, so no coordination is necessary for those.
+If your application is to work on conventional and mobile devices, it should monitor both mouse events and gestures if it wants to respond to user input beyond what the WorldWindow’s navigator already does.</description>
+    </item>
+    
+    <item>
+      <title>WorldWindow-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/world-window/</link>
+      <pubDate>Wed, 26 Jul 2017 15:05:14 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/world-window/</guid>
+      <description>WorldWindow WorldWindow is the fundamental Web WorldWind object. It represents the presence of Web WorldWind in the web page. Almost all interactions between the app and Web WorldWind occur through a WorldWindow.
+A WorldWindow encapsulates an HTML canvas element. The app developer is responsible for creating the canvas, typically by defining a &amp;lt;canvas&amp;gt; element in static HTML. The canvas is given an ID and that ID is handed to the WorldWindow constructor to tell the WorldWindow its drawing surface.</description>
+    </item>
+    
+    <item>
+      <title>Concepts-WebWorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/concepts/</link>
+      <pubDate>Wed, 26 Jul 2017 14:39:48 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/concepts/</guid>
+      <description>Concepts Web WorldWind is a virtual globe component that you embed in web pages. It provides an interactive, 3D geographic context for information. As a component, it comprises one aspect of a web application or web page. Other components provide textual or graphic information or provide a user interface. In the following figure, Web WorldWind is just the portion outlined in red. The rest of the components on the web page — the menus, the buttons, the text — are HTML developed by the web page creator.</description>
+    </item>
+    
+    <item>
+      <title>Common Problems-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/common-problems/</link>
+      <pubDate>Wed, 26 Jul 2017 14:36:34 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/common-problems/</guid>
+      <description>Common Problems This page describes problems users or developers frequently encounter and gives solutions to those problems.
+No globe is shown Be sure you’re connected to the internet. Also, your browser may not support WebGL. To test that, visit http://get.webgl.org. If that site shows that WebGL is not supported, then follow the link there to your browser’s support page to see how you might enable it.
+No ‘Access-Control-Allow-Origin’ header is present on the requested resource This message occurs when the server holding an image or other resource does not implement CORS (Cross-Origin Resource Sharing).</description>
+    </item>
+    
+    <item>
+      <title>Importing Data-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/importing-data/</link>
+      <pubDate>Fri, 14 Jul 2017 09:37:03 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/importing-data/</guid>
+      <description>Importing Data Follow these instructions to import data to the WorldWind client.
+1) Download the WorldWind Java SDK
+Follow the instructions on the Get Started page to download and extract the latest WorldWind Java SDK.
+2) Run the Install Imagery And Elevations Application
+Here is an examples of running the Install Imagery And Elevations application from the command-line:
+On Mac OS X and Linux:
+java -Xmx1024m -cp MyApp.jar:worldwind.jar:worldwindx.jar:jogl-all.jar:gluegen-rt.jar:gdal.jar gov.nasa.worldwindx.examples.dataimport.InstallImageryAndElevationsDemo  On Windows:</description>
+    </item>
+    
+    <item>
+      <title>2D Rendering of Custom Shapes-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/2d-rendering-of-custom-shapes/</link>
+      <pubDate>Fri, 14 Jul 2017 09:21:33 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/2d-rendering-of-custom-shapes/</guid>
+      <description>2D Rendering of Custom Shapes Custom shapes (Renderables) should display correctly in both 3D and 2D modes. This document describes how custom 3D renderables must be implemented to display correctly in 2D mode. It first describes the necessary background and requirements of 2D mode, then presents steps for achieving correct behavior. Before reading this document we strongly advise that you read the custom-shape tutorial and examine the example code for that tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Build a Custom Renderable-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/build-a-custom-renderable/</link>
+      <pubDate>Fri, 14 Jul 2017 01:37:13 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/build-a-custom-renderable/</guid>
+      <description>window.addEventListener(&#39;load&#39;, function() { $(&#34;table&#34;).addClass(&#34;table table-hover&#34;); });  Build a Custom Renderable This tutorial shows how to implement a custom renderable that draws a cube centered on a geographic position. It is intended for developers familiar with OpenGL, who would like to implement a custom WorldWind Renderable. It may be helpful to follow along with the completed tutorial on GitHub.
+Contents  How WorldWind Draws a Scene Implementing Renderable Managing Drawing State Orienting the Cube Drawing the Cube Picking Ordered Rendering Determining if the Cube is Visible Putting it all together  How WorldWind Draws a Scene When WorldWind renders a frame, the SceneController sets up the global drawing state, and then asks each Layer in the Model to render itself.</description>
+    </item>
+    
+    <item>
+      <title>Adding New Tactical Symbols-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/adding-new-tactical-symbols/</link>
+      <pubDate>Fri, 14 Jul 2017 01:02:30 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/adding-new-tactical-symbols/</guid>
+      <description>window.addEventListener(&#39;load&#39;, function() { $(&#34;table&#34;).addClass(&#34;table table-hover&#34;); });  Adding New Tactical Symbols Applications that use symbology may need to use some custom symbols. The application could implement a new symbology set for the custom symbols, but that may be too much work if the number of symbols is small. The easiest way to add a small number of symbols is to assign identifiers to the new symbols that fit into the naming convention of an existing symbol set, and provide icons for the new symbols along side WorldWind&amp;rsquo;s standard icons.</description>
+    </item>
+    
+    <item>
+      <title>Tactical Graphic Status-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/tactical-graphic-status/</link>
+      <pubDate>Fri, 14 Jul 2017 00:55:10 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/tactical-graphic-status/</guid>
+      <description>window.addEventListener(&#39;load&#39;, function() { $(&#34;table&#34;).addClass(&#34;table table-hover&#34;); });  This page lists all of the tactical graphics defined in MIL-STD-2525C, and shows which graphics are supported in WorldWind.
+ Appendix B, Tactical Graphics Appendix C, Meteorological and Oceanographic Appendix G, Emergency Management  Appendix B, Tactical Graphics    Hierarchy Description Supported     TACGRP.TSK.BLK Block    TACGRP.TSK.BRH Breach    TACGRP.TSK.BYS Bypass    TACGRP.</description>
+    </item>
+    
+    <item>
+      <title>Icon Retriever-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/icon-retriever/</link>
+      <pubDate>Fri, 14 Jul 2017 00:41:16 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/icon-retriever/</guid>
+      <description>window.addEventListener(&#39;load&#39;, function() { $(&#34;table&#34;).addClass(&#34;table table-hover&#34;); });  Icon Retriever This guide shows how to use the IconRetriever interface to retrieve icons for tactical symbols. The guide is organized into in three sections:
+ Usage Parameters Example  Usage Icons in a symbol set are retrieved using an IconRetriever. The retriever&amp;rsquo;s job is to take the identifier for a symbol and construct a BufferedImage that contains the icon for that symbol.</description>
+    </item>
+    
+    <item>
+      <title>Tactical Graphics-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/tactical-graphics/</link>
+      <pubDate>Fri, 14 Jul 2017 00:11:33 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/tactical-graphics/</guid>
+      <description>window.addEventListener(&#39;load&#39;, function() { $(&#34;table&#34;).addClass(&#34;table table-hover&#34;); });  Tactical Graphics A Tactical Graphic is a graphic defined by a symbol set. A graphic can be an icon that is drawn a geographic position, a vector graphic that is positioned using one or more control points, or a line or polygon that is styled according to the symbol set&amp;rsquo;s specification. This guide covers tactical graphics belonging to the U.S. Department of Defense’s Common Warfighting Symbology set, MIL-STD-2525.</description>
+    </item>
+    
+    <item>
+      <title>Tactical Symbols-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/tactical-symbols/</link>
+      <pubDate>Thu, 13 Jul 2017 23:25:56 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/tactical-symbols/</guid>
+      <description>Tactical Symbols A tactical symbol displays graphic and textual information about an object at a single geographic position at a particular point in time. The graphic displayed is typically a screen icon with supplemental text and graphics surrounding the icon. In general, the graphic displayed depends on the symbology set a tactical symbol belongs to. This guide covers tactical symbols belonging to the U.S. Department of Defense&amp;rsquo;s Common Warfighting Symbology set, MIL-STD-2525C.</description>
+    </item>
+    
+    <item>
+      <title>Common Problems-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/common-problems/</link>
+      <pubDate>Thu, 13 Jul 2017 23:03:35 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/common-problems/</guid>
+      <description>Common Problems Many problems encountered by WorldWind developers and their application users have common causes. They therefore have the same solution. Those problems and their fix are listed here.
+Problem: NASA Map Layers do not download (HTTP 301) As of January 2017 WorldWind map servers (worldwind*.arc.nasa.gov, data.worldwind.arc.nasa.gov, and builds.worldwind.arc.nasa.gov) exclusively use HTTPS. HTTP requests return a redirect to the HTTPS endpoint. The Java URLConnection class does not follow the redirect protocol.</description>
+    </item>
+    
+    <item>
+      <title>Concepts-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/tutorials/concepts/</link>
+      <pubDate>Thu, 13 Jul 2017 22:58:22 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/tutorials/concepts/</guid>
+      <description>Concepts WorldWind is a collection of components that interactively display 3D geographic information within Java applications. Applications use WorldWind by placing one or more WorldWindow objects in their user interface. That WorldWindow provide the 3D geographic context for the application&amp;rsquo;s information and behaviors.
+WorldWind components are extensible. The API is defined primarily by interfaces, so components can be selectively replaced by alternative components. Concrete classes can also be replaced or extended.</description>
+    </item>
+    
+    <item>
+      <title>Demos-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/demos/</link>
+      <pubDate>Thu, 13 Jul 2017 00:02:06 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/demos/</guid>
+      <description>Demos The applications here demonstrate some of WorldWind&amp;rsquo;s rich capabilities. Also see WorldWind Europa Challenge site for a collection of applications created by the WorldWind Europa Challenge teams.
+Requirements  Up to date video card drivers Oracle Java Runtime Environment (JRE) 1.7.0 Java and OpenGL setup can be tested using JOGL demo site.  Application Template    Displays the default globe with its default layers. Includes capabilities such as a compass and status bar that are common to most applications, and presents Earth within a star field and with an atmosphere.</description>
+    </item>
+    
+    <item>
+      <title>Examples-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/examples/</link>
+      <pubDate>Fri, 07 Jul 2017 11:59:41 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/examples/</guid>
+      <description> Examples The full code for the examples below is available in the worldwind-examples module of the WorldWind Android project.
+General Purpose Globe      Multi-Globe Demonstration      Day Night Cycle      Placemarks Demonstration      Placemarks Select and Drag      MIL-STD-2525 Placemarks      MIL-STD-2525 Demonstration      Line Of Sight      Paths      Paths, Polygons &amp;amp; Labels      Basic Performance Benchmark      Placemarks Stress Test      Basic Stress Test      Texture Stress Test      MIL-STD-2525 Stress Test      </description>
+    </item>
+    
+    <item>
+      <title>Show Tessellation-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/show-tessellation/</link>
+      <pubDate>Fri, 07 Jul 2017 00:47:30 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/show-tessellation/</guid>
+      <description>Show Tessellation This example adds a layer to the basic globe that shows the tessellation.
+ShowTessellationFragement.java The ShowTessellationFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we simply add an additional ShowTessellationLayer to the globe.
+public class ShowTessellationFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with a additional tessellation layer. */ @Override public WorldWindow createWorldWindow() { // Let the super class (BasicGlobeFragment) do the creation WorldWindow wwd = super.</description>
+    </item>
+    
+    <item>
+      <title>Camera Controls-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/camera-controls/</link>
+      <pubDate>Fri, 07 Jul 2017 00:43:36 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/camera-controls/</guid>
+      <description>Camera Controls This advanced example uses the Navigator&amp;rsquo;s setAsCamera interface in response to touch event gestures. It overrides the default pan, zoom and rotate behavior.
+ one-finger pan moves the geographic location of the camera, two-finger pinch-zoom adjusts the camera altitude, two-finger rotate rotates the camera about its own axis, three-finger tilt tilts the camera about its own axis.  CameraControlFragment.java The CameraControlFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method.</description>
+    </item>
+    
+    <item>
+      <title>Shapes Dash and Fill-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/shapes-dash-and-fill/</link>
+      <pubDate>Fri, 07 Jul 2017 00:38:02 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/shapes-dash-and-fill/</guid>
+      <description>Shapes Dash and Fill This example renders five different dashed shapes on the globe.
+ The westernmost Path specifies a dash pattern and factor. The middle Path modifies the dash factor from the western example. The easternmost Path follows terrain and uses a different pattern. The Ellipse specifies a repeating fill using an image. The southern Polygon uses the same repeating fill, but follows terrain and specifies a dash pattern for the outline.</description>
+    </item>
+    
+    <item>
+      <title>Labels-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/labels/</link>
+      <pubDate>Fri, 07 Jul 2017 00:33:17 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/labels/</guid>
+      <description>Labels This tutorial uses Labels shapes to identify landmarks around Washington, D.C. Label shapes have a variety of configurable properties, including:
+ Text Color Text Size (in screen pixels) Typeface Text Outline Rotation Outline Color Outline Size  LabelsFragment.java The LabelsFragment class extends BasicGlobeFragment and overrides the createWorldWindow method. Here we configure six Label shapes to identify landmarks around Washington, D.C.
+package gov.nasa.worldwindx; ... public class LabelsFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a set of label shapes * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>Polygons-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/polygons/</link>
+      <pubDate>Fri, 07 Jul 2017 00:30:16 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/polygons/</guid>
+      <description>Polygons This example renders six different five-sided polygons on the globe.
+ The top-left polygon is above ground, using the default ABSOLUTE altitude mode and default attributes. The top-right polygon is on the terrain surface, using a CLAMP_TO_GROUND altitude mode and setFollowTerrain(true). The middle-left polygon is above ground, like the top-left, but with setExtrude(true). The middle-right polygon is like the middle-left, but with custom attributes. The bottom-left polygon contains an inner ring specified with addBoundary(List).</description>
+    </item>
+    
+    <item>
+      <title>Paths-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/paths/</link>
+      <pubDate>Fri, 07 Jul 2017 00:26:01 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/paths/</guid>
+      <description>Paths This example renders four different wing-shaped or chevron-shaped paths on the globe.
+ The northern most path is above ground, using the default ABSOLUTE altitude mode and default attributes. The next path is on the terrain surface, using a CLAMP_TO_GROUND altitude mode and setFollowTerrain(true). The third path is above ground, like the first, but with setExtrude(true). The southern most path is like the third, but with custom attributes.  PathsFragment.</description>
+    </item>
+    
+    <item>
+      <title>Placemark Picking-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/placemark-picking/</link>
+      <pubDate>Fri, 07 Jul 2017 00:22:32 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/placemark-picking/</guid>
+      <description>Placemark Picking Tapping a placemark will toggle its highlighted state.
+PlacemarksPickingFragment.java The PlacemarksPickingFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a add a RenderableLayer with four Placemarks to the globe. We also override with default WorldWindowController with a PickNavigateController inner class to respond to touch events on the Placemarks.
+public class PlacemarksPickingFragment extends BasicGlobeFragment { private static final double NORMAL_IMAGE_SCALE = 3.0; private static final double HIGHLIGHTED_IMAGE_SCALE = 4.</description>
+    </item>
+    
+    <item>
+      <title>Placemarks-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/placemarks/</link>
+      <pubDate>Fri, 07 Jul 2017 00:19:26 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/placemarks/</guid>
+      <description>Placemarks This example renders four different placemarks with one above ground.
+PlacemarksFragment.java The PlacemarksFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a add a RenderableLayer with four Placemarks to the globe.
+public class PlacemarksFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with a RenderableLayer populated with four Placemarks. */ @Override public WorldWindow createWorldWindow() { // Let the super class (BasicGlobeFragment) do the creation WorldWindow wwd = super.</description>
+    </item>
+    
+    <item>
+      <title>Navigator Events-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/navigator-events/</link>
+      <pubDate>Fri, 07 Jul 2017 00:15:50 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/navigator-events/</guid>
+      <description>Navigator Events The crosshairs and overlays react to the user input.
+NavigatorEventFragment.java The NavigatorEventFragment class extends the BasicGlobeFragment and overrides the onCreateView method. Here we create some screen overlays and implement a NavigatorListener to respond to NavigatorEvents.
+public class NavigatorEventFragment extends BasicGlobeFragment { // UI elements protected TextView latView; protected TextView lonView; protected TextView altView; protected ImageView crosshairs; protected ViewGroup overlay; // Use pre-allocated navigator state objects to avoid per-event memory allocations private LookAt lookAt = new LookAt(); private Camera camera = new Camera(); // Track the navigation event time so the overlay refresh rate can be throttled private long lastEventTime; // Animation object used to fade the overlays private AnimatorSet animatorSet; private boolean crosshairsActive; @Nullable @Override public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) { // Let the super class (BasicGlobeFragment) create the view and the WorldWindow View rootView = super.</description>
+    </item>
+    
+    <item>
+      <title>Look At View-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/look-at-view/</link>
+      <pubDate>Fri, 07 Jul 2017 00:11:40 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/look-at-view/</guid>
+      <description>Look At View This example simulates a view from an aircraft above Santa Monica, CA looking at the LAX airport.
+CameraViewFragment.java The LookAtViewFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we position the Navigator&amp;rsquo;s camera at an aircraft&amp;rsquo;s location and point the camera at a nearby airport.
+public class LookAtViewFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with its camera configured to look at a given location from a given position.</description>
+    </item>
+    
+    <item>
+      <title>Camera View-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/camera-view/</link>
+      <pubDate>Fri, 07 Jul 2017 00:03:35 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/camera-view/</guid>
+      <description>Camera View This example simulates a view from an aircraft above Oxnard, CA looking at the Point Mugu Naval Air Station.
+CameraViewFragment.java The CameraViewFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we position the Navigator&amp;rsquo;s camera at an aircraft&amp;rsquo;s location and point the camera at a nearby airport.
+public class CameraViewFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with its camera positioned at a given location and configured to point in a given * direction.</description>
+    </item>
+    
+    <item>
+      <title>Surface Image-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/surface-image/</link>
+      <pubDate>Thu, 06 Jul 2017 23:56:43 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/surface-image/</guid>
+      <description>Surface Image This example adds two surface images to the basic globe:
+ A remote image showing Mount Etna erupting on July 13th, 2001. The NASA &amp;lsquo;Meatball&amp;rsquo; logo.  SurfaceImageFragment.java The SurfaceImageFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create two SurfaceImage objects and add them to a RenderableLayer, and then we add the layer to the globe.
+public class SurfaceImageFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow with an additional RenderableLayer containing two SurfaceImages.</description>
+    </item>
+    
+    <item>
+      <title>GeoPackage-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/geopackage/</link>
+      <pubDate>Thu, 06 Jul 2017 23:51:35 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/geopackage/</guid>
+      <description>GeoPackage The GeoPackageFragment class extends BasicGlobeFragment and overrides the createWorldWindow method. Here we use WorldWind&amp;rsquo;s LayerFactory to display the contents of a local OGC GeoPackage database. LayerFactory asynchronously reads the GeoPackage contents to configure a WorldWind layer, then notifies the application when it&amp;rsquo;s done.
+package gov.nasa.worldwindx; ... public class GeoPackageFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a GeoPackage Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>WCS Elevation Coverage-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wcs-elevation-coverage/</link>
+      <pubDate>Thu, 06 Jul 2017 23:45:17 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wcs-elevation-coverage/</guid>
+      <description>WCS Elevation Coverage This tutorial demonstrates how to add USGS NED elevation data from a WCS.
+WcsElevationFragment.java The WcsElevationFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we use the Wcs100ElevationCoverage class to load USGS NED elevation data. Once the coverage is added to the elevation model, the Wcs100ElevationCoverage class will request elevation data via the WCS version 1.0.0 specification and WorldWind will generate terrain. A similar connection to a WCS supporting version 2.</description>
+    </item>
+    
+    <item>
+      <title>WMTS Layer-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wmts-layer/</link>
+      <pubDate>Thu, 06 Jul 2017 23:26:43 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wmts-layer/</guid>
+      <description>WMTS Layer This tutorial adds a hillshade WMTS layer to the basic globe example.
+WmtsLayerFragment.java The WmtsLayerFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we use WorldWind&amp;rsquo;s LayerFactory to display the contents of a remote OGC Web Map Tile Service (WMTS). LayerFactory asynchronously negotiates with the WMTS endpoint to configure a WorldWind layer, then notifies the application when it&amp;rsquo;s done.
+package gov.nasa.worldwindx; ... public class WmtsLayerFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a WMTS Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>WMS Layer-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/wms-layer/</link>
+      <pubDate>Thu, 06 Jul 2017 23:21:29 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/wms-layer/</guid>
+      <description>WMS Layer This example adds a Sea Surface Temperature WMS layer to the basic globe example.
+WmsLayerFragment.java The WmsLayerFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. Here we create a WmsLayerConfig object to define a WMS layer configuration, and then we create a WmsLayer object with the config object. And, finally, we add the new layer to the WorldWindow object.
+WmsLayerFragment.java public class WmsLayerFragment extends BasicGlobeFragment { /** * Creates a new WorldWindow (GLSurfaceView) object with a WMS Layer * * @return The WorldWindow object containing the globe.</description>
+    </item>
+    
+    <item>
+      <title>Basic Globe-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/basic-globe/</link>
+      <pubDate>Thu, 06 Jul 2017 23:01:58 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/basic-globe/</guid>
+      <description>Basic Globe Tutorial The globe uses the default navigation gestures:
+ one-finger pan moves the camera, two-finger pinch-zoom adjusts the range to the look at position, two-finger rotate arcs the camera horizontally around the look at position, three-finger tilt arcs the camera vertically around the look at position.  Get Started It’s very easy to get started using WorldWind Android. You simply create and configure a WorldWindow View object and add it to a layout.</description>
+    </item>
+    
+    <item>
+      <title>Basic WorldWind App-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/basic-ww-app/</link>
+      <pubDate>Thu, 06 Jul 2017 14:01:30 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/basic-ww-app/</guid>
+      <description>How to build a basic WorldWind Android &amp;lsquo;app&amp;rsquo; This tutorial sets up a project from scratch and inserts a WorldWind globe in a FrameLayout.
+1. Create a new Android Studio Project  Select File &amp;gt; New &amp;gt; New Project&amp;hellip; to run the ne project wizard Configure your new project:  You can use the default values  Select the form factors your app will run on:  Choose Phone/Tablet Choose Minimum SDK: API 19: Android 4.</description>
+    </item>
+    
+    <item>
+      <title>Development Environment Setup-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/tutorials/dev-environment-setup/</link>
+      <pubDate>Thu, 06 Jul 2017 12:51:19 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/tutorials/dev-environment-setup/</guid>
+      <description>Development Environment Setup Android Studio is the IDE used by the WorldWind development team. It includes all the tools you need to build apps for Android. If you haven&amp;rsquo;t done so already, download and install Android Studio.
+Installation Notes When you perform the installation you can choose the Standard Setup, which will download the required Android SDK components.
+Prerequisites Android Studio requires a compatible Java SE Development Kit (JDK) be installed on your computer.</description>
+    </item>
+    
+    <item>
+      <title>About/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/about/</link>
+      <pubDate>Mon, 03 Jul 2017 14:41:50 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/about/</guid>
+      <description>About WorldWind is a free, open source API for visualizing and hosting geospatial data. Our client libraries, available for Android devices, the browser, or the desktop, provide developers a quick and easy utility for visualizations of 3D globe, map and geographical information. Our server kit extends the functionality of GeoServer to provide an end to end geospatial solution.
+Organizations across the world use WorldWind to monitor weather patterns, visualize cities and terrain, track the movement of planes, vehicles and ships, analyze geospatial data, and educate people about the Earth.</description>
+    </item>
+    
+    <item>
+      <title>Contact/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/contact/</link>
+      <pubDate>Mon, 03 Jul 2017 14:28:34 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/contact/</guid>
+      <description>Contact Administrative Contact Parul Agrawal - parul.agrawal-1@nasa.gov
+The WorldWind project is managed from NASA Ames Research Center at Moffett Field, CA.
+Issue Reports and Source Code WorldWind uses GitHub for source and issue management.
+Development Community The WorldWind Forum is a great resource to learn more about the WorldWind projects. Many users are quick to help and share code snippets. Members of the NASA and ESA WorldWind development teams regularly visit the forum to answer questions and help with issues.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/get-started/</link>
+      <pubDate>Fri, 30 Jun 2017 14:40:16 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/get-started/</guid>
+      <description>Get Started WorldWind Android is a 3D virtual globe API for Android, developed by NASA. It provides a geographic context with high-resolution terrain, used to visualize geographic or geo-located information in 3D and 2D. Developers can customize the globe’s terrain and imagery. WorldWind Android provides a collection of shapes for displaying and interacting with geographic data and representing a range of geometric objects.
+Compatible with Android 4.1 (Jelly Bean) and newer.</description>
+    </item>
+    
+  </channel>
+</rss>

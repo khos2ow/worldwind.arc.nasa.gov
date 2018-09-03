@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <title>
+        Picking-Web WorldWind/NASA WorldWind
+        </title>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+<div>
+<nav class="navbar web-navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <p class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+            <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+        <div id="myNavBar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about">About</a></li>
+                <li><a href="/web">Web</a></li>
+                <li><a href="/android">Android</a></li>
+                <li><a href="/java">Java</a></li>
+                <li><a href="/serverkit">Server Kit</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+</nav>
+</div>
+
+
+    <div class="container-fluid">
+    <div class="row ww-carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                        <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WebWorldWind"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+
+                    <li><a href="/web#anchor">Overview</a></li>
+                    <li><a href="/web/get-started#anchor">Get Started</a></li>
+                    <li><a href="/web/features#anchor">Features</a></li>
+                    <li><a href="/web/examples#anchor">Examples</a></li>
+                    <li><a href="/web/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/web/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="picking">Picking</h2>
+
+<p>Picking is performed by the WorldWindow. There are four flavors of picking:</p>
+
+<ul>
+<li>Normal picking returns the visible object or terrain at a specified pick point. See <a href="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/PlacemarksAndPicking.js">PlacemarksAndPicking.js</a> for an example.</li>
+<li>Deep picking returns all objects at a specified pick point. See <a href="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/DeepPicking.js">DeepPicking.js</a> for an example.</li>
+<li>Region picking returns all visible objects within a specified pick region. See <a href="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/examples/PickAllShapesInRegion.js">PickAllShapesInRegion.js</a> for an example.</li>
+<li>Terrain picking returns the geographic coordinates of the terrain at a specified pick point. See <a href="https://github.com/NASAWorldWind/WebWorldWind/blob/develop/src/layer/CoordinatesDisplayLayer.js">CoordinatesDisplayLayer.js</a> for an example.</li>
+</ul>
+
+<p>The sections below provide the details of each flavor.</p>
+
+<p>Picking is initiated by the app using the API on the WorldWindow object. It’s typically performed in response to a mouse click or tap gesture, but the app may initiate picking at any time it chooses.</p>
+
+<p>Picking is fast, much faster than actually drawing the scene. But apps should invoke picking judiciously because it does require both CPU and GPU resources.</p>
+
+<h2 id="pick-return">Pick Return</h2>
+
+<p>All flavors of picking return a PickedObjectList containing an array of PickedObjects. Each PickedObject identifies the individual item that was picked. Included in that object is a reference to the picked shape and a flag indicating whether the picked object is the top-most object in the returned collection of picked objects. In the case of normal picking there will be at most one picked shape identified, and its isOnTop property will be true. In the case of deep picking there may be several picked objects, but only one will be marked as the top-most. This top-most object may be the terrain, as described below.</p>
+
+<p>For region picking all objects that fall within the pick region are returned regardless of whether they are actually visible on the screen (not occluded by other shapes or terrain). But the truly visible ones are marked as top-most.</p>
+
+<p>In all flavors of picking but region picking, the picked object list may contain a picked object identifying terrain. Its isTerrain property is true. This object identifies the geographic position of the pick point (the position property). It’s returned if the pick point is within the terrain and not in space. If the terrain at that position occludes the other items in the picked object list, the terrain object is marked as top-most.</p>
+
+<p>Also included in the picked object is the parent layer of the picked shape. See the API doc for PickedObject for further details.</p>
+
+<h2 id="picking-interface">Picking Interface</h2>
+
+<p>The API for picking is all on the WorldWindow object. The methods are:</p>
+
+<p>pick for normal and deep picking
+pickTerrain for terrain picking
+pickShapesInRegion for region picking
+For deep picking you set the WorldWindow’s deepPicking property prior to calling the pick method.</p>
+
+<h2 id="pick-point-and-pick-region">Pick Point and Pick Region</h2>
+
+<p>The pick point and pick region are specified in screen coordinates, but coordinates relative to the WorldWindow’s canvas. Those coordinates can be easily computed using the canvasCoodinates method of the WorldWindow object, as follows in this call to pick:</p>
+
+<pre><code class="language-javascript">var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
+</code></pre>
+
+<p>The x and y in this call are the clientX and clientY properties of the event passed to the event handler.</p>
+
+<p>For region picking, the pick region is relative to the upper-left corner of the window. Here is code from the PickAllShapesInRegion example that composes the pick region:</p>
+
+<pre><code class="language-javascript">var rectRadius = 50,
+    pickPoint = wwd.canvasCoordinates(x, y),
+    pickRectangle = new WorldWind.Rectangle(
+        pickPoint[0] - rectRadius,
+        pickPoint[1] + rectRadius,
+        2 * rectRadius, 2 * rectRadius);
+</code></pre>
+
+<p>Notice that the origin of the rectangle (the first two arguments to the Rectangle constructor above) is its upper-left corner.</p>
+
+    </section>
+</div>
+
+
+
+
+<div class="push"></div>
+<script type="text/javascript" src="/js/event-tracking.js"></script>
+
+</div>
+</body>
+<div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+</div>
+</html>

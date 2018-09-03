@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link rel="stylesheet" href="/css/theme.css">
+        <title>
+            Camera Controls-WorldWind Android/NASA WorldWind
+        </title>
+        
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+    <body>
+    <div class='wrapper'>
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <p class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+                    <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+                <div id="myNavBar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/web">Web</a></li>
+                        <li><a href="/android">Android</a></li>
+                        <li><a href="/java">Java</a></li>
+                        <li><a href="/serverkit">Server Kit</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        
+<div class="container-fluid">
+    <div class="row ww-carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Android</h1>
+                    </div>
+                </div>
+
+                <div class="item slides">
+                    <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Android</h1>
+                    </div>
+                </div>
+
+                <div class="item slides">
+                    <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Android</h1>
+                    </div>
+                </div>
+
+                <div class="item slides">
+                    <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Android</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WorldWindAndroid"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/android">Overview</a></li>
+                    <li><a href="/android/get-started#anchor">Get Started</a></li>
+                    <li><a href="/android/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/android/examples#anchor">Examples</a></li>
+                    <li><a href="/android/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="camera-controls">Camera Controls</h2>
+
+<p><img src="/img/ww-android-camera-controls.png" class="img-responsive center-block"></p>
+
+<p>This advanced example uses the <strong>Navigator&rsquo;s setAsCamera</strong> interface in response to touch event gestures.  It overrides the default pan, zoom and rotate behavior.</p>
+
+<ul>
+<li>one-finger pan moves the geographic location of the camera,</li>
+<li>two-finger pinch-zoom adjusts the camera altitude,</li>
+<li>two-finger rotate rotates the camera about its own axis,</li>
+<li>three-finger tilt tilts the camera about its own axis.</li>
+</ul>
+
+<h3 id="cameracontrolfragment-java">CameraControlFragment.java</h3>
+
+<p>The CameraControlFragment class extends the BasicGlobeFragment and overrides the createWorldWindow method. In createWorldWindow, we create a CameraController: a subclass of the BasicWorldWindController that processes gestures and updates the view via the Navigator. The fragment sets the WorldWindow&rsquo;s worldWindowController property to an instance of our custom controller.</p>
+
+<p><img src="/img/ww-android-camera-controls-classes.png" class="img-responsive center-block"></p>
+
+<pre><code class="language-java">public class CameraControlFragment extends BasicGlobeFragment {
+
+    /**
+     * Creates a new WorldWindow object with a custom WorldWindowController.
+     */
+    @Override
+    public WorldWindow createWorldWindow() {
+        // Let the super class (BasicGlobeFragment) do the creation
+        WorldWindow wwd = super.createWorldWindow();
+
+        // Override the default &quot;look at&quot; gesture behavior with a camera centric gesture controller
+        wwd.setWorldWindowController(new CameraController());
+
+        // Create a camera position above KOXR airport, Oxnard, CA
+        Camera camera = new Camera();
+        camera.set(34.2, -119.2,
+            10000, WorldWind.ABSOLUTE,
+            90, // Looking east
+            70, // Lookup up from nadir
+            0); // No roll
+
+        // Apply the new camera position
+        Globe globe = wwd.getGlobe();
+        wwd.getNavigator().setAsCamera(globe, camera);
+
+        return wwd;
+    }
+
+
+    /**
+     * A custom WorldWindController that uses gestures to control the camera directly via the setAsCamera interface
+     * instead of the default setAsLookAt interface.
+     */
+    private class CameraController extends BasicWorldWindowController {
+
+        protected Camera camera = new Camera();
+
+        protected Camera beginCamera = new Camera();
+
+        @Override
+        protected void handlePan(GestureRecognizer recognizer) {
+            int state = recognizer.getState();
+            float dx = recognizer.getTranslationX();
+            float dy = recognizer.getTranslationY();
+
+            if (state == WorldWind.BEGAN) {
+                this.gestureDidBegin();
+                this.lastX = 0;
+                this.lastY = 0;
+            } else if (state == WorldWind.CHANGED) {
+                // Get the navigator's current position.
+                double lat = this.camera.latitude;
+                double lon = this.camera.longitude;
+                double alt = this.camera.altitude;
+
+                // Convert the translation from screen coordinates to degrees. Use the navigator's range as a metric for
+                // converting screen pixels to meters, and use the globe's radius for converting from meters to arc degrees.
+                double metersPerPixel = this.wwd.pixelSizeAtDistance(alt);
+                double forwardMeters = (dy - this.lastY) * metersPerPixel;
+                double sideMeters = -(dx - this.lastX) * metersPerPixel;
+                this.lastX = dx;
+                this.lastY = dy;
+
+                double globeRadius = this.wwd.getGlobe().getRadiusAt(lat, lon);
+                double forwardDegrees = Math.toDegrees(forwardMeters / globeRadius);
+                double sideDegrees = Math.toDegrees(sideMeters / globeRadius);
+
+                // Adjust the change in latitude and longitude based on the navigator's heading.
+                double heading = this.camera.heading;
+                double headingRadians = Math.toRadians(heading);
+                double sinHeading = Math.sin(headingRadians);
+                double cosHeading = Math.cos(headingRadians);
+                lat += forwardDegrees * cosHeading - sideDegrees * sinHeading;
+                lon += forwardDegrees * sinHeading + sideDegrees * cosHeading;
+
+                // If the navigator has panned over either pole, compensate by adjusting the longitude and heading to move
+                // the navigator to the appropriate spot on the other side of the pole.
+                if (lat &lt; -90 || lat &gt; 90) {
+                    this.camera.latitude = Location.normalizeLatitude(lat);
+                    this.camera.longitude = Location.normalizeLongitude(lon + 180);
+                } else if (lon &lt; -180 || lon &gt; 180) {
+                    this.camera.latitude = lat;
+                    this.camera.longitude = Location.normalizeLongitude(lon);
+                } else {
+                    this.camera.latitude = lat;
+                    this.camera.longitude = lon;
+                }
+                //this.camera.heading = WWMath.normalizeAngle360(heading + sideDegrees * 1000);
+
+                this.wwd.getNavigator().setAsCamera(this.wwd.getGlobe(), this.camera);
+                this.wwd.requestRedraw();
+            } else if (state == WorldWind.ENDED || state == WorldWind.CANCELLED) {
+                this.gestureDidEnd();
+            }
+        }
+
+        @Override
+        protected void handlePinch(GestureRecognizer recognizer) {
+            int state = recognizer.getState();
+            float scale = ((PinchRecognizer) recognizer).getScale();
+
+            if (state == WorldWind.BEGAN) {
+                this.gestureDidBegin();
+            } else if (state == WorldWind.CHANGED) {
+                if (scale != 0) {
+                    // Apply the change in scale to the navigator, relative to when the gesture began.
+                    scale = ((scale - 1) * 0.1f) + 1; // dampen the scale factor
+                    this.camera.altitude = this.camera.altitude * scale;
+                    this.applyLimits(this.camera);
+
+                    this.wwd.getNavigator().setAsCamera(this.wwd.getGlobe(), this.camera);
+                    this.wwd.requestRedraw();
+                }
+            } else if (state == WorldWind.ENDED || state == WorldWind.CANCELLED) {
+                this.gestureDidEnd();
+            }
+        }
+
+        @Override
+        protected void handleRotate(GestureRecognizer recognizer) {
+            int state = recognizer.getState();
+            float rotation = ((RotationRecognizer) recognizer).getRotation();
+
+            if (state == WorldWind.BEGAN) {
+                this.gestureDidBegin();
+                this.lastRotation = 0;
+            } else if (state == WorldWind.CHANGED) {
+
+                // Apply the change in rotation to the navigator, relative to the navigator's current values.
+                double headingDegrees = this.lastRotation - rotation;
+                this.camera.heading = WWMath.normalizeAngle360(this.camera.heading + headingDegrees);
+                this.lastRotation = rotation;
+
+                this.wwd.getNavigator().setAsCamera(this.wwd.getGlobe(), this.camera);
+                this.wwd.requestRedraw();
+            } else if (state == WorldWind.ENDED || state == WorldWind.CANCELLED) {
+                this.gestureDidEnd();
+            }
+        }
+
+        @Override
+        protected void handleTilt(GestureRecognizer recognizer) {
+            int state = recognizer.getState();
+            float dx = recognizer.getTranslationX();
+            float dy = recognizer.getTranslationY();
+
+            if (state == WorldWind.BEGAN) {
+                this.gestureDidBegin();
+                this.lastRotation = 0;
+            } else if (state == WorldWind.CHANGED) {
+                // Apply the change in tilt to the navigator, relative to when the gesture began.
+                double headingDegrees = 180 * dx / this.wwd.getWidth();
+                double tiltDegrees = -180 * dy / this.wwd.getHeight();
+
+                this.camera.heading = WWMath.normalizeAngle360(this.beginCamera.heading + headingDegrees);
+                this.camera.tilt = this.beginCamera.tilt + tiltDegrees;
+                this.applyLimits(camera);
+
+                this.wwd.getNavigator().setAsCamera(this.wwd.getGlobe(), this.camera);
+                this.wwd.requestRedraw();
+            } else if (state == WorldWind.ENDED || state == WorldWind.CANCELLED) {
+                this.gestureDidEnd();
+            }
+        }
+
+        @Override
+        protected void gestureDidBegin() {
+            if (this.activeGestures++ == 0) {
+                this.wwd.getNavigator().getAsCamera(this.wwd.getGlobe(), this.beginCamera);
+                this.camera.set(this.beginCamera);
+            }
+        }
+
+        protected void applyLimits(Camera camera) {
+            double distanceToExtents = this.wwd.distanceToViewGlobeExtents();
+
+            double minAltitude = 100;
+            double maxAltitude = distanceToExtents;
+            camera.altitude = WWMath.clamp(camera.altitude, minAltitude, maxAltitude);
+
+            // Limit the tilt to between nadir and the horizon (roughly)
+            double r = wwd.getGlobe().getRadiusAt(camera.latitude, camera.latitude);
+            double maxTilt = Math.toDegrees(Math.asin(r / (r + camera.altitude)));
+            double minTilt = 0;
+            camera.tilt = WWMath.clamp(camera.tilt, minTilt, maxTilt);
+        }
+    }
+}
+</code></pre>
+
+    </section>
+</div>
+
+
+
+
+    <div class="push"></div>
+    <script type="text/javascript" src="/js/event-tracking.js"></script>
+
+    </div>
+    <br/>
+    <br/>
+    </body>
+    <div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+    </div>
+
+</html>

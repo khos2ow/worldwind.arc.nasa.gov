@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link rel="stylesheet" href="/css/theme.css">
+        <title>
+            Demos-WorldWind Java/NASA WorldWind
+        </title>
+        
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+    <body>
+    <div class='wrapper'>
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <p class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+                    <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+                <div id="myNavBar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/web">Web</a></li>
+                        <li><a href="/android">Android</a></li>
+                        <li><a href="/java">Java</a></li>
+                        <li><a href="/serverkit">Server Kit</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        
+<div class="container-fluid">
+    <div class="row ww-carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WorldWindJava"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<div id="menu" style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/java">Overview</a></li>
+                    <li><a href="/java/get-started#anchor">Get Started</a></li>
+                    <li><a href="/java/features#anchor">Features</a></li>
+                    <li><a href="/java/demos#anchor">Demos</a></li>
+                    <li><a href="/java/examples#anchor">Examples</a></li>
+                    <li><a href="/java/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/java/releases#anchor">Releases</a></li>
+                    <li><a href="/java/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="demos">Demos</h2>
+
+<p>The applications here demonstrate some of WorldWind&rsquo;s rich capabilities. Also see <a href="http://eurochallenge.como.polimi.it/">WorldWind Europa Challenge site</a> for a collection of applications created by the WorldWind Europa Challenge teams.</p>
+
+<hr />
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+<li>Up to date video card drivers</li>
+<li>Oracle Java Runtime Environment (JRE) 1.7.0</li>
+<li>Java and OpenGL setup can be tested using JOGL demo site.</li>
+</ul>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ApplicationTemplate.jnlp"><h3 class="panel-title">Application Template</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ApplicationTemplate.jnlp">
+                    <img src="/img/java/applicationtemplate_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Displays the default globe with its default layers. Includes capabilities such as a compass and status bar that are
+common to most applications, and presents Earth within a star field and with an atmosphere. Only 6 lines
+of code are required to instantiate everything seen here.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/KMLViewer.jnlp"><h3 class="panel-title">KML Viewer</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/KMLViewer.jnlp">
+                    <img src="/img/java/kmlviewer_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates loading, displaying, and interacting with KML content in WorldWind.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/WMSLayerManager.jnlp"><h3 class="panel-title">WMS Layer Manager</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/WMSLayerManager.jnlp">
+                    <img src="/img/java/wmslayermanager_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Features a WMS layer panel that allows you to access any WMS server and
+        layers.</p>
+
+<p>To add a server, click on the + tab and enter a url. After the WMS discovery process, the list of available layers is displayed. Select one to add it to the current globe layer list. Unselect it to remove it.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/InstallImageryAndElevationsDemo.jnlp"><h3 class="panel-title">Installing Images and Elevations</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/InstallImageryAndElevationsDemo.jnlp">
+                    <img src="/img/java/rasterviewer.png" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Enables a user to install image data and elevation data from a file on the local hard drive. Data can be installed as
+a full pyramid of tiles or as a partial pyramid.</p>
+
+<p>Installing a full pyramid takes longer and consumes more space on the user&rsquo;s hard drive, but has the best runtime performance. Installing a partial pyramid takes less time and consumes less space on the user&rsquo;s hard drive, but requires that the original data not be moved or deleted.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ExportImageOrElevations.jnlp"><h3 class="panel-title">Export Surface Imagery and Elevations</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ExportImageOrElevations.jnlp">
+                    <img src="/img/java/exportimageorelevations_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates how to use the SectorSelector utility to save a selected region of surface imagery and elevations to a GeoTIFF file.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ScankortDenmark.jnlp"><h3 class="panel-title">Scankort Denmark Data</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ScankortDenmark.jnlp">
+                    <img src="/img/java/scankortdenmark_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates high resolution imagery (0.2 meters per pixel) and elevation data (1.6 meters per pixel) served by the WorldWind WMS, and visualized by the WorldWind Java client.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/RigidShapes.jnlp"><h3 class="panel-title">Rigid Shapes</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/RigidShapes.jnlp">
+                    <img src="/img/java/rigidshapes_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates visualization of common rigid shape types in WorldWind Java. Includes six rigid shape types: Box, Cone, Cylinder, Ellipsoid/Sphere, Pyramid, and Wedge.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ExtrudedShapes.jnlp"><h3 class="panel-title">Extruded Shapes</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/ExtrudedShapes.jnlp">
+                    <img src="/img/java/extrudedshapes_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Shows visualization of textured 3D buildings with WorldWind Java SDK Extruded Shapes.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/SurfaceShapes.jnlp"><h3 class="panel-title">Surface Shapes</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/SurfaceShapes.jnlp">
+                    <img src="/img/java/surfaceshapes_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates visualization of common terrain following shapes in WorldWind Java. Includes five surface shape types: SurfacePolyline, SurfaceQuad/SurfaceSquare, SurfaceEllipse/SurfaceCircle, SurfaceSector, and SurfacePolygon.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/Airspaces.jnlp"><h3 class="panel-title">Airspaces</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/Airspaces.jnlp">
+                    <img src="/img/java/airspaces_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates the WorldWind Java controlled airspaces tookit.</p>
+
+<p>Airspaces feature 3D volumes controlled by geographic coordinates and upper- and lower- altitude boundaries. Airspaces optionally conform to the terrain as you move them. They demonstrate what&rsquo;s possible in terms of dynamic manipulation of data in 3D space.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnalyticSurface.jnlp"><h3 class="panel-title">Analytic Surface</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnalyticSurface.jnlp">
+                    <img src="/img/java/analyticsurface_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates visual representation of scalar values over a grid of geographic positions. AnalyticSurface supports dynamic scalar data by providing a simple, high throughput rendering pipeline for the application.</p>
+
+<p>This demonstrates two unique surface types:</p>
+
+<ul>
+<li>A dynamic surface representing random altitudes over the Coast of Florida, USA.</li>
+<li>A static surface representing annual precipitation in Washington State, USA.</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/VideoOnTerrain.jnlp"><h3 class="panel-title">Video On Terrain</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/VideoOnTerrain.jnlp">
+                    <img src="/img/java/videoonterrain_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Illustrates how applications can display video on the globe&rsquo;s surface.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/WebBrowserBalloons.jnlp"><h3 class="panel-title">Web Browser Balloons</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/WebBrowserBalloons.jnlp">
+                    <img src="/img/java/webbrowserballoons_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates use of WorldWind browser balloons to display HTML, JavaScript, and Flash content to the user in the form of a screen-aligned balloon. There are two browser balloon types: <em>ScreenBrowserBalloon</em> which displays a balloon at a point on the screen, and <em>GlobeBrowserBalloon</em> which displays a balloon attached to a position on the Globe.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/Annotations.jnlp"><h3 class="panel-title">Annotations</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/Annotations.jnlp">
+                    <img src="/img/java/annotations_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Allows you to experiment with the multiple options of WorldWind Java annotation feature.</p>
+
+<p>Annotations are text labels with support for multiline text, simple HTML and many styling attributes such as font face, size and colors, bubble shapes and background image.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnnotationControls.jnlp"><h3 class="panel-title">On Screen Controls</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnnotationControls.jnlp">
+                    <img src="/img/java/annotationcontrols_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates the use of WorldWind annotations to create simple user interfaces embedded into the WorldWindow.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/MGRSGraticule.jnlp"><h3 class="panel-title">MGRS Graticule</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/MGRSGraticule.jnlp">
+                    <img src="/img/java/mgrsgraticule_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Shows visualization of the Military Grid Reference System (MGRS) as a graticule overlayed on the globe&rsquo;s surface.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/TerrainProfiler.jnlp"><h3 class="panel-title">Terrain Profilier</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/TerrainProfiler.jnlp">
+                    <img src="/img/java/terrainprofiler_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Shows the terrain profile layer in action with its various controls. Allows a view of a realtime section profile
+graph for any place on the planet, at any scale - continent, country or mountain range&hellip; just by moving the mouse.</p>
+
+<p>It proves particularly useful to explore the ocean floors where the bathymetry data reveals important geologic features.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/FlatWorldEarthquakes.jnlp"><h3 class="panel-title">Flat World Earthquakes</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/FlatWorldEarthquakes.jnlp">
+                    <img src="/img/java/flatworld_02_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Shows the latest earthquakes over a flat world projection. Allows you to see the whole globe at once while
+retaining the capability to zoom onto the surface and still experience 3D terrain.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnaglyphStereo.jnlp"><h3 class="panel-title">Anaglyph Stereo</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AnaglyphStereo.jnlp">
+                    <img src="/img/java/anaglyphstereo_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Shows anaglyph stereo viewing capability. It allows you to explore the world in &lsquo;real&rsquo; 3D using red and cyan glasses
+        with the red filter over the left eye.</p>
+
+<p>To get a comfortable experience use the slider to adjust the interocular distance.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/MultiWindowViewVolume.jnlp"><h3 class="panel-title">Multi-Window View Volume</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/MultiWindowViewVolume.jnlp">
+                    <img src="/img/java/multiwindowviewvolume_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates WorldWind Java SDK support for rendering globes in multiple application windows. WorldWind automatically shares resources wherever possible across multiple windows in a single runtime environment.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/KeepingObjectsInView.jnlp"><h3 class="panel-title">View Tracking</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/KeepingObjectsInView.jnlp">
+                    <img src="/img/java/keepingobjectsinview_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates how applications can keep a set of moving objects in view.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/LineBuilder.jnlp"><h3 class="panel-title">Line Builder</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/LineBuilder.jnlp">
+                    <img src="/img/java/linebuilder_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Allows you to interactively draw a path over the terrain surface.</p>
+
+<p>It demonstrates how an application can use and consume mouse events before they get to the default view input handler.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AirspaceBuilder.jnlp"><h3 class="panel-title">Airspace Builder</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/AirspaceBuilder.jnlp">
+                    <img src="/img/java/airspacebuilder_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Demonstrates runtime construction of 3D shapes using the WorldWind Java controlled airspace shapes.</p>
+
+<ul>
+<li><strong>New shape</strong> - Click the &ldquo;New shape&rdquo; button. When &ldquo;Auto fill new shapes&rdquo; is checked a default shape is created automatically</li>
+<li><strong>Select a shape</strong> - Left mouse button click</li>
+<li><strong>Delete a shape</strong> - Select the shape, then press the delete key.</li>
+<li><strong>Move a shape</strong> or move a control point - Drag the shape or control point with the left mouse button</li>
+<li><strong>Resize a shape</strong> - Hold the Shift key and drag any control point with the left mouse button</li>
+<li><strong>Create a control point</strong> - Hold the Alt key and click the left mouse button</li>
+<li><strong>Delete a control point</strong> - Hold the Ctrl key and click the left mouse button</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h2 id="user-created-application-examples">User Created Application Examples</h2>
+
+<p><br>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://miningsolutions.itsc.uah.edu/glider/"><h3 class="panel-title">GLIDER - Globally Leveraged integrated data explorer for research</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://miningsolutions.itsc.uah.edu/glider/">
+                    <img src="/img/java/glider_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p><a href="http://miningsolutions.itsc.uah.edu/glider/">GLIDER</a> (Globally Leveraged Integrated Data Explorer for Research) is a NASA ACESS funded project managed at <a href="http://www.uah.edu/">UAHuntsville</a> <a href="http://www.itsc.uah.edu/">ITSC</a>. The goal of this project is to integrate three existing applications, namely WorldWind, Interactive Visualizer and Image Classifier (IVICS) and the Algorithm Development and Mining (ADaM) toolkit into a single seamless tool for research and education community. GLIDER will be a complete comprehensive, easy to use tool for thematic information extraction from NASA imagery.</p>
+
+            </div>
+        </div>
+    </div>
+</div></p>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://earth.esa.int/EOLi/EOLi.html"><h3 class="panel-title">EOLi (Earth Observation Link) by ESA (European Space Agency)</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://earth.esa.int/EOLi/EOLi.html">
+                    <img src="/img/java/eoli_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p><a href="http://earth.esa.int/EOLi/EOLi.html">ESA EOLi</a> (Earth Observation Link) is the European Space Agency&rsquo;s client for Earth Observation Catalogue and Ordering Services.</p>
+
+<p>Using EOLi, you can browse the metadata and preview images of Earth Observation data acquired by the satellites ENVISAT, ERS, Landsat, IKONOS, DMC, ALOS, SPOT, Kompsat, Proba, JERS, IRS, Nimbus, NOAA, SCISAT, SeaStar, Terra/Aqua.</p>
+
+<p>By default, EOLi-sa uses a 2d drawing mode. To enable WorldWind, click on the layered map icon in the upper right for map settings. Then choose Orthographic or Plate Carrée (new 3D map) for a projection.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="#f16"><h3 class="panel-title">WorldWind Java DiSTI F-16 Flight Simulator</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#f16">
+                    <img src="/img/java/f16.png" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>‘Fly’ an F-16 and immerse yourself in the cockpit as it maneuvers over the terrain. All made possible through a collaboration between NASA WorldWind, Oracle and DiSTI. Here together you’ll see these three powerful technologies—NASA’s WorldWind, Oracle&rsquo;s Java Open GL and DiSTI’s new GL Studio for Java—converge to enable Java developers to leverage spatial data in a 4D world with incredible virtual reality.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.clfs.umd.edu/biology/faganlab/movement/"><h3 class="panel-title">Informatics Tools for Population-level Movement Dynamics</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.clfs.umd.edu/biology/faganlab/movement/">
+                    <img src="/img/java/animal_tracker.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>The <a href="http://biology.umd.edu">University of Maryland Department of Biology</a>, has created the Animal Movement Visualizer to display animal location data in real time. This software can be used by ecologists and researchers to track the migration patterns of animals, simply by uploading coordinates via an excel file.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://geo.xlab.si/"><h3 class="panel-title">Gaea&#43;</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://geo.xlab.si/">
+                    <img src="/img/java/gaeaplus_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Gaea+ features a rich combination of 3d building, landmark, street, and aerial photography data for Slovenia.</p>
+
+<p><a href="http://geo.xlab.si/download/pzs/install/windows/GaeaPlusPZSEn.exe">Gaea+ XLAB 3D Viewer</a></p>
+
+<ul>
+<li><a href="http://geo.xlab.si/download/pzs/install/windows/GaeaPlusPZSEn.exe">Windows</a></li>
+<li><a href="http://geo.xlab.si/download/pzs/install/macosx/GaeaPZS_en.dmg">Mac</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="https://worldwind.arc.nasa.gov/java/apps/SARApp/help/v6/SARHelp.html"><h3 class="panel-title">Air Search and Rescue</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://worldwind.arc.nasa.gov/java/apps/SARApp/help/v6/SARHelp.html">
+                    <img src="/img/java/sar_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>This application helps search and rescue planners determine the best places to search after a plane goes missing.</p>
+
+<p>Using last known positions from ground radar and other sources, planners are able to reconstruct an aircraft path and study it&rsquo;s position relative to the ground from any view point including that of the pilot.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.ga.gov.au/data-pubs/interactive-3d-models/world-wind-3d-data-viewer"><h3 class="panel-title">Geoscience Australia&#39;s WorldWind Viewer</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.ga.gov.au/data-pubs/interactive-3d-models/world-wind-3d-data-viewer">
+                    <img src="/img/java/geoscience_australia_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>Geoscience Australia&rsquo;s WorldWind Viewer is an application that displays Australia&rsquo;s continental data sets. The viewer allows you to compare national data sets such as the radioelements, the gravity and magnetic anomalies, and other mapping layers, and show the data draped over the Australian terrain in three dimensions.</p>
+
+<p>The viewer currently displays the following Geoscience Australia data layers: Radiometric Map of Australia, Gravity Anomaly Map of the Australian Region, Magnetic Anomaly Map of Australia</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://code.google.com/p/worldwindrcp/"><h3 class="panel-title">WorldWind Geo</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://code.google.com/p/worldwindrcp/">
+                    <img src="/img/java/wwgeo_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>WorldWind Geo is an experimental geo browser built on top of two of the best open source technologies: the WorldWind Java SDK and Eclipse.</p>
+
+<p>The new version of our 3D globe is closing the gap between GIS &amp; SIS (Scientific Information Systems) by incorporating low/med/hi resolution GIS datasets from multiple sources: NASA, MS Virtual Earth, and others plus the great java NetCDF library for plotting/subsetting capabilities of scientific data.</p>
+
+<p>Developed by Vladimir Silva.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.gano.name/shawn/JSatTrak/"><h3 class="panel-title">JSatTrack</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.gano.name/shawn/JSatTrak/">
+                    <img src="/img/java/jsattrack_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>JSatTrak is a Satellite tracking program written in Java. It allows you to predict the position of any satellite in real time or in the past or future. It uses advanced SGP4/SDP4 algorithms developed by NASA/NORAD to propagate the satellite orbits.</p>
+
+<p>The program also allows for easy updating of current satellite tracking data via CelesTrak.com. Because this application was written in Java, it should run on almost any operating system or directly off the web using java web start!</p>
+
+<p>Version 3.0 requires Java 1.6 - and uses NASA&rsquo;s WorldWind Java SDK (included) and JOGL for 3D rendering (included for win).</p>
+
+<p>Developed by Shawn Gano.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.gano.name/shawn/JSatTrak/"><h3 class="panel-title">JSatTrack</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.gano.name/shawn/JSatTrak/">
+                    <img src="/img/java/jsattrack_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>JSatTrak is a Satellite tracking program written in Java. It allows you to predict the position of any satellite in real time or in the past or future. It uses advanced SGP4/SDP4 algorithms developed by NASA/NORAD to propagate the satellite orbits.</p>
+
+<p>The program also allows for easy updating of current satellite tracking data via CelesTrak.com. Because this application was written in Java, it should run on almost any operating system or directly off the web using java web start!</p>
+
+<p>Version 3.0 requires Java 1.6 - and uses NASA&rsquo;s WorldWind Java SDK (included) and JOGL for 3D rendering (included for win).</p>
+
+<p>Developed by Shawn Gano.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.geomapapp.org/"><h3 class="panel-title">GeoMapApp</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.geomapapp.org/">
+                    <img src="/img/java/geomapapp_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>GeoMapApp (formerly MapApp) is a freely downloadable Java application, which permits users to browse bathymetry data from the world&rsquo;s oceans, generate and download custom grids and maps, and explore a variety of other data types.</p>
+
+<p>GeoMapApp is a data exploration and visualization tool that is continually being expanded as part of the Marine Geoscience Data System. GeoMapApp is an integrated mapping application developed at Lamont-Doherty Earth Observatory.</p>
+
+<p>Developed by William Haxby, with support from the LDEO Marine Geoscience Data System.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.darpa.mil/program/autonomous-real-time-ground-ubiquitous-surveillance-infrared"><h3 class="panel-title">DARPA ARGUS-IS</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.darpa.mil/program/autonomous-real-time-ground-ubiquitous-surveillance-infrared">
+                    <img src="/img/java/darpa_argus-is_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>The DARPA ARGUS-IS program mission is to provide military users a flexible and responsive capability to find, track and monitor events and activities of interest on a continuous basis in areas of interest.</p>
+
+<p>The ground processing subsystem enables users to interact with the ARGUS-IS airborne systems. The user interface, based on NASA WorldWind software, facilitates specification of areas where imagery is desired throughout the entire ARGUS-IS field of view.</p>
+
+<p>A next-generation system enables persistent surveillance of wide areas Brian Leininger, ARGUS-IS Program Manager, SPIE March 2008.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="http://www.myuniportal.com/"><h3 class="panel-title">MyUniPortal</h3></a>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://www.myuniportal.com/">
+                    <img src="/img/java/myuniportal_01_250.jpg" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <p>The free high tech learning portal for kids throughout the world.</p>
+
+<p>MyUniPortal combines information from different sources such as html, video media, search engines into an interface that allows the data to be placed into separate windows specific for that data (Browser, Video Viewer, Query Viewer, 3D Maps).</p>
+
+<p>Developed by Anthony Anecito.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </section>
+</div>
+
+
+
+
+    <div class="push"></div>
+    <script type="text/javascript" src="/js/event-tracking.js"></script>
+
+    </div>
+    <br/>
+    <br/>
+    </body>
+    <div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+    </div>
+
+</html>

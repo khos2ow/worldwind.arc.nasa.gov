@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WorldWind Android/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/android/</link>
+    <description>Recent content in WorldWind Android/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2017 14:40:16 -0400</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docs-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/docs/</link>
+      <pubDate>Thu, 27 Jul 2017 23:01:41 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WorldWindAndroid/</description>
+    </item>
+    
+    <item>
+      <title>Examples-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/examples/</link>
+      <pubDate>Fri, 07 Jul 2017 11:59:41 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/examples/</guid>
+      <description> Examples The full code for the examples below is available in the worldwind-examples module of the WorldWind Android project.
+General Purpose Globe      Multi-Globe Demonstration      Day Night Cycle      Placemarks Demonstration      Placemarks Select and Drag      MIL-STD-2525 Placemarks      MIL-STD-2525 Demonstration      Line Of Sight      Paths      Paths, Polygons &amp;amp; Labels      Basic Performance Benchmark      Placemarks Stress Test      Basic Stress Test      Texture Stress Test      MIL-STD-2525 Stress Test      </description>
+    </item>
+    
+    <item>
+      <title>Get Started-WorldWind Android/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/android/get-started/</link>
+      <pubDate>Fri, 30 Jun 2017 14:40:16 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/android/get-started/</guid>
+      <description>Get Started WorldWind Android is a 3D virtual globe API for Android, developed by NASA. It provides a geographic context with high-resolution terrain, used to visualize geographic or geo-located information in 3D and 2D. Developers can customize the globe’s terrain and imagery. WorldWind Android provides a collection of shapes for displaying and interacting with geographic data and representing a range of geometric objects.
+Compatible with Android 4.1 (Jelly Bean) and newer.</description>
+    </item>
+    
+  </channel>
+</rss>

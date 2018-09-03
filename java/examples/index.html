@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link rel="stylesheet" href="/css/theme.css">
+        <title>
+            Examples-WorldWind Java/NASA WorldWind
+        </title>
+        
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+    <body>
+    <div class='wrapper'>
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <p class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+                    <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+                <div id="myNavBar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/web">Web</a></li>
+                        <li><a href="/android">Android</a></li>
+                        <li><a href="/java">Java</a></li>
+                        <li><a href="/serverkit">Server Kit</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        
+<div class="container-fluid">
+    <div class="row ww-carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WorldWindJava"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<div id="menu" style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/java">Overview</a></li>
+                    <li><a href="/java/get-started#anchor">Get Started</a></li>
+                    <li><a href="/java/features#anchor">Features</a></li>
+                    <li><a href="/java/demos#anchor">Demos</a></li>
+                    <li><a href="/java/examples#anchor">Examples</a></li>
+                    <li><a href="/java/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/java/releases#anchor">Releases</a></li>
+                    <li><a href="/java/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="examples">Examples</h2>
+
+<hr />
+
+<p>The WorldWind API contains over 100 code examples that show how to perform all manner of tasks, from creating the most basic WorldWind application to using complex, advanced functionality.</p>
+
+<p>Below are brief descriptions of selected example programs.  All examples can be found in the <a href="https://github.com/NASAWorldWind/WorldWindJava/tree/develop/src/gov/nasa/worldwindx/examples">GitHub repository</a>.</p>
+
+<ol>
+<li>Basics</li>
+<li>Layers</li>
+<li>View</li>
+<li>Data</li>
+<li>Terrain</li>
+<li>Shapes</li>
+<li>Annotations</li>
+<li>Images</li>
+<li>User Interface</li>
+<li>Network</li>
+<li>Configuration</li>
+<li>Tools</li>
+<li>Multiwindow</li>
+</ol>
+
+<hr />
+
+<h2 id="basics">Basics</h2>
+
+<p><strong>SimplestPossibleExample</strong> -  Demonstrates the simplest possible way to create a WorldWind application.</p>
+
+<p><strong>HelloWorldWind</strong> -  Shows in detail how to create a basic WorldWind program.</p>
+
+<p><strong>ApplicationTemplate</strong> -  Provides a base application framework for simple WorldWind examples.</p>
+
+<p><strong>Shutdown</strong> -  Shows how to shut down a WorldWindow and how to shut down all of WorldWind.</p>
+
+<hr />
+
+<h2 id="layers">Layers</h2>
+
+<p><strong>OnScreenLayerManager</strong> -  Demonstrates an on-screen layer manager using LayerManagerLayer.</p>
+
+<p><strong>WMSLayerManager</strong> -  Demonstrates the use of multiple WMS layers, as displayed in a WMSLayersPanel.</p>
+
+<p><strong>LayerTreeUsage</strong> -  Uses a BasicTree to display a list of layers.</p>
+
+<p><strong>Graticule</strong> -  Displays the globe with a latitude and longitude graticule (latitude and longitude grid)</p>
+
+<p><strong>MGRSGraticule</strong> -  Displays the globe with a MGRS/UTM graticule</p>
+
+<hr />
+
+<h2 id="view">View</h2>
+
+<p><strong>ViewLookAround</strong> -  Demonstrates how to ‘look around’ a scene by controlling the view’s pitch, heading, roll and field of view, in this case by using a simple set of sliders.</p>
+
+<p><strong>ViewIteration</strong> -  Demonstrates how to animate the view from one position on the globe to another.</p>
+
+<p><strong>AddAnimator</strong> -  Demonstrates the use of BasicFlyView with a FlyToFlyViewAnimator, allowing the user to fly smoothly to new locations by simply specifying a location’s name or lat-long coordinates.</p>
+
+<p><strong>ViewSwitch</strong> -  Demonstrates the difference between BasicOrbitView and BasicFlyView. Allows the user to select the preferred view type and then enter the name or lat-lon coordinates of a new location to animate the view to.</p>
+
+<p><strong>ViewLimits</strong> -  Demonstrates how to keep the view within certain bounds.</p>
+
+<p><strong>KeepingObjectsInView</strong> -  Demonstrates keeping a set of scene elements visible by using the utility class ExtentVisibilitySupport.</p>
+
+<p><strong>ViewControls</strong> -  Shows the ViewControlsLayer and allows you to adjust its size, orientation, and the available controls.</p>
+
+<hr />
+
+<h2 id="data">Data</h2>
+
+<p><strong>BulkDownload</strong> -  Illustrates how to use WorldWind to retrieve data from layers and elevation models in bulk from a remote source.</p>
+
+<p><strong>DataInstallerAp</strong> - Provides an interactive means to install data on the client.</p>
+
+<p><strong>Shapefiles</strong> -  Illustrates how to import ESRI Shapefiles into WorldWind.</p>
+
+<p><strong>ExtrudedPolygonsFromShapefile</strong> -  Shows how to load extruded shapes from Shapefiles.</p>
+
+<p><strong>VPFLayerDemo</strong> -  Illustrates how to import data from a Vector Product Format (VPF) database into WorldWind.</p>
+
+<p><strong>FlatWorldEartquakes</strong> -  Demonstrates how to use the EarthFlat and FlatOrbitView to display USGS’ latest earthquakes RSS feed.</p>
+
+<p><strong>GeoRSS</strong> -  Illustrates how to create a shape from a GeoRSS document. This example creates two shapes from hard-coded example GeoRSS documents.</p>
+
+<p><strong>SkankortDenmark</strong> -  Demonstrates high resolution imagery (0.2 meters per pixel) and elevation data (1.6 meters per pixel) served by the WorldWind WMS, and visualized by the WorldWind Java client.</p>
+
+<p><strong>SurfaceImageViewer</strong> -  Demonstrates how to open and view arbitrary surface images and elevations that have an accompanying world file.</p>
+
+<p><strong>ExportImageOrElevations</strong> -  Demonstrates how to use the SectorSelector utility to save selected image and/or elevations to a GeoTIFF file.</p>
+
+<p><strong>GetBestElevations</strong> -  Retrieves the highest-resolution elevations available for the current elevation model,
+        drawing them from the server if necessary.</p>
+
+<hr />
+
+<h2 id="terrain">Terrain</h2>
+
+<p><strong>TerrainProfiler</strong> -  Shows the TerrainProfileLayer in action with its various controls.</p>
+
+<p><strong>TerrainIntersection</strong> -  Shows how to compute terrain intersections using the highest resolution terrain data available from a globe’s elevation model.</p>
+
+<p><strong>ContourLines</strong> -  Illustrates how to display contour lines in WorldWind on the surface terrain at a specified elevation.</p>
+
+<p><strong>BathymetryRemoval</strong> -  Illustrates how to suppress the WorldWind Globe’s bathymetry (elevations below mean sea level) by using a  BathymetryFilterElevationModel.</p>
+
+<p><strong>DetailHints</strong> -  Illustrates how to control the detail of ElevationModel and TiledImageLayer using their detail hint properties.</p>
+
+<p><strong>DimGlobeSurfac</strong> - Illustrates how to place a layer over the terrain in order to dim it.</p>
+
+<hr />
+
+<h2 id="shapes">Shapes</h2>
+
+<p><strong>Shapes</strong> -  Shows how to let the user create path and surface shapes on the globe and modify their parameters with a simple user interface.</p>
+
+<p><strong>Airspaces</strong> -  Illustrates how to configure and display WorldWind Airspace shapes.</p>
+
+<p><strong>AirspaceBuilder</strong> -  Illustrates runtime construction of 3D extruded polygons and spheres using WorldWind Airspace shapes.</p>
+
+<p><strong>ExtrudedPolygons</strong> -  Shows how to use WorldWind ExtrudedPolygons.</p>
+
+<p><strong>ExtrudedShapes</strong> -  Demonstrates how to create ExtrudedPolygons with cap and side textures.</p>
+
+<p><strong>ExtrudedPolygonBuilder</strong> -  Shows how to build a tool for creating and editing ExtrudedPolygons on the surface of the globe.</p>
+
+<p><strong>LineBuilder</strong> -  Allows the user to interactively build a polyline.</p>
+
+<p><strong>LineBackground</strong> -  Illustrates how to display lines that stand out from the background imagery.</p>
+
+<p><strong>Paths</strong> -  Shows how to use the WorldWind Path construct.</p>
+
+<p><strong>PathsWithDirection</strong> -  Shows how to draw a Path with direction arrowheads between the points.</p>
+
+<p><strong>Polygons</strong> -  Shows how to use WorldWind Polygon shapes.</p>
+
+<p><strong>RigidShapes</strong> -  Demonstrates usage of the various Rigid Shapes: Ellipsoid, Box, Cylinder, Cone, Pyramid and Wedge.</p>
+
+<p><strong>RigidShapeBuilder</strong> -  Shows how to build a tool for creating and editing 3D shapes and placing them on the globe. Possible shapes include the Rigid Shapes (Ellipsoid, Box, Cylinder, Cone, Pyramid and Wedge) as well as ExtrudedPolygon.</p>
+
+<p><strong>Ellipsoids</strong> -  Illustrates how to use the WorldWind Ellipsoid rigid shape to display an arbitrarily sized and oriented ellipsoid on the Globe.</p>
+
+<p><strong>Boxes</strong> -  Illustrates how to use the WorldWind Box rigid shape to display an arbitrarily sized and oriented box on the Globe.</p>
+
+<p><strong>Cylinders</strong> -  Illustrates how to use the WorldWind Cylinder rigid shape to display an arbitrarily sized and oriented cylinder on the Globe.</p>
+
+<p><strong>Cones</strong> -  Illustrates how to use the WorldWind Cone rigid shape to display an arbitrarily sized and oriented cone on the Globe.</p>
+
+<p><strong>Pyramid</strong> -  Illustrates how to use the WorldWind Pyramid rigid shape to display an arbitrarily sized and oriented pyramid on the Globe.</p>
+
+<p><strong>Wedges</strong> -  Illustrates how to use the WorldWind Wedge rigid shape to display an arbitrarily sized and oriented wedge on the Globe.</p>
+
+<p><strong>RotatedSector</strong> -  Illustrates rotating a Sector-shaped SurfaceQuad from standard position.</p>
+
+<hr />
+
+<h2 id="annotations">Annotations</h2>
+
+<p><strong>Annotations</strong> -  Illustrates how to use a WorldWind Annotation to display on-screen information to the user in the form of a text label with an optional image.</p>
+
+<p><strong>AnnotationControls</strong> -  Illustrates how to use a WorldWind Annotation with an AnnotationLayoutManager to display an Annotation with a simple embedded user interface.</p>
+
+<p><strong>Balloons</strong> -  Illustrates how to use a WorldWind Balloon to display on-screen information to the user in the form of a screen-aligned text balloon.</p>
+
+<p><strong>WebBrowserBalloons</strong> -  Illustrates how to use WorldWind browser balloons to display HTML, JavaScript, and Flash content to the user in the form of a screen-aligned balloon.</p>
+
+<p><strong>TacticalGraphics and TacticalSymbol</strong> - Shows examples of WorldWind’s 2525C implementation.</p>
+
+<p><strong>Markers</strong> -  Displays Markers (small shapes) in different shapes and colors.</p>
+
+<p><strong>MarkersOrder</strong> -  Shows how to control track markers’ attributes to convey their order in time.</p>
+
+<p><strong>GPSTracks</strong> -  Demonstrates displaying GPS tracks using markers.</p>
+
+<p><strong>Placemarks</strong> -  Illustrates how to use PointPlacemark.</p>
+
+<p><strong>PlaceNames</strong> -  Demonstrates how to customize which place names (names of countries, oceans, cities, etc) are displayed.</p>
+
+<p><strong>PathsWithLabels</strong> -  Demonstrates how to draw a path with a text annotation attached to the path.</p>
+
+<p><strong>AlarmIcons</strong> -  Illustrates how to display an icon with an alarm state using a WorldWind WWIcon.</p>
+
+<p><strong>GridOfPoints</strong> -  Uses a PointGrid to draw a grid of points on the terrain, spacing them evenly throughout a region defined by a four sided polygon.</p>
+
+<hr />
+
+<h2 id="images">Images</h2>
+
+<p><strong>SurfaceImages</strong> -  Demonstrates how to use the SurfaceImage class to place images on the surface of the globe.</p>
+
+<p><strong>RemoteSurfaceImage</strong> -  Demonstrates how to retrieve a remote image and display it as a SurfaceImage.</p>
+
+<p><strong>RubberSheetImage</strong> -  Demonstrates use of the SurfaceImage class to create a “rubber sheet” image that can be arbitrarily positioned, scaled and warped on the globe’s surface.</p>
+
+<p><strong>VideoOnTerrain</strong> -  Illustrates how you might show video on the globe’s surface.</p>
+
+<p><strong>ScreenImageDragging</strong> -  Demonstrates the use of the ScreenImage class, and shows how to use it to create an image that can be dragged around the screen using the mouse.</p>
+
+<hr />
+
+<h2 id="user-interface">User Interface</h2>
+
+<p><strong>ContextMenusOnShapes</strong> -  Illustrates how to attach context (popup) menus to shapes.</p>
+
+<p><strong>DeepPicking</strong> -  Illustrates how to cause all elements under the cursor in a WorldWindow to be reported in SelectEvents.</p>
+
+<p><strong>PickFrustum</strong> -  Illustrates how to change the size of the pick frustum.</p>
+
+<p><strong>SplitPaneUsage</strong> -  Illustrates how to use WorldWind within a Swing JSplitPane.</p>
+
+<p><strong>TabbedPaneUsage</strong> -  Demonstrates the use of tabbed panes.</p>
+
+<hr />
+
+<h2 id="network">Network</h2>
+
+<p><strong>NetworkOfflineMode</strong> -  Shows how to detach WorldWind from the network and reattach it.</p>
+
+<p><strong>LocalDataOnly</strong> -  Shows how to operate WorldWind completely locally, drawing data only from local caches.</p>
+
+<hr />
+
+<h2 id="configuration">Configuration</h2>
+
+<p><strong>FlatWorld</strong> -  Demonstrates how to display a flat globe instead of a round globe.</p>
+
+<p><strong>ConfiguringGLRuntimeCapabilities</strong> -  Illustrates how to configure WorldWind’s OpenGL features using a GLRuntimeCapabilities.</p>
+
+<p><strong>CustomElevationModel</strong> -  Illustrates how to configure WorldWind with a custom ElevationModel from a configuration file.</p>
+
+<p><strong>Stereo</strong> -  Shows how to configure WorldWind to display the globe in stereo.</p>
+
+<hr />
+
+<h2 id="tools">Tools</h2>
+
+<p><strong>LoggingControl</strong> -  Illustrates control and redirection of WorldWind logging.</p>
+
+<p><strong>WorldWindDiagnostics</strong> -  Shows how to output extensive diagnostic information about the user’s system configuration.</p>
+
+<p><strong>ScreenShots</strong> -  Demonstrates how to take screenshots with WWJ using the ScreenShotAction class.</p>
+
+<p><strong>LinesOfSight</strong> -  Computes and displays line-of-sight intersections for Terrain and renderables using the highest-resolution elevation data associated with a specified globe.</p>
+
+<p><strong>AbstractShapeIntersection</strong> -  Shows how to determine and display the intersection of a line with an Ellipsoid or other rigid shapes.</p>
+
+<p><strong>ExtrudedPolygonIntersection</strong> -  Shows how to determine and display the intersection of a line with an ExtrudedPolygon.</p>
+
+<p><strong>PolygonIntersection</strong> -  Shows how to determine and display the intersection of a line with a Polygon.</p>
+
+<p><strong>SectorSelection</strong> -  Demonstrates how to use the SectorSelector utility.</p>
+
+<p><strong>SimpleShapeDragging</strong> -  Demonstrates the use of the BasicDragger class for dragging a shape across the globe.</p>
+
+<p><strong>DraggingShapes</strong> -  Illustrates how to use the BasicDragger to create multiple shapes on the surface terrain that retain their form when dragged.</p>
+
+<p><strong>TreeControl</strong> -  Demonstrates use of the on-screen tree control using BasicTree.</p>
+
+<p><strong>TreeFiltering</strong> -  Demonstrates the use of BasicQuadTree to limit which markers in a collection are displayed to those in a specific region.</p>
+
+<p><strong>MeasureToolUsage</strong> -  Shows how to use the MeasureTool to draw a shape on the globe and measure length, area, etc.</p>
+
+<p><strong>GazeteerApp</strong> -  Shows how to integrate a gazetteer search function into the WorldWindow using the YahooGazetteer.</p>
+
+<p><strong>DataCacheViewer</strong> -  Shows how to build a tool to allow the user to view and delete cached WorldWind files based on how old they are.</p>
+
+<hr />
+
+<h2 id="multiwindow">Multiwindow</h2>
+
+<p><strong>MultiFrame</strong> -  Shows how to create two WorldWindows, each in its own JFrame. The WorldWindows share a globe and some layers.</p>
+
+<p><strong>CardLayoutUsage</strong> -  Illustrates how to use multiple WorldWind windows with a CardLayout layer manager.</p>
+
+<p><strong>FlatAndRoundGlobes</strong> -  Illustrates how to display round and flat globes side by side.</p>
+
+<p><strong>TabbedPaneUsage</strong> -  Illustrates how to use multiple WorldWind windows with a JTabbedPane.</p>
+
+<p><strong>ViewViewVolume</strong> -  Illustrates how to display a globe, and in a separate window display another globe with a visualization of the view volume in the main globe window.</p>
+
+<p><br/></p>
+
+    </section>
+</div>
+
+
+
+
+    <div class="push"></div>
+    <script type="text/javascript" src="/js/event-tracking.js"></script>
+
+    </div>
+    <br/>
+    <br/>
+    </body>
+    <div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+    </div>
+
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WorldWind Server Kit/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/serverkit/</link>
+    <description>Recent content in WorldWind Server Kit/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Sep 2017 12:20:20 -0700</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/serverkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Features-WWSK/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/serverkit/features/</link>
+      <pubDate>Wed, 13 Sep 2017 12:21:37 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/serverkit/features/</guid>
+      <description>Features WWSK&amp;rsquo;s features are built for data viewing. In addition to GeoServer&amp;rsquo;s general features, WWSK can export data as a GeoPackage, allowing the user to control its contents. Our most recently developed feature is the WorldWind Viewer, which lets you see your data in the context of Earth.
+General Features  Understands multiple data formats such as Shapefiles, GeoTIFFS, GeoPackages, and GDAL formats Serves and shares data with clients Accesses data from remote services, acting as a proxy Uses an integrated GeoWebCache for improved client performance  WorldWind Explorer  Allows you to see your data in the context of a globe Visualizes all the layers and layer groups that you&amp;rsquo;ve defined on one terrain Understands and leverages your GeoServer&amp;rsquo;s capabilities and strengths&amp;ndash;no configuration required  GeoPackage Capabilities  Export your data as a GeoPackage Exported raster GeoPackages contain a collection of prerendered tiles User-controlled content (i.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-WWSK/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/serverkit/get-started/</link>
+      <pubDate>Wed, 13 Sep 2017 12:21:14 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/serverkit/get-started/</guid>
+      <description>Get Started Build WWSK uses Apache Maven for a build system. To build WWSK and its dependencies, run maven from the root of the WWSK repository:
+$ mvn clean install  Run Depending on your personal preference, there are several ways to run WWSK.
+ Deploy a standalone WWSK distribution Deploy a WAR file Run in NetBeans Run in Jetty from Maven Deploy a binary distribution  Detailed instructions for each of these options are available on GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>

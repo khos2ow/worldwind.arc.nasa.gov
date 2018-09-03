@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <title>
+        Layers-Web WorldWind/NASA WorldWind
+        </title>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+<div>
+<nav class="navbar web-navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <p class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+            <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+        <div id="myNavBar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about">About</a></li>
+                <li><a href="/web">Web</a></li>
+                <li><a href="/android">Android</a></li>
+                <li><a href="/java">Java</a></li>
+                <li><a href="/serverkit">Server Kit</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+</nav>
+</div>
+
+
+    <div class="container-fluid">
+    <div class="row ww-carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                        <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                <div class="jumbotron-overlay"></div>
+                <div class="heading">
+                    <h1>Web WorldWind</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WebWorldWind"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+
+                    <li><a href="/web#anchor">Overview</a></li>
+                    <li><a href="/web/get-started#anchor">Get Started</a></li>
+                    <li><a href="/web/features#anchor">Features</a></li>
+                    <li><a href="/web/examples#anchor">Examples</a></li>
+                    <li><a href="/web/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/web/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="layers">Layers</h2>
+
+<p><img src="/img/web/layerlist.jpg" class="img-responsive" alt="List of map layers to use on WorldWind globe" align="right">LayerListLayers hold all the information displayed by the WorldWindow. Each WorldWindow holds one layer list that contains all the layers to display in that WorldWindow. Each layer contains either imagery, shapes or decorations such as a compass. During rendering, layers are displayed in the order they’re defined in the layer list. (3D shapes within layers, however, are displayed in far-to-near order, as described in the Shapes section.) The adjacent illustration depicts six layers. The first two are image layers. The second two hold shapes. And the bottom two hold decorations.</p>
+
+<p>The above layer list is defined and the layers added to the WorldWindow by the following code:</p>
+
+<pre><code class="language-javascript">// Create the WorldWindow.
+var wwd = new WorldWind.WorldWindow(&quot;canvasOne&quot;);
+
+// Create and add imagery layers.
+wwd.addLayer(new WorldWind.BMNGLayer());
+wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
+
+// Create and add layers for shapes, but don't add any shapes yet.
+wwd.addLayer(new RenderableLayer());
+wwd.addLayer(new RenderableLayer());
+
+// Create and add a compass and view controls.
+wwd.addLayer(new WorldWind.CompassLayer());
+wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+
+// Update the display.
+wwd.redraw();
+</code></pre>
+
+<h2 id="layer-properties">Layer Properties</h2>
+
+<p>Layers have the following properties:</p>
+
+<ul>
+<li><em>displayName</em> — A string that you can use to give the layer a name that would be displayed, for example, in a layer manager.</li>
+<li><em>enabled</em> — A boolean that enables you to turn the layer off while leaving it in the layer list.</li>
+<li><em>pickEnabled</em> — A boolean indicating that the layer and its contents do not participate in picking.</li>
+<li><em>opacity</em> — A number between 0 and 1 that enables you to make an layer and its contents semi-transparent. A value of 1 means fully opaque. A value of 0 means fully transparent.</li>
+<li><em>minActiveAltitude</em> — A number specifying the eye altitude above which the layer is displayed. The layer is not displayed if the eye altitude is below this value</li>
+<li><em>maxActiveAltitude</em> — A number specifying the eye altitude below which the layer is displayed. The layer is not displayed if the eye altitude is above this value.</li>
+<li><em>inCurrentFrame</em> — A read-only boolean indicating whether the layer was actually drawn during the most recent redraw. A layer may not be drawn for several reasons, such as the eye altitude has not reached the max active altitude.</li>
+</ul>
+
+<p>See the API doc for Layer for more details.</p>
+
+<p>There are several types of layers. Each defines additional properties that you can use to control the layer’s behavior. See the API doc for the particular layer to discover those properties. The layer type you’re likely to use most is RenderableLayer, which you use to hold shapes. It’s described below. Apps typically create several of these.</p>
+
+<h2 id="image-layers">Image Layers</h2>
+
+<p>Image layers hold imagery that is drawn on the surface of the globe. This is typically global-coverage imagery but need not be. Web WorldWind provides the following image layers:</p>
+
+<ul>
+<li><strong>Bing Aerial Layer</strong> (class BingAerialLayer) — Full global coverage using high-resolution Bing satellite imagery.</li>
+<li><strong>Bing Aerial with Labels Layer</strong> (class BingAerialWithLabelsLayer) — Full global coverage using the same imagery as Bing Aerial Layer but with placenames and roads included.</li>
+<li><strong>Bing Roads Layer</strong> (class BingRoadsLayer) — Full global coverage using high-resolution Bing roads imagery.</li>
+<li><strong>Blue Marble Layer</strong> (class BMNGLayer) — Full global coverage using low-resolution Blue Marble imagery.</li>
+<li><strong>Blue Marble + Landsat Layer</strong> (class BMNGLandsatLayer) — Full global coverage using colorized Blue Marble imagery for the oceans and medium-resolution Landsat imagery for land.</li>
+<li><strong>Blue Marble Single Image Layer</strong> (class BMNGOneImageLayer) — Full global coverage using one low-resolution Blue Marble image. This layer is used similarly to a splash screen in order to quickly display imagery on the globe while other higher-resolution imagery is retrieved.</li>
+</ul>
+
+<p>You can create your own image layers using TiledImageLayer. The imagery need not span the entire globe.</p>
+
+<h2 id="renderable-layer">Renderable Layer</h2>
+
+<p>You use the RenderableLayer class when you want to display shapes. The layer can hold any number of shapes. Apps typically use renderable layers to group shapes logically. To display a shape, you simply create it using its constructor and add it to a renderable layer:</p>
+
+<pre><code class="language-javascript">var placemarkLayer = new WorldWind.RenderableLayer(&quot;Placemarks&quot;);
+var placemark = new WorldWind.Placemark(new WorldWind.Position(latitude, longitude, altitude));
+
+placemarkLayer.addRenderable(placemark);
+</code></pre>
+
+<p>Here the layer is given the display name “Placemarks”.</p>
+
+<p>You must also add the renderable layer to the WorldWindow’s layer list:</p>
+
+<pre><code class="language-javascript">wwd.addLayer(placemarkLayer);
+</code></pre>
+
+<p>Renderable layers hold any kind of shape.</p>
+
+    </section>
+</div>
+
+
+
+
+<div class="push"></div>
+<script type="text/javascript" src="/js/event-tracking.js"></script>
+
+</div>
+</body>
+<div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+</div>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/blog/</link>
+    <description>Recent content in Blogs on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Apr 2018 11:57:49 -0700</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://worldwind.arc.nasa.gov/blog/roadmap/</link>
+      <pubDate>Mon, 30 Apr 2018 11:57:49 -0700</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/blog/roadmap/</guid>
+      <description>WorldWind Roadmap 2018 Earlier this year, we created NASA WorldWind&amp;rsquo;s first roadmap, a place where users and developers alike can see what&amp;rsquo;s in store for the Web platform. Checkout what we&amp;rsquo;ve been working on!
+Please note this is a preliminary plan, so not all features may be included in our next release.
+ Surface shape dragging interface for shape editors Web Coverage Service (WCS) initial public API and preparation Web Coverage Service (WCS) capabilities negotiation GeoTiff elevations support Multiple elevation sources Layer attribution enhancement Improved WebGL texture management with a high resolution canvas RenderableLayer opacity support (shapes inherit layer opacity)</description>
+    </item>
+    
+  </channel>
+</rss>

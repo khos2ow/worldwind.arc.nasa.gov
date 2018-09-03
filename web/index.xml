@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web WorldWind/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/web/</link>
+    <description>Recent content in Web WorldWind/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jul 2017 09:21:27 -0500</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Get Started-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/get-started/</link>
+      <pubDate>Tue, 14 Nov 2017 11:17:24 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/get-started/</guid>
+      <description>Get Started This is a quick guide to get started on Web WorldWind basics. This is what we&amp;rsquo;re going to build:
+  Your browser does not support HTML5 Canvas.   window.addEventListener(&#34;load&#34;, eventWindowLoaded, false); function eventWindowLoaded() { var wwd = new WorldWind.WorldWindow(&#34;FinalWorldWindow&#34;); wwd.addLayer(new WorldWind.BMNGOneImageLayer()); wwd.addLayer(new WorldWind.BMNGLandsatLayer()); wwd.addLayer(new WorldWind.CompassLayer()); wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd)); wwd.addLayer(new WorldWind.ViewControlsLayer(wwd)); var placemarkLayer = new WorldWind.RenderableLayer(); wwd.addLayer(placemarkLayer); var placemarkAttributes = new WorldWind.PlacemarkAttributes(null); placemarkAttributes.imageOffset = new WorldWind.Offset( WorldWind.OFFSET_FRACTION, 0.</description>
+    </item>
+    
+    <item>
+      <title>Web Examples</title>
+      <link>https://worldwind.arc.nasa.gov/web/examples/</link>
+      <pubDate>Tue, 07 Nov 2017 15:08:10 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/examples/</guid>
+      <description>Examples The full code for the examples below is available in the examples module of the Web WorldWind project.
+Sun Simulation   Source: SunSimulation.js SunSimulation.html    Argument Parsing   Source: ParseUrlArguments.js ParseUrlArguments.html    Basic Example   Source: BasicExample.js BasicExample.html    Time Series   Source: BlueMarbleTimeSeries.js BlueMarbleTimeSeries.html    Collada   Source: Collada.js Collada.html    Configuration   Source: Configuration.</description>
+    </item>
+    
+    <item>
+      <title>Docs-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/docs/</link>
+      <pubDate>Fri, 28 Jul 2017 14:05:05 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WebWorldWind/</description>
+    </item>
+    
+    <item>
+      <title>Features-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/features/</link>
+      <pubDate>Thu, 27 Jul 2017 11:22:07 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/features/</guid>
+      <description>Features Web WorldWind provides a rich set of features for displaying and interacting with geographic information.
+General Features  Open-source, high-performance, 3D virtual globe (WGS84) for web pages and web applications 2D Map mode with selectable and extensible map projections JavaScript API for automating all aspects of interaction and visualization Large collection of built-in high-resolution imagery and terrain Display high-resolution imagery, terrain and geographic data from any public or private source Supports REST, WMS and Bing Large collection of geometric and geographic shapes for representing information Navigation and Viewing, Picking Display multiple globes and maps on the same page Simple to use, extend and modify  Graphics Capabilities  Placemark, Path and Curtain, Polygon and Extruded Polygon, Text Terrain conforming shapes: Path, Polygon, Ellipse, Circle, Quadrilateral, Square Imagery: JPEG, PNG Graticules Shapefiles</description>
+    </item>
+    
+  </channel>
+</rss>

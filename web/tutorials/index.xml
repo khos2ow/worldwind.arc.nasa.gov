@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials-Web WorldWind/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/web/tutorials/</link>
+    <description>Recent content in Tutorials-Web WorldWind/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2017 14:35:48 -0500</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/web/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Standalone Example-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/standalone-example/</link>
+      <pubDate>Wed, 15 Nov 2017 14:33:47 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/standalone-example/</guid>
+      <description>Hosting Locally The Data Get the latest release on GitHub.
+Host the WorldWind library and the images folder on your HTTP server:
+https://YOUR_SERVER/worldwind.min.js https://YOUR_SERVER/image/  Get some data and unpack to:
+https://YOUR_SEVER/standalone/  You can also use this example data from NASA.
+The standalone folder is specific to the example data from NASA. With custom data, the folder could be named anything. The Script Add the WorldWind library:
+&amp;lt;script src=&amp;quot;https://YOUR_SERVER/worldwind.</description>
+    </item>
+    
+    <item>
+      <title>Configuration-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/configuration/</link>
+      <pubDate>Wed, 15 Nov 2017 13:56:48 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/configuration/</guid>
+      <description>Configuration If you are just getting started with Web WorldWind, you might be interested in its configuration options. The script below shows you how to set some of these configurations. Please note that these options must be set before you create the WorldWindow or any other WorldWind object.
+Setting the Logging Level // Get detailed logging WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING); // Turn off logging WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_NONE);  Changing the GPU Cache Size // Custom GPU Cache Size WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Simplest Example-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/simplest-example/</link>
+      <pubDate>Wed, 15 Nov 2017 13:48:00 -0800</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/simplest-example/</guid>
+      <description>Simplest Example This tutorial illustrates how to build a simple WorldWind globe in an HTML file. Zoom in with your mouse wheel (pinch gesture for mobile devices). Drag the mouse or your finger to pan around the globe. Drag the right mouse button or your two fingers upward to tilt the globe.
+  Your browser does not support HTML5 Canvas.   window.addEventListener(&#34;load&#34;, eventWindowLoaded, false); function eventWindowLoaded() { var wwd = new WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Deployment-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/deployment/</link>
+      <pubDate>Thu, 27 Jul 2017 09:14:35 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/deployment/</guid>
+      <description>Deployment Deploying Web WorldWind is easy. In fact, unless you want to run it from your own server there is no deployment required. You simply include a script tag linking to it:
+&amp;lt;script src=&amp;quot;https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  To deploy Web WorldWind on your own server, copy the library worldwind.min.js and the images directory from the Web WorldWind release and place them on your web server. The images directory must be a sibling of the library, i.</description>
+    </item>
+    
+    <item>
+      <title>Shapes-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/shapes/</link>
+      <pubDate>Thu, 27 Jul 2017 09:10:24 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/shapes/</guid>
+      <description>Shapes Shapes represent the information other than surface imagery that you display on the globe. Web WorldWind has a rich and growing set of shapes to choose from:
+ Placemark (class Placemark) — Displays an image with an optional label at any geographic position and altitude. You can use one of Web WorldWind’s placemark images or specify your own. See the PlacemarksAndPicking example. Path (class Path) — Draws a connected set of lines either in space or on the ground.</description>
+    </item>
+    
+    <item>
+      <title>Layers-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/layers/</link>
+      <pubDate>Wed, 26 Jul 2017 15:21:03 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/layers/</guid>
+      <description>Layers LayerListLayers hold all the information displayed by the WorldWindow. Each WorldWindow holds one layer list that contains all the layers to display in that WorldWindow. Each layer contains either imagery, shapes or decorations such as a compass. During rendering, layers are displayed in the order they’re defined in the layer list. (3D shapes within layers, however, are displayed in far-to-near order, as described in the Shapes section.) The adjacent illustration depicts six layers.</description>
+    </item>
+    
+    <item>
+      <title>Picking-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/picking/</link>
+      <pubDate>Wed, 26 Jul 2017 15:19:00 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/picking/</guid>
+      <description>Picking Picking is performed by the WorldWindow. There are four flavors of picking:
+ Normal picking returns the visible object or terrain at a specified pick point. See PlacemarksAndPicking.js for an example. Deep picking returns all objects at a specified pick point. See DeepPicking.js for an example. Region picking returns all visible objects within a specified pick region. See PickAllShapesInRegion.js for an example. Terrain picking returns the geographic coordinates of the terrain at a specified pick point.</description>
+    </item>
+    
+    <item>
+      <title>Navigation and Viewing-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/navigation-and-viewing/</link>
+      <pubDate>Wed, 26 Jul 2017 15:14:35 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/navigation-and-viewing/</guid>
+      <description>Navigation and Viewing As the user interacts with the globe, panning, zooming and tilting, it’s the WorldWindow’s Navigator that translates the user’s movements into operations on the globe. Each WorldWindow has one navigator. That navigator is responsible for the view onto the globe. A navigator is created automatically when you create a WorldWindow.
+Topics on this page:
+ Controlling the View from the WorldWindow Controlling the Navigator GoTo Animator Geocoders  Controlling the View from the WorldWindow If all you want to do is move the view to a geographic location or position (a location with altitude), you can use the goTo function of WorldWindow to do that.</description>
+    </item>
+    
+    <item>
+      <title>Event and Gesture Handling-WebWorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/event-and-gesture-handling/</link>
+      <pubDate>Wed, 26 Jul 2017 15:10:22 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/event-and-gesture-handling/</guid>
+      <description>Event and Gesture Handling Applications can generally monitor and respond to JavaScript events as they normally would. But because the WorldWindow’s navigator is monitoring mouse and touch events to enable the user to manipulate the globe, some coordination between the application’s event handling and the navigator’s event handling is necessary. Web WorldWind does not monitor keyboard events, so no coordination is necessary for those.
+If your application is to work on conventional and mobile devices, it should monitor both mouse events and gestures if it wants to respond to user input beyond what the WorldWindow’s navigator already does.</description>
+    </item>
+    
+    <item>
+      <title>WorldWindow-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/world-window/</link>
+      <pubDate>Wed, 26 Jul 2017 15:05:14 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/world-window/</guid>
+      <description>WorldWindow WorldWindow is the fundamental Web WorldWind object. It represents the presence of Web WorldWind in the web page. Almost all interactions between the app and Web WorldWind occur through a WorldWindow.
+A WorldWindow encapsulates an HTML canvas element. The app developer is responsible for creating the canvas, typically by defining a &amp;lt;canvas&amp;gt; element in static HTML. The canvas is given an ID and that ID is handed to the WorldWindow constructor to tell the WorldWindow its drawing surface.</description>
+    </item>
+    
+    <item>
+      <title>Concepts-WebWorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/concepts/</link>
+      <pubDate>Wed, 26 Jul 2017 14:39:48 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/concepts/</guid>
+      <description>Concepts Web WorldWind is a virtual globe component that you embed in web pages. It provides an interactive, 3D geographic context for information. As a component, it comprises one aspect of a web application or web page. Other components provide textual or graphic information or provide a user interface. In the following figure, Web WorldWind is just the portion outlined in red. The rest of the components on the web page — the menus, the buttons, the text — are HTML developed by the web page creator.</description>
+    </item>
+    
+    <item>
+      <title>Common Problems-Web WorldWind/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/web/tutorials/common-problems/</link>
+      <pubDate>Wed, 26 Jul 2017 14:36:34 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/web/tutorials/common-problems/</guid>
+      <description>Common Problems This page describes problems users or developers frequently encounter and gives solutions to those problems.
+No globe is shown Be sure you’re connected to the internet. Also, your browser may not support WebGL. To test that, visit http://get.webgl.org. If that site shows that WebGL is not supported, then follow the link there to your browser’s support page to see how you might enable it.
+No ‘Access-Control-Allow-Origin’ header is present on the requested resource This message occurs when the server holding an image or other resource does not implement CORS (Cross-Origin Resource Sharing).</description>
+    </item>
+    
+  </channel>
+</rss>

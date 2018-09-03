@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WorldWind Java/NASA WorldWind on NASA WorldWind</title>
+    <link>https://worldwind.arc.nasa.gov/java/</link>
+    <description>Recent content in WorldWind Java/NASA WorldWind on NASA WorldWind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2017 23:14:25 -0400</lastBuildDate>
+    
+	<atom:link href="https://worldwind.arc.nasa.gov/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docs-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/docs/</link>
+      <pubDate>Fri, 28 Jul 2017 14:04:18 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/docs/</guid>
+      <description>API Documentation https://nasaworldwind.github.io/WorldWindJava/</description>
+    </item>
+    
+    <item>
+      <title>Releases-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/releases/</link>
+      <pubDate>Thu, 27 Jul 2017 13:47:01 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/releases/</guid>
+      <description>Releases GitHub Releases has the WorldWind Java release artifacts and detailed release change logs. Information about the WorldWind releases is listed here.
+WorldWind Java v2.1.0, December 13, 2016 WorldWind Java v2.1.0 contains major improvements for security, functionality, and automation, including: HTTPS map services, Travis CI integration, first-class 2D map support, improved shape dragging, general shape editor, new USGS high resolution imagery layer, new USGS topographic layers, Shapefile rendering performance improvements, Shapefile XML layer configuration files, OGC Web Coverage Service (WCS) elevations, plus many more improvements and bug fixes.</description>
+    </item>
+    
+    <item>
+      <title>Examples-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/examples/</link>
+      <pubDate>Thu, 27 Jul 2017 09:58:18 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/examples/</guid>
+      <description>Examples The WorldWind API contains over 100 code examples that show how to perform all manner of tasks, from creating the most basic WorldWind application to using complex, advanced functionality.
+Below are brief descriptions of selected example programs. All examples can be found in the GitHub repository.
+ Basics Layers View Data Terrain Shapes Annotations Images User Interface Network Configuration Tools Multiwindow  Basics SimplestPossibleExample - Demonstrates the simplest possible way to create a WorldWind application.</description>
+    </item>
+    
+    <item>
+      <title>Get Started-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/get-started/</link>
+      <pubDate>Thu, 27 Jul 2017 09:50:17 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/get-started/</guid>
+      <description>Get Started WorldWind is an SDK (software development kit) that software engineers can use to build their own applications. To run a WorldWind demo application, visit the Demos page. Follow these instructions to download, run, and deploy an application using WorldWind.
+Run an Application Using WorldWind  Download the latest release from the WorldWind GitHub Releases.
+ Extract the WorldWind SDK to a folder anywhere on your hard drive. The following steps refer to the extracted folder as WorldWind.</description>
+    </item>
+    
+    <item>
+      <title>Features-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/features/</link>
+      <pubDate>Thu, 27 Jul 2017 09:48:19 -0500</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/features/</guid>
+      <description>Features WorldWind Java provides a rich set of features for displaying and interacting with geographic data and representing a wide range of geometric objects.
+General Features  Open-source, high-performance 3D Virtual globe API and SDK Adds 3D geographic visualization to any application Runs on Windows, Mac OS X, Linux Free run-time and development license Unencumbered use on any number of devices Huge collection of high-resolution imagery and terrain from NASA servers Displays high-resolution imagery, terrain and geographic information from any open-standard public or private source Open-standard interfaces to GIS services and databases Large collection of geometric and geographic shapes Simple to extend and modify, designed to be extensible Uses Java and OpenGL  Graphics Capabilities  Point, Path, Polygon, Curtain Volumes: Extruded Polygon, Ellipsoid, Sphere, Cylinder, Cone, Pyramid, Box, Airspaces (see below) Terrain conforming shapes: Path, Polygons, Ellipse, Circle, Quadrilateral, Rectangle, Square, Text, Image, Icon Airspaces: Box, Cake, Capped Cylinder (full and partial), Curtain, Orbit, PolyArc, Polygon, Route, Sphere, Track Annotation: Text, Text Balloon, HTML5 web-browser Balloon, Image, Icons, all with geo-located and screen versions Placenames, Political boundaries Transparency Picking, Selection Navigation and Viewing: Orbit View, First Person, Stereo, application-defined Multiple WorldWind windows Interactive shape editors 2525C Tactical Symbols and Tactical Graphics  Data Formats  Imagery: JPG, PNG, GeoTIFF, JPEG2000 and many others Government formats: NITF, MrSID, RPF (CADRG, CIB, etc.</description>
+    </item>
+    
+    <item>
+      <title>Demos-WorldWind Java/NASA WorldWind</title>
+      <link>https://worldwind.arc.nasa.gov/java/demos/</link>
+      <pubDate>Thu, 13 Jul 2017 00:02:06 -0400</pubDate>
+      
+      <guid>https://worldwind.arc.nasa.gov/java/demos/</guid>
+      <description>Demos The applications here demonstrate some of WorldWind&amp;rsquo;s rich capabilities. Also see WorldWind Europa Challenge site for a collection of applications created by the WorldWind Europa Challenge teams.
+Requirements  Up to date video card drivers Oracle Java Runtime Environment (JRE) 1.7.0 Java and OpenGL setup can be tested using JOGL demo site.  Application Template    Displays the default globe with its default layers. Includes capabilities such as a compass and status bar that are common to most applications, and presents Earth within a star field and with an atmosphere.</description>
+    </item>
+    
+  </channel>
+</rss>

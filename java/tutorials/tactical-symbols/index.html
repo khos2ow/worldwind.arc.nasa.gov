@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="NASA WorldWind Software Development Kits (SDKs) for geo-spatial 3D virtual
+        globe visualization via OpenGL/WebGL on Android, Java and JavaScript/HTML5 platforms.">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link rel="stylesheet" href="/css/theme.css">
+        <title>
+            Tactical Symbols-WorldWind Java/NASA WorldWind
+        </title>
+        
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-105294289-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+    <body>
+    <div class='wrapper'>
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <p class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand"><img id="logo-size" src="/img/nasa-logo.svg" alt="Blue NASA Meatball"></a>
+                    <a href="/" class="navbar-brand" id="webww-header">NASA WorldWind</a>
+                <div id="myNavBar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/web">Web</a></li>
+                        <li><a href="/android">Android</a></li>
+                        <li><a href="/java">Java</a></li>
+                        <li><a href="/serverkit">Server Kit</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        
+<div class="container-fluid">
+    <div class="row ww-carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/img/java-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/serverkit-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/web-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/android-background.jpg" alt="" style="width:100%;">
+                    <div class="jumbotron-overlay"></div>
+                    <div class="heading">
+                        <h1>WorldWind Java</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="anchor"></div>
+<a href="https://github.com/NASAWorldWind/WorldWindJava"><img style="position: absolute; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<div id="menu" style="display: none;"></div>
+<div class="container content-container" id="main">
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <p class="span12">
+            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
+                <i class="icon-th"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="col-sm-3">
+        <div id="wrap" class="row-fluid wrap">
+            
+            <div class="sidenav">
+                
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/java">Overview</a></li>
+                    <li><a href="/java/get-started#anchor">Get Started</a></li>
+                    <li><a href="/java/features#anchor">Features</a></li>
+                    <li><a href="/java/demos#anchor">Demos</a></li>
+                    <li><a href="/java/examples#anchor">Examples</a></li>
+                    <li><a href="/java/tutorials#anchor">Tutorials</a></li>
+                    <li><a href="/java/releases#anchor">Releases</a></li>
+                    <li><a href="/java/docs#anchor">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="col-sm-9">
+        
+
+<h2 id="tactical-symbols">Tactical Symbols</h2>
+
+<p>A tactical symbol displays graphic and textual information about an object at a single geographic position at a particular point in time. The graphic displayed is typically a screen icon with supplemental text and graphics surrounding the icon. In general, the graphic displayed depends on the symbology set a tactical symbol belongs to. This guide covers tactical symbols belonging to the U.S. Department of Defense&rsquo;s Common Warfighting Symbology set, <a href="http://worldwind.arc.nasa.gov/milstd2525c/Mil-STD-2525C.pdf">MIL-STD-2525C</a>.</p>
+
+<p><img src="/img/java/tacticalsymbols-demoicon.jpg" align="right" class="img-responsive">The tactical symbols Java Web Start demo showcases how tactical symbols appear and behave in a WorldWind based application.</p>
+
+<p>Run the <a href="https://worldwind.arc.nasa.gov/java/latest/webstart/TacticalSymbols.jnlp">Tactical Symbols Demo</a>.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This guide shows how to use WorldWind tactical symbols in your application, and is organized into five sections:</p>
+
+<ol>
+<li><a href="#construction">Construction</a></li>
+<li><a href="#position">Position</a></li>
+<li><a href="#modifiers">Modifiers</a></li>
+<li><a href="#display-options">Display Options</a></li>
+<li><a href="#offline-use">Offline Use</a></li>
+</ol>
+
+<h2 id="a-name-construction-a-construction"><a name="construction"></a>Construction</h2>
+
+<p>Each symbology set defines a tactical symbol implementation that derives from the TacticalSymbol interface. TacticalSymbol provides an interface to common tactical symbol functionality, and extends the Renderable interface so you can add a TacticalSymbol directly to a RenderableLayer.</p>
+
+<p>To create and display a tactical symbol, create a new instance of a TacticalSymbol implementation appropriate for the desired symbology set, then add it to a RenderableLayer.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set. The symbol
+// identifier specifies a MIL-STD-2525 friendly Special Operations Forces Drone
+// Aircraft. The position places the tactical symbol at 1km above mean sea level.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Create a renderable layer to display the tactical symbol. This example adds
+// only a single symbol, but many symbols can be added to a single layer. Note
+// that Tactical symbols and tactical graphics can be combined in a single layer.
+RenderableLayer symbolLayer = new RenderableLayer();
+symbolLayer.addRenderable(symbol);
+
+// Add the layer to the WorldWindow's model and request that the layer redraw
+// itself. The WorldWindow draws the symbol on the globe at the specified
+// position. Interactions between the symbol and the cursor are returned in the
+// WorldWindow's picked object list, and reported to the WorldWindow's select
+// listeners.
+WorldWindow wwd = ... // A reference to your application's WorldWind instance.
+wwd.getModel().getLayers().add(symbolLayer);
+wwd.redraw();
+</code></pre>
+
+<p>We&rsquo;ve created and displayed a TacticalSymbol representing a friendly Special Operations Forces Drone Aircraft from the MIL-STD-2525 symbology set by creating a MilStd2525TacticalSymbol with the appropriate symbol identifier string. We then added the TacticalSymbol to a RenderableLayer we created. Here&rsquo;s a screen shot of the result.</p>
+
+<p><img src="/img/java/tacticalsymbolguide-createanddisplay11.jpg" alt="Tactical Symbol in WorldWind" /></p>
+
+<p>MilStd2525TacticalSymbol&rsquo;s constructor accepts the following parameters:</p>
+
+<p><br/></p>
+
+<h4 id="symbol-identifier-required">Symbol Identifier (required)</h4>
+
+<p>A string identifier indicating the tactical symbol&rsquo;s appearance. The format of this identifier depends on the symbol set. In the case of MIL-STD-2525, the symbol identifier is a 15-character alphanumeric symbol identification code (SIDC). The symbol&rsquo;s shape, fill color, outline color, and icon are all defined by the symbol identifier. In the above example, &ldquo;SFAPMFQM&mdash;&mdash;A&rdquo; defines a friendly Special Operations Forces drone aircraft.</p>
+
+<p><br/></p>
+
+<h4 id="position-required">Position (required)</h4>
+
+<p>The latitude, longitude, and altitude where the symbol is drawn on the globe. In the above example, (34.7327, -117.8347, 1000) places the symbol 1km above sea level and north of Los Angeles.</p>
+
+<p><br/></p>
+
+<h4 id="modifiers-optional">Modifiers (optional)</h4>
+
+<p>An optional list of key-value pairs specifying supplemental graphic and text attributes. This parameter may be null or omitted entirely. The modifiers list extends the symbol attributes already indicated by the symbol identifier. In the case where both the symbol identifier and the modifiers list indicate the same attribute, the modifiers list has priority. The above example omits the modifiers parameter, so the symbol contains only the attributes indicated by its symbol identifier. See <a href="#modifiers">Modifiers</a> for more information.</p>
+
+<h2 id="a-name-position-a-position"><a name="position"></a>Position</h2>
+
+<p>A TacticalSymbol&rsquo;s position indicates the latitude, longitude, and altitude where the symbol draws its graphic. To position a TacticalSymbol during construction, just specify the desired position parameter. To position a TacticalSymbol after construction, call setPosition with the desired position.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set. The symbol is
+// initially positioned near Los Angeles.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Move the tactical symbol from Los Angeles to Afghanistan, and set its altitude to
+// 3km above sea level.
+symbol.setPosition(Position.fromDegrees(32.4520, 63.44553, 3000));
+</code></pre>
+
+<p>We&rsquo;ve moved a TacticalSymbol from Los Angeles to Afghanistan, and set its altitude to 3km above sea level. Here&rsquo;s a screen shot of the result:</p>
+
+<p><img src="/img/java/tacticalsymbolguide-position11.jpg" alt="TacticalSymbol in Afghanistan" /></p>
+
+<p>A TacticalSymbol&rsquo;s altitude mode indicates how the altitude component is interpreted. There are three recognized altitude modes:</p>
+
+<ul>
+<li>WorldWind.ABSOLUTE - altitude is relative to mean sea level</li>
+<li>WorldWind.RELATIVE_TO_GROUND - altitude is relative to ground level</li>
+<li>WorldWind.CLAMP_TO_GROUND - altitude is replaced with ground level</li>
+</ul>
+
+<p>To configure a MilStd2525TacticalSymbol&rsquo;s altitude mode appropriately for the type of object displayed, just create the symbol as you normally would. During construction, MilStd2525TacticalSymbol configures the altitude mode from information in the symbol identifier.</p>
+
+<pre><code class="language-java">// Create an air tactical symbol for the MIL-STD-2525 symbology set. This symbol
+// identifier specifies a MIL-STD-2525 friendly Special Operations Forces Drone
+// Aircraft. MilStd2525TacticalSymbol automatically sets the altitude mode to
+// WorldWind.ABSOLUTE.
+TacticalSymbol airSymbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(32.4520, 63.44553, 3000));
+
+// Create a ground tactical symbol for the MIL-STD-2525 symbology set. This symbol
+// identifier specifies multiple hostile Self-Propelled Rocket Launchers.
+// MilStd2525TacticalSymbol automatically sets the altitude mode to
+// WorldWind.CLAMP_TO_GROUND.
+TacticalSymbol groundSymbol = new MilStd2525TacticalSymbol(&amp;quot;SHGPUCFRMS----G&amp;quot;, Position.fromDegrees(32.4, 63.4, 0));
+</code></pre>
+
+<p>We&rsquo;ve created two TacticalSymbols representing air and ground objects. MilStd2525TacticalSymbol identifies each symbol identifier as air and ground, and configures their altitude modes as WorldWind.ABSOLUTE and WorldWind.CLAMP_TO_GROUND, respectively. Here&rsquo;s a screen shot of the result.</p>
+
+<p><img src="/img/java/tacticalsymbolguide-position22.jpg" alt="Tactical Symbols with different altitude modes" /></p>
+
+<p>TacticalSymbol provides support for manually configuring the altitude mode. It is usually not necessary to manually configure a TacticalSymbol&rsquo;s altitude mode unless there&rsquo;s a need to override the automatically configured mode. To manually configure the altitude mode, call setAltitudeMode with one of the recognized modes.</p>
+
+<pre><code class="language-java">// Set the ground symbol's altitude mode.
+groundSymbol.setAltitudeMode(WorldWind.CLAMP_TO_GROUND);
+</code></pre>
+
+<h2 id="a-name-modifiers-a-modifiers"><a name="modifiers"></a>Modifiers</h2>
+
+<p>Modifiers are optional key-value attributes that cause a TacticalSymbol to display supplemental graphic and text around or over the symbol&rsquo;s graphic. See the MilStd2525TacticalSymbol documentation for a list of supported modifiers. The placement and display of modifiers for MilStd2525TacticalSymbol is defined in the MIL-STD-2525 specification.</p>
+
+<p>To set a TacticalSymbol&rsquo;s modifiers during construction, specify the modifier keys and their associated values as key-value pairs attached to an AVList.</p>
+
+<pre><code class="language-java">// Create the list of key-value pairs used to specify modifiers during tactical
+// symbol construction.
+AVList modifiers = new AVListImpl();
+modifiers.setValue(SymbologyConstants.DIRECTION_OF_MOVEMENT, Angle.fromDegrees(50));
+modifiers.setValue(SymbologyConstants.ECHELON, SymbologyConstants.ECHELON_TEAM_CREW);
+
+// Create a ground tactical symbol for the MIL-STD-2525 symbology set. Specify the
+// ground symbol's Direction of Movement (heading) and Echelon modifiers
+// by adding each modifier as a key-value pair to the modifiers parameter.
+TacticalSymbol groundSymbol = new MilStd2525TacticalSymbol(&amp;quot;SHGPUCFRMS----G&amp;quot;, Position.fromDegrees(32.4, 63.4, 0), modifiers);
+</code></pre>
+
+<p>To set a TacticalSymbol&rsquo;s modifiers after construction, call setModifier with the modifier key and its associated value. To display a modifier with an implicit value - such the Location modifier - call setModifier with the modifier key and the value true.</p>
+
+<pre><code class="language-java">// Set the ground symbol's Direction of Movement (heading) and Echelon modifiers.
+groundSymbol.setModifier(SymbologyConstants.DIRECTION_OF_MOVEMENT, Angle.fromDegrees(50));
+groundSymbol.setModifier(SymbologyConstants.ECHELON, SymbologyConstants.ECHELON_TEAM_CREW);
+</code></pre>
+
+<p>We&rsquo;ve set a TacticalSymbol&rsquo;s Direction of Movement (heading) and Echelon modifiers. The Direction of Movement is displayed as an arrow extending from the symbol&rsquo;s ground position and oriented to its heading. The Echelon graphic is displayed above the symbol icon. The Location modifier is displayed as text aligned to the symbol icon&rsquo;s left side. Here&rsquo;s a screen shot of the result.</p>
+
+<p><img src="/img/java/tacticalsymbolguide-modifiers12.jpg" alt="TacticalSymbol with Modifier text" /></p>
+
+<p>TacticalSymbol provides support for removing existing modifiers. To remove a modifier, call setModifier with the modifier key and the value null. To hide an implicit modifier, such as the the Location modifier, set the appropriate visibility flag on the symbol. For example, to hide the Location modifier, call setShowLocation(false).</p>
+
+<pre><code class="language-java">// Remove the ground symbol's Direction of Movement (heading), Echelon, and Location
+// modifiers.
+groundSymbol.setModifier(SymbologyConstants.DIRECTION_OF_MOVEMENT, null);
+groundSymbol.setModifier(SymbologyConstants.ECHELON, null);
+groundSymbol.setShowLocation(false);
+</code></pre>
+
+<h2 id="a-name-display-options-a-display-options"><a name="display-options"></a>Display Options</h2>
+
+<p><br/></p>
+
+<h4 id="size-and-opacity">Size and Opacity</h4>
+
+<p>TacticalSymbol provides control of its scale and opacity through the TacticalSymbolAttributes interface. The scale is a decimal number greater than 0.0: values less than 1.0 make the symbol smaller, while values greater than 1.0 make the symbol larger. The opacity is a decimal number between 0.0 and 1.0 (inclusive), where 0.0 is completely transparent and 1.0 is completely opaque. The scale and opacity apply to both the symbol graphic and the symbol modifiers.</p>
+
+<p>To set a TacticalSymbol&rsquo;s size or opacity (or both), create and configure a new TacticalSymbolAttributes, then call setAttributes with the new attribute bundle.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Create an attribute bundle and use it as the symbol's normal attributes.
+TacticalSymbolAttributes attrs = new BasicTacticalSymbolAttributes();
+attrs.setScale(0.75); // Make the symbol 75% its normal size.
+attrs.setOpacity(0.5); // Make the symbol 50% transparent.
+symbol.setAttributes(attrs);
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="highlighting">Highlighting</h4>
+
+<p>TacticalSymbol extends the Highlightable interface, and provides control of its highlighted display parameters through a highlight attribute bundle. This bundle is used to draw the symbol&rsquo;s graphic and modifiers when a TacticalSymbol&rsquo;s highlighted state is true.</p>
+
+<p>To highlight a TacticalSymbol, create and configure a new TacticalSymbolAttributes, then call setHighlightAttributes with the new attribute bundle. Finally, call setHighlighted with the value true to highlight the symbol. If your application uses HighlightController, the symbol is automatically highlighted when it&rsquo;s under the cursor. Note that it is possible to specify both normal and highlight attributes, but it is not necessary to do so.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Create an attribute bundle and use it as the symbol's highlight attributes.
+TacticalSymbolAttributes highlightAttrs = new BasicTacticalSymbolAttributes();
+highlightAttrs.setScale(2.0); // 200% of normal size when highlighted.
+highlightAttrs.setOpacity(1.0); // 100% opaque when highlighted.
+symbol.setHighlightAttributes(highlightAttrs);
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="decluttering">Decluttering</h4>
+
+<p>When many tactical symbols are displayed in the same scene, the scene is likely to become cluttered and difficult to interpret. TacticalSymbol provides two ways to reduce the amount of information it displays in order to reduce clutter: hiding symbol modifiers, and displaying the symbol as a simple dot.</p>
+
+<p>To hide a TacticalSymbol&rsquo;s graphic or text modifiers (or both) call setShowGraphicModifiers or setShowTextModifiers, respectively, with the value false. The symbol displays its normal frame, fill, and icon, but hides any supplemental graphic or text modifiers.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Hide the symbol's text modifiers to reduce clutter.
+symbol.setShowTextModifiers(false);
+</code></pre>
+
+<p>To display a MilStd2525TacticalSymbol as a simple dot, call setShowFrameAndIcon with the value false. The TacticalSymbolAttributes&rsquo; scale indicates the dot&rsquo;s diameter in screen pixels, and the symbol&rsquo;s fill color is used as the dot&rsquo;s interior color. When MilStd2525TacticalSymbol is displayed as a dot, its graphic and text modifiers are not displayed.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set.
+MilStd2525TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Configure the symbol to display as a simple dot, and without any graphic or text
+// modifiers.
+symbol.setShowFrameAndIcon(false);
+
+// Create an attribute bundle to specify the dot's diameter in screen pixels.
+TacticalSymbolAttributes attrs = new BasicTacticalSymbolAttributes();
+attrs.setScale(3.0); // Set the dot's diameter to 3.0 pixels.
+symbol.setAttributes(attrs);
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="modifier-attributes">Modifier Attributes</h4>
+
+<p>TacticalSymbol provides control of the font and color used to display text modifiers via the TacticalSymbolAttributes interface. To set the text modifier font or color (or both), call setModifierFont or setModifierMaterial, respectively.</p>
+
+<pre><code class="language-java">// Create a tactical symbol for the MIL-STD-2525 symbology set.
+TacticalSymbol symbol = new MilStd2525TacticalSymbol(&amp;quot;SFAPMFQM------A&amp;quot;, Position.fromDegrees(34.7327, -117.8347, 1000));
+
+// Create an attribute bundle and use it as the symbol's normal attributes. Specify
+// the text modifier font and material.
+TacticalSymbolAttributes attrs = new BasicTacticalSymbolAttributes();
+attrs.setTextModifierFont(Font.decode(&amp;quot;Arial-Bold-12&amp;quot;));
+attrs.setTextModifierMaterial(Material.RED);
+symbol.setAttributes(attrs);
+</code></pre>
+
+<h2 id="a-name-offline-use-a-offline-use"><a name="offline-use"></a>Offline Use</h2>
+
+<p>By default, the icons displayed by TacticalSymbol and TacticalPointGraphic are downloaded from an HTTP server at <a href="https://worldwind.arc.nasa.gov/milstd2525c/rev1/">https://worldwind.arc.nasa.gov/milstd2525c/rev1/</a>. When an application cannot access worldwind.arc.nasa.gov, it is necessary to configure these symbols to download their icons from another location. This can be accomplished by deploying an HTTPS server or by using a local ZIP archive.</p>
+
+<p><br/></p>
+
+<h4 id="https-server">HTTPS Server</h4>
+
+<ol>
+<li><p>Install an HTTPS server on any machine that is accessible to the client application. Use any server that supports the HTTPS protocol, such as NGINX.</p></li>
+
+<li><p>Download the WorldWind MIL-STD-2525 <a href="https://worldwind.arc.nasa.gov/milstd2525c/rev1/milstd2525-symbols.zip">Symbol Icons ZIP archive</a>.</p></li>
+
+<li><p>Extract the Symbol Icons ZIP Archive to a publicly accessible folder on the server. Assign global read permission to the folder and its sub-folders. The following steps refer to the extracted folder&rsquo;s public URL as <a href="http://myserver.com/milstd2525/">http://myserver.com/milstd2525/</a>.</p></li>
+
+<li><p>Configure WorldWind by adding the following entry to the worldwind.xml configuration file:</p></li>
+</ol>
+
+<pre><code class="language-xml">&lt;Property name=&quot;gov.nasa.worldwind.avkey.MilStd2525IconRetrieverPath&quot; value=&quot;http://myserver.com/milstd2525/&quot;&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="local-zip-archive">Local ZIP Archive</h4>
+
+<ol>
+<li><p>Download the WorldWind MIL-STD-2525 <a href="https://worldwind.arc.nasa.gov/milstd2525c/rev1/milstd2525-symbols.zip">Symbol Icons ZIP archive</a>. Place the archive in a location that is accessible to the application. The following steps refer to the archive&rsquo;s location as MyApp/milstd2525-symbols.zip, where MyApp is the application root folder.</p></li>
+
+<li><p>Configure WorldWind by adding the following entry to the worldwind.xml configuration file:</p></li>
+</ol>
+
+<pre><code class="language-xml">&lt;Property name=&quot;gov.nasa.worldwind.avkey.MilStd2525IconRetrieverPath&quot; value=&quot;jar:file:milstd2525-symbols.zip!&quot;&gt;
+</code></pre>
+
+<p>The file URL specified in this entry may be absolute or it may be relative to the application working directory.</p>
+
+    </section>
+</div>
+
+
+
+
+    <div class="push"></div>
+    <script type="text/javascript" src="/js/event-tracking.js"></script>
+
+    </div>
+    <br/>
+    <br/>
+    </body>
+    <div>
+    <footer id="fh5co-footer" class="overlay fh5co-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-2 fh5co-widget">
+                <a href="/"><h3 class="text-center">Home</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/WorldWindLabs"><h3 class="text-center">Apps</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="https://github.com/NASAWorldWind"><h3 class="text-center">Source Code</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/about"><h3 class="text-center">About</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/contact"><h3 class="text-center">Contact</h3></a>
+            </div>
+            <div class="col-md-2 fh5co-widget">
+                <a href="/blog/roadmap"><h3 class="text-center">Blog</h3></a>
+            </div>
+            </div>
+        </div>
+</footer>
+    </div>
+
+</html>
