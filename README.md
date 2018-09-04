@@ -20,7 +20,7 @@ This site is configured to use permalinks. A markdown file will be converted to 
 
 Hugo is a single executable and quite portable. Download and install Hugo using the precompiled binaries from the [GitHub releases page](https://github.com/gohugoio/hugo/releases) or install using brew: `$ brew install hugo`.
 
-To generate the site, simply execute `$ hugo` from the root project directory. Hugo will create a `public` folder containing the generated site. You may also use Hugo to serve the content. It will automatically reload pages when a change is made in the project. Execute `$ hugo serve` and navigate your browser to `http://localhost:1313`. 
+To generate the site, simply execute `$ ./hugow` from the root project directory. Hugo will create a `public` folder containing the generated site. You may also use Hugo to serve the content. It will automatically reload pages when a change is made in the project. Execute `$ ./hugow serve` and navigate your browser to `http://localhost:1313`. 
 
 ## Site Structure
 
@@ -80,13 +80,13 @@ Hugo uses [archetypes](http://gohugo.io/content/archetypes/) to facilitate the o
 
 To use an archetype to create content, simply execute the following:
 ```
-hugo new <path to location of new content>/<markdown file name>.md
+./hugow new <path to location of new content>/<markdown file name>.md
 ```
 To generate the "get-started.md" file/page in the WorldWind Android project using the project structure detailed in the *Site Structure* section would look like this:
 ```
-hugo new android/get-started.md
+./hugow new android/get-started.md
 ```
-Notice the `content` directory is implied and not required for the `hugo new` command.
+Notice the `content` directory is implied and not required for the `./hugow new` command.
 
 ## Shortcodes
 

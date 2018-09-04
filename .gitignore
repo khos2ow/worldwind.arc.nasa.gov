@@ -3,3 +3,6 @@
 .idea/shelf
 
 public
+
+.hugo/*
+!.hugo/version
